@@ -1,0 +1,111 @@
+{
+  "id": "ZW095-C3",
+  "name": {
+    "en": "Home Energy Meter Gen5 3 Clamps"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_current",
+    "measure_power",
+    "meter_power",
+    "measure_voltage",
+	"button"
+  ],
+  
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 134,
+    "productTypeId": [
+      2
+    ],
+    "productId": [
+      28,
+      95
+    ],
+    "zwaveAllianceProductId": 1596,
+    "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1596/Home Energy Meter Gen5 manual.pdf",
+    "learnmode": {
+      "instruction": {
+        "en": "Press the action button on the {{driverNameEn}}",
+        "nl": "Druk op de actie knop op de {{driverNameNl}}"
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "multiChannelNodes": {
+      "1": {
+        "class": "sensor",
+        "capabilities": [
+          "measure_power",
+          "meter_power",
+          "measure_voltage",
+          "measure_current"
+        ],
+        "name": {
+          "en": "Clamp 01"
+        },
+        "icon": "/drivers/ZW095-C3/assets/icon.svg",
+        "settings": []
+      },
+	  "2": {
+	  "class": "sensor",
+        "capabilities": [
+          "measure_power",
+          "meter_power",
+          "measure_voltage",
+          "measure_current"
+        ],
+        "name": {
+          "en": "Clamp 02"
+        },
+        "icon": "/drivers/ZW095-C3/assets/icon.svg",
+        "settings": []
+		},
+		"3": {
+	  "class": "sensor",
+        "capabilities": [
+          "measure_power",
+          "meter_power",
+          "measure_voltage",
+          "measure_current"
+        ],
+        "name": {
+          "en": "Clamp 03"
+        },
+        "icon": "/drivers/ZW095-C3/assets/icon.svg",
+        "settings": []
+		}
+	 },
+	"defaultConfiguration": [
+      {
+        "id": 101,
+        "value": 4130560,
+        "size": 4
+      },
+      {
+        "id": 111,
+        "size": 4,
+        "value": 240
+      },
+	  {
+        "id": 102,
+        "value": 14336,
+        "size": 4
+      },
+      {
+        "id": 112,
+        "size": 4,
+        "value": 1800
+      },
+	  {
+        "id": 3,
+        "value": 0,
+        "size": 1
+      }
+	  ]
+  }
+}
