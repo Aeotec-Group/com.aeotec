@@ -1,0 +1,188 @@
+[
+  
+
+  {
+    "id": "35",
+    "type": "number",
+    "label": {
+      "en": "Moving time",
+      "nl": "Bewegende tijd"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) sets the time the roller blind needs to move from top to bottom.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) stelt de tijd in die het rolgordijn nodig heeft om van boven naar beneden te bewegen."
+    },
+    "zwave": {
+      "index": 35,
+      "size": 1
+    },
+    "attr": {
+      "min": 5,
+      "max": 127
+    },
+    "value": 150
+  },
+	{
+    "id": "80",
+    "type": "dropdown",
+    "label": {
+      "en": "Instant Report"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) defines the report type of Nano Shutter when controlling from the external switches."
+    },
+    "zwave": {
+      "index": 80,
+      "size": 1
+    },
+    "value": "1",
+    "values": [
+			  {
+				"id": "0",
+				"label": {
+				  "en": "No report"
+				}
+			  },
+			  {
+				"id": "1",
+				"label": {
+				  "en": "Basic report"
+				}
+			  },
+			  {
+				"id": "2",
+				"label": {
+				  "en": "Switch multilevel report"
+				}
+			  }  
+		  ]
+	  },
+    {
+    "id": "85",
+    "type": "dropdown",
+    "label": {
+      "en": "Extern Button Operation Mode",
+      "nl": "Externe knop Bedieningswijze"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) defines the operating mode of the externally connected switches.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) definieert de bedrijfsmodus van de extern aangesloten schakelaars."
+    },
+    "zwave": {
+      "index": 85,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "S1, S2 open, close and stop shutter",
+          "nl": "S1, S2 openen, sluiten en stoppen van de sluiter"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "S1 Open/Stop, S2 Close/Stop",
+          "nl": "S1 Open/Stop, S2 Sluiten/Stop"
+        }
+      }
+            
+	  ]
+	  },
+  {
+    "id": "120",
+    "type": "dropdown",
+    "label": {
+      "en": "Switch type input 1",
+      "nl": "Schakelaar type input 1"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the input device mode for input 1.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de modus voor het invoer apparaat verbonden aan ingang 1."
+    },
+    "zwave": {
+      "index": 120,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Automatic",
+          "nl": "Automatisch"
+        }
+      },
+	  {
+        "id": "1",
+        "label": {
+          "en": "2-state switch mode",
+          "nl": "2-state schakel modus"
+        }
+      },
+            {
+        "id": "2",
+        "label": {
+          "en": "3-way switch mode",
+          "nl": "3-way schakel modus"
+        }
+      },
+      	  {
+        "id": "3",
+        "label": {
+          "en": "Momentary switch",
+          "nl": "Pulsdruk schakelaar"
+        }
+		}
+    ]
+  },
+  {
+    "id": "121",
+    "type": "dropdown",
+    "label": {
+      "en": "Switch type input 2",
+      "nl": "Schakelaar type input 2"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the input device mode for input 2.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de modus voor het invoer apparaat verbonden aan ingang 2."
+    },
+    "zwave": {
+      "index": 121,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Automatic",
+          "nl": "Automatisch"
+        }
+      },
+	  {
+        "id": "1",
+        "label": {
+          "en": "2-state switch mode",
+          "nl": "2-state schakel modus"
+        }
+      },
+            {
+        "id": "2",
+        "label": {
+          "en": "3-way switch mode",
+          "nl": "3-way schakel modus"
+        }
+      },
+      	  {
+        "id": "3",
+        "label": {
+          "en": "Momentary switch",
+          "nl": "Pulsdruk schakelaar"
+        }
+		}
+    ]
+  }
+]
