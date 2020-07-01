@@ -273,7 +273,7 @@
       "index": 102,
       "size": 4
     },
-    "value": 0
+    "value": 3
   },
   {
     "id": "103",
@@ -324,7 +324,7 @@
       "index": 112,
       "size": 4
     },
-    "value": 600
+    "value": 300
   },
   {
     "id": "113",
@@ -415,5 +415,58 @@
         }
       }
     ]
+  },
+  {
+    "id": "125",
+    "type": "number",
+    "label": {
+      "en": "Set the default dimming rate."
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}})set the default dimming rate."
+    },
+    "zwave": {
+      "index": 125,
+      "size": 1
+    },
+    "value": 3
+  },
+  {
+    "id": "131",
+    "type": "number",
+    "label": {
+      "en": "Min brightness level"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) Set the min brightness level that the load can reach to. Note: When the level is determined, this level value will not be reset after exclusion."
+    },
+    "zwave": {
+      "index": 131,
+      "size": 1
+    },
+	 "attr": {
+      "min": 0,
+      "max": 99
+    },
+    "value": 0
+  },
+  {
+    "id": "132",
+    "type": "number",
+    "label": {
+      "en": "Max brightness level"
+    },
+    "hint": {
+      "en": "Set the max brightness level that the load can reach to. Note: When the level is determined, this level value will not be reset after exclusion."
+    },
+    "zwave": {
+      "index": 132,
+      "size": 1
+    },
+	 "attr": {
+      "min": 0,
+      "max": 99
+    },
+    "value": 99
   }
-]
+  ]
