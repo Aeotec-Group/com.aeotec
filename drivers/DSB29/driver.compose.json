@@ -1,0 +1,43 @@
+{
+  "id": "DSB29",
+  "name": {
+    "en": "Door/Window Sensor G2"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_battery",
+    "alarm_contact"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "energy": {
+    "batteries": [
+      "AAA",
+      "AAA"
+    ]
+  },
+  "zwave": {
+    "manufacturerId": 134,
+    "productTypeId": [
+      2,
+      2562,
+      514
+    ],
+    "productId": [
+      29
+    ],
+    "zwaveAllianceProductId": 764,
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Short press the action button on the back of the {{driverNameEn}}.",
+        "nl": "Druk kort op de actie knop op de achterkant van de {{driverNameNl}}."
+      }
+    },
+    "associationGroups": [
+      1
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "id": "3",
+    "type": "dropdown",
+    "label": {
+      "en": "Sensor behaviour",
+      "nl": "Sensor gedrag"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines when the sensor triggers the contact alarm.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt wanneer het contact alarm van de sensor afgaat."
+    },
+    "zwave": {
+      "index": 3,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "No contact = on, contact = off",
+          "nl": "Geen contact = aan, contact = uit"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "No contact = off, contact = on",
+          "nl": "Geen contact = uit, contact = aan"
+        }
+      }
+    ]
+  }
+]
