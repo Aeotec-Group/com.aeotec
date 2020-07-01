@@ -1,0 +1,338 @@
+[
+  {
+    "id": "20",
+    "type": "dropdown",
+    "label": {
+      "en": "Motor behavior after Power ON",
+      "nl": "Motorisch gedrag na het inschakelen van de stroom"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the behaviour of the device after power loss.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het gedrag van het apparaat na stroom uitval."
+    },
+    "zwave": {
+      "index": 20,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Status before re-power",
+          "nl": "Status voor stroomonderbreking"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Moves to 99%",
+          "nl": "Verplaatst naar 99%"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Moves to 0%",
+          "nl": "Verplaatst naar 0%"
+        }
+      }
+    ]
+  },
+  {
+    "id": "22",
+    "type": "dropdown",
+    "label": {
+      "en": "Configure motor run direction",
+      "nl": "Configuratie van de looprichting van de motor"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the behaviour of the motor control.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het gedrag van de motorbesturing."
+    },
+    "zwave": {
+      "index": 22,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Both mode, motor run in default direction",
+          "nl": "Beide modi, de motor loopt in de standaardrichting"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Only Shutter Mode reverse direction",
+          "nl": "Alleen de sluitermodus in omgekeerde richting"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Only Venetian Mode reverce direction",
+          "nl": "Alleen Venetiaanse Modus reverceerrichting"
+        }
+      },
+	   {
+        "id": "3",
+        "label": {
+          "en": "Both mode, motor runs in reverse direction",
+          "nl": "Beide modi, de motor loopt in omgekeerde richting"
+        }
+      }
+    ]
+  },
+  {
+    "id": "34",
+    "type": "number",
+    "label": {
+      "en": "(venetian blinds) Blade turn time * 0.1",
+      "nl": "(Jaloezieën) Bladdraaitijd * 0,1"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the maximum time for blade turn time.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de maximale tijd voor het draaien van de messen."
+    },
+    "zwave": {
+      "index": 34,
+      "size": 2
+    },
+    "attr": {
+      "min": 10,
+      "max": 32767
+    },
+    "value": 150
+  },
+  {
+    "id": "35",
+    "type": "number",
+    "label": {
+      "en": "Blind up/down time * 0.01",
+      "nl": "Blinde op/neer tijd * 0,01"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the maximum time up/down time for motor.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de maximale op/neer-tijd van de motor."
+    },
+    "zwave": {
+      "index": 35,
+      "size": 2
+    },
+    "attr": {
+      "min": 500,
+      "max": 32767
+    },
+    "value": 15000
+  },
+   {
+    "id": "36",
+    "type": "dropdown",
+    "label": {
+      "en": "Enter Calibration",
+      "nl": "Voer Kalibratie in"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) starts the calibration.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) start de kalibratie."
+    },
+    "zwave": {
+      "index": 36,
+      "size": 1
+    },
+	"value": "0",
+    "values":[
+      {
+        "id": "0",
+        "label": {
+          "en": "Exit calibration",
+          "nl": "Kalibratie bij uitgang"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Enter Shutter Mode Calibration",
+          "nl": "Ga naar de sluitertijdkalibratiemodus"
+        }
+      },
+	  {
+        "id": "2",
+        "label": {
+          "en": "Enter Venetian Mode Calibration",
+          "nl": "Voer de Venetiaanse modus kalibratie ins"
+        }
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "type": "dropdown",
+    "label": {
+      "en": "Set curtain mode",
+      "nl": "Stel de gordijnmodus in"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) sets the curtain mode used.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) stelt de gordijnmodus in gebruik."
+    },
+    "zwave": {
+      "index": 39,
+      "size": 1
+    },
+	"value": "0",
+    "values":[
+      {
+        "id": "0",
+        "label": {
+          "en": "Shutter Mode",
+          "nl": "sluitermodus"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Venetian Mode",
+          "nl": "Venetiaanse mode"
+        }
+      }
+    ]
+  },
+    {
+    "id": "85",
+    "type": "dropdown",
+    "label": {
+      "en": "Extern Button Operation Mode",
+      "nl": "Externe knop Bedieningswijze"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) defines the operating mode of the externally connected switches.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) definieert de bedrijfsmodus van de extern aangesloten schakelaars."
+    },
+    "zwave": {
+      "index": 85,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "S1, S2 open, close and stop shutter",
+          "nl": "S1, S2 openen, sluiten en stoppen van de sluiter"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "S1 Open/Stop, S2 Close/Stop",
+          "nl": "S1 Open/Stop, S2 Sluiten/Stop"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Venetian Control",
+          "nl": "Venetiaanse controle"
+        }
+      }
+	  ]
+	  },
+  {
+    "id": "120",
+    "type": "dropdown",
+    "label": {
+      "en": "Switch type input 1",
+      "nl": "Schakelaar type input 1"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the input device mode for input 1.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de modus voor het invoer apparaat verbonden aan ingang 1."
+    },
+    "zwave": {
+      "index": 120,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Automatic",
+          "nl": "Automatisch"
+        }
+      },
+	  {
+        "id": "1",
+        "label": {
+          "en": "2-state switch mode",
+          "nl": "2-state schakel modus"
+        }
+      },
+            {
+        "id": "2",
+        "label": {
+          "en": "3-way switch mode",
+          "nl": "3-way schakel modus"
+        }
+      },
+      	  {
+        "id": "3",
+        "label": {
+          "en": "Momentary switch",
+          "nl": "Pulsdruk schakelaar"
+        }
+		}
+    ]
+  },
+  {
+    "id": "121",
+    "type": "dropdown",
+    "label": {
+      "en": "Switch type input 2",
+      "nl": "Schakelaar type input 2"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the input device mode for input 2.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de modus voor het invoer apparaat verbonden aan ingang 2."
+    },
+    "zwave": {
+      "index": 121,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Automatic",
+          "nl": "Automatisch"
+        }
+      },
+	  {
+        "id": "1",
+        "label": {
+          "en": "2-state switch mode",
+          "nl": "2-state schakel modus"
+        }
+      },
+            {
+        "id": "2",
+        "label": {
+          "en": "3-way switch mode",
+          "nl": "3-way schakel modus"
+        }
+      },
+      	  {
+        "id": "3",
+        "label": {
+          "en": "Momentary switch",
+          "nl": "Pulsdruk schakelaar"
+        }
+		}
+    ]
+  }
+]
