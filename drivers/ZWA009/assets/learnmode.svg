@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="learnmode.svg"
+   id="svg10"
+   xml:space="preserve"
+   enable-background="new 0 0 64 64"
+   viewBox="0 0 64 64"
+   y="0px"
+   x="0px"
+   version="1.1"><metadata
+   id="metadata16"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs14" /><sodipodi:namedview
+   inkscape:current-layer="svg10"
+   inkscape:window-maximized="1"
+   inkscape:window-y="-11"
+   inkscape:window-x="-11"
+   inkscape:cy="32"
+   inkscape:cx="32"
+   inkscape:zoom="12.71875"
+   showgrid="false"
+   id="namedview12"
+   inkscape:window-height="1496"
+   inkscape:window-width="2520"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0"
+   guidetolerance="10"
+   gridtolerance="10"
+   objecttolerance="10"
+   borderopacity="1"
+   bordercolor="#666666"
+   pagecolor="#ffffff" />
+<g
+   id="Layer_1">
+</g>
+<g
+   id="Layer_2">
+	<g
+   id="g7">
+		<path
+   id="path3"
+   d="M11.18,49.326    c-1.064-1.689-1.68-3.684-1.68-5.816V20.443c0-6.032,4.934-10.966,10.966-10.966h23.068c6.031,0,10.966,4.935,10.966,10.966V43.51    c0,6.031-4.935,10.966-10.966,10.966H20.466c-2.547,0-4.899-0.88-6.766-2.352"
+   stroke-miterlimit="10"
+   stroke-width="1.5"
+   stroke="#000000"
+   fill="none" />
+		<path
+   id="path5"
+   d="M35.252,25.642    c2.297,1.181,3.867,3.575,3.867,6.335c0,3.932-3.187,7.119-7.119,7.119s-7.119-3.187-7.119-7.119c0-2.761,1.571-5.154,3.869-6.335    "
+   stroke-miterlimit="10"
+   stroke-width="1.5"
+   stroke="#000000"
+   fill="none" />
+	</g>
+</g>
+<ellipse
+   ry="5.97543"
+   rx="6.0540543"
+   cy="31.921377"
+   cx="32"
+   id="path22"
+   style="fill:#0000ff;fill-rule:evenodd" /><text
+   transform="scale(0.97077873,1.0301009)"
+   id="text26"
+   y="22.020195"
+   x="39.618553"
+   style="font-style:normal;font-weight:normal;font-size:7.83536px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.734565"
+   xml:space="preserve"><tspan
+     style="stroke-width:0.734565"
+     y="22.020195"
+     x="39.618553"
+     id="tspan24"
+     sodipodi:role="line">3x</tspan></text></svg>

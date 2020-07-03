@@ -1,0 +1,106 @@
+{
+  "id": "ZWA009",
+  "name": {
+    "en": "aërQ Temperature & Humidity Sensor"
+  },
+  "capabilities": [
+    "measure_temperature", 
+	"measure_humidity", 
+	"measure_dewpoint",
+	"alarm_generic.mold", 
+	"measure_battery"
+  ],
+  "energy": {
+    "batteries": [ "CR2477" ]
+  },
+    "capabilitiesOptions": {
+    "alarm_generic.mold": {
+      "title": {
+        "en": "Mold Alert",
+        "nl": "Schimmel Alarm",
+		"de": "Schimmel Alarm"
+      }
+}
+},
+  "zwave": {
+    "manufacturerId": 881,
+    "productTypeId": 2,
+    "productId": 9,
+    "learnmode": {
+	"image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Tripple clicking the button includes (adds) the device. \nThe LED flashes alternately red/green until inclusion is started. ",
+        "nl": "De Tripple-klik op de knop bevat (voegt) het apparaat toe. \nDe LED knippert afwisselend rood/groen tot de opname wordt gestart.",
+		"de": "Ein dreifaches Anklicken des Knopfes fügt das Gerät hinzu. \nDie LED blinkt bis zum Start der Inklusion abwechselnd rot/grün."
+      }
+    },
+	"unlearnmode": {
+	"image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Tripple clicking the button includes (adds) the device. \n The LED flashes alternately red/green until exclusion is started. ",
+        "nl": "Tripple-klikken op de knop omvat (voegt toe) het apparaat. \n De LED knippert afwisselend rood/groen tot de uitsluiting wordt gestart.",
+		"de": "Ein dreifaches Anklicken des Knopfes fügt das Gerät hinzu. \n Die LED blinkt bis zum Start der Exklusion abwechselnd rot/grün."
+      }
+    },
+    "associationGroups": [1],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Z-Wave Plus Lifeline"
+        }
+      },
+      "2": {
+        "hint": {
+          "en": "Temperature High Trigger",
+		  "nl": "Temperatuur Hoge Trigger",
+		  "de": "Sendet Befehle an die Assozierten Geräte bei überschreiten des oberen Temperaturschwellwertes"
+        }
+      },
+      "3": {
+        "hint": {
+          "en": "Temperature Low Trigger",
+		  "nl": "Temperatuur Lage Trigger",
+		  "de": "Sendet Befehle an die Assozierten Geräte bei unterschreiten des unteren Temperaturschwellwertes"
+        }
+      },
+	  "4": {
+        "hint": {
+          "en": "Humidity High Trigger",
+		  "nl": "Vochtigheid Hoge Trigger",
+		  "de": "Sendet Befehle an die Assozierten Geräte bei überschreiten des oberen Feuchtigkeitsschwellwertes"
+        }
+      },
+	  "5": {
+        "hint": {
+          "en": "Humidity Low Trigger",
+		  "nl": "Vochtigheid Lage Trigger",
+		  "de": "Sendet Befehle an die Assozierten Geräte bei unterschreiten des unteren Feuchtigkeitsschwellwertes"
+        }
+      },
+	  "6": {
+        "hint": {
+          "en": "Air Temperature",
+		  "nl": "Air Temperature",
+		  "de": "Sendet den Temperaturwert an ein Assoziertes Gerät"
+        }
+      }
+    }
+  },
+  "class": "sensor",
+  "images": {
+    "large": "/drivers/ZWA009/assets/images/large.jpg",
+    "small": "/drivers/ZWA009/assets/images/small.jpg"
+  },
+  "defaultConfiguration": [
+			{
+				"id": 1,
+				"size": 1,
+				"value": 5
+			},
+			{
+				"id": 2,
+				"size": 1,
+				"value": 5
+			}
+]
+}
