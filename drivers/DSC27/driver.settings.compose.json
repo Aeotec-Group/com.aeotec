@@ -1,0 +1,42 @@
+[
+  {
+    "id": "120",
+    "type": "dropdown",
+    "label": {
+      "en": "Switch type input",
+      "nl": "Schakelaar type input"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the input device mode for input.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de modus voor het invoer apparaat verbonden aan ingang."
+    },
+    "zwave": {
+      "index": 120,
+      "size": 1
+    },
+    "value": "1",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Momentary switch",
+          "nl": "Pulsdruk schakelaar"
+        }
+      },
+       {
+        "id": "1",
+        "label": {
+          "en": "2-state switch mode",
+          "nl": "2-state schakel modus"
+                  }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "3-way switch mode",
+          "nl": "3-way schakel modus"
+        }
+      }
+    ]
+  }
+]

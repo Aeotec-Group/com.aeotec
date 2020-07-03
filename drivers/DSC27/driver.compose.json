@@ -1,0 +1,49 @@
+{
+  "id": "DSC27",
+  "name": {
+    "en": "Micro Dimmer G2"
+  },
+  "class": "light",
+  "capabilities": [
+    "dim",
+    "onoff"
+  ],
+  "capabilitiesOptions": {
+    "onoff": {
+      "setOnDim": false
+    }
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 134,
+    "productTypeId": [
+      3,
+	  259,
+      515
+    ],
+    "productId": [
+      27
+    ],
+    "zwaveAllianceProductId": 765,
+    "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2135/Aeon Labs Nano Dimmer manual.pdf",
+    "learnmode": {
+      "instruction": {
+        "en": "Short press the action button on the back of the Micro Dimmer.",
+        "nl": "Druk kort op de actie knop op de achterkant van de Micro Dimmer."
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "defaultConfiguration": [
+      {
+        "id": 80,
+        "value": 2,
+        "size": 1
+      }
+    ]
+  }
+}
