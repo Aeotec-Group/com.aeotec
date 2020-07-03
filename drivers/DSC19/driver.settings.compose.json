@@ -1,0 +1,144 @@
+[
+  {
+    "id": "101",
+    "type": "number",
+    "label": {
+      "en": "Report group 1 report type",
+      "nl": "Rapport type groep 1"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the type of reports sent to devices in the 1st report group.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welk type rapporten er worden verstuurd naar apparaten in de 1e groep."
+    },
+    "zwave": {
+      "index": 101,
+      "size": 4
+    },
+    "value": 15
+  },
+  {
+    "id": "102",
+    "type": "number",
+    "label": {
+      "en": "Report group 2 report type",
+      "nl": "Rapport type groep 2"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the type of reports sent to devices in the 2nd report group.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welk type rapporten er worden verstuurd naar apparaten in de 2e groep."
+    },
+    "zwave": {
+      "index": 102,
+      "size": 4
+    },
+    "value": 0
+  },
+  {
+    "id": "103",
+    "type": "number",
+    "label": {
+      "en": "Report group 3 report type",
+      "nl": "Rapport type  groep 3"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the type of reports sent to devices in the 3rd report group.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welk type rapporten er worden verstuurd naar apparaten in de 3e groep."
+    },
+    "zwave": {
+      "index": 103,
+      "size": 4
+    },
+    "value": 0
+  },
+  {
+    "id": "111",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 1",
+      "nl": "Rapportage interval  groep 1"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the interval for sending report to devices in report group 1.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de interval voor het versturen van rapporten naar apparaten in de 1ste groep."
+    },
+    "zwave": {
+      "index": 111,
+      "size": 4
+    },
+    "value": 1800
+  },
+  {
+    "id": "112",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 2",
+      "nl": "Rapportage interval groep 2"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the interval for sending report to devices in report group 2.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de interval voor het versturen van rapporten naar apparaten in de 2e groep."
+    },
+    "zwave": {
+      "index": 112,
+      "size": 4
+    },
+    "value": 300
+  },
+  {
+    "id": "113",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 3",
+      "nl": "Rapportage interval groep 3"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the interval for sending report to devices in report group 3.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de interval voor het versturen van rapporten naar apparaten in de 3e groep."
+    },
+    "zwave": {
+      "index": 113,
+      "size": 4
+    },
+    "value": 600
+  },
+  {
+    "id": "120",
+    "type": "dropdown",
+    "label": {
+      "en": "Switch type input",
+      "nl": "Schakelaar type input"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the input device mode for input.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de modus voor het invoer apparaat verbonden aan ingang."
+    },
+    "zwave": {
+      "index": 120,
+      "size": 1
+    },
+    "value": "1",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Momentary switch",
+          "nl": "Pulsdruk schakelaar"
+        }
+      },
+       {
+        "id": "1",
+        "label": {
+          "en": "2-state switch mode",
+          "nl": "2-state schakel modus"
+                  }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "3-way switch mode",
+          "nl": "3-way schakel modus"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,78 @@
+{
+  "id": "DSC19",
+  "name": {
+    "en": "Micro Smart Dimmer G2"
+  },
+  "class": "light",
+  "capabilities": [
+    "dim",
+    "measure_power",
+    "meter_power",
+    "onoff",
+	"measure_voltage",
+	"measure_current"
+  ],
+  "capabilitiesOptions": {
+    "onoff": {
+      "setOnDim": false
+    }
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 134,
+    "productTypeId": [
+      3,
+	  259,
+      515
+    ],
+    "productId": [
+      19
+    ],
+    "zwaveAllianceProductId": 774,
+    "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2135/Aeon Labs Nano Dimmer manual.pdf",
+    "learnmode": {
+      "instruction": {
+        "en": "Short press the action button on the back of the Micro Dimmer.",
+        "nl": "Druk kort op de actie knop op de achterkant van de Micro Dimmer."
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "defaultConfiguration": [
+      {
+        "id": 80,
+        "value": 2,
+        "size": 1
+      },
+      {
+        "id": 90,
+        "size": 1,
+        "value": 0
+      },
+	  {
+        "id": 101,
+        "size": 4,
+        "value": 15
+      },
+	  {
+        "id": 102,
+        "size": 4,
+        "value": 0
+      },
+	  {
+        "id": 103,
+        "size": 4,
+        "value": 0
+      },
+	  {
+        "id": 111,
+        "size": 4,
+        "value": 1800
+      }
+    ]
+  }
+}
