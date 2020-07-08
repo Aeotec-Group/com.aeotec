@@ -7,7 +7,7 @@
       
     },
     "hint": {
-      "en": "This parameter is configured the delay time before PIR sensor can be triggered again to reset motion timeout counter. Value = 0 will disable PIR sensor from triggering until motion timeout has finished."
+      "en": "This parameter configures the delay time before PIR sensor can be triggered again to reset motion timeout counter. Value = 0 will disable PIR sensor from triggering until motion timeout has finished."
     },
     "zwave": {
       "index": 1,
@@ -26,7 +26,7 @@
       "en": "Motion Clear Time"
     },
     "hint": {
-      "en": "This parameter is configured the time to clear motion event after a motion event detected."      
+      "en": "This parameter configures the time to clear a motion event after a motion event detected."      
     },
     "zwave": {
       "index": 2,
@@ -148,7 +148,7 @@
       "en": "Disable BASIC_SET to Associated nodes"
     },
     "hint": {
-      "en": "This parameter is configured the enabled or disabled send BASIC_SET command to nodes that associated in group 2 and group 3."
+      "en": "This parameter enables or disables sending the BASIC_SET command to nodes that are associated in group 2 and group 3."
     },
     "zwave": {
       "index": 5,
@@ -189,7 +189,7 @@
       "en": "Basic Set Value Settings for Group 2"
     },
     "hint": {
-      "en": "This parameter is configured the enabled or disabled send BASIC_SET command to nodes that associated in group 2 and group 3."
+      "en": "This parameter enables or disables sending the BASIC_SET command to nodes that are associated in group 2 and group 3."
     },
     "zwave": {
       "index": 6,
@@ -242,7 +242,7 @@
       "en": "Temperature Alarm Value"
     },
     "hint": {
-      "en": "This parameter is configured the threshold value that alarm level for temperature. When the current ambient temperature value is larger than this configuration value, device will send ON to nodes associated in group 3. If current temperature value is less than this value, device will send OFF to nodes associated in group 3."
+      "en": "This parameter configures the threshold value for the temperature alarm. When the current ambient temperature value is larger than the configured value, the device will send ON to all nodes associated in group 3. If the current temperature value is less than this value, the device will send OFF to all nodes associated in group 3."
     },
     "zwave": {
       "index": 7,
@@ -261,7 +261,7 @@
       "en": "Led Indicate Disable"
     },
     "hint": {
-      "en": "This parameter is configured the Led light on disable or enable."
+      "en": "This parameter enables or disables the Led light."
     },
     "zwave": {
       "index": 10,
@@ -276,7 +276,7 @@
       "en": "Temperature Sensor Report Interval"
     },
     "hint": {
-      "en": "This parameter is configured the time interval for temperature sensor report. This value is larger, the battery life is longer."
+      "en": "This parameter configures the time interval for the temperature sensor report. The larger the value, the longer battery life will be."
     },
     "zwave": {
       "index": 23,
@@ -295,7 +295,7 @@
       "en": "Light Sensor Report Interval"
     },
     "hint": {
-      "en": "This parameter is configured the time interval for light sensor report. This value is larger, the battery life is longer."
+      "en": "This parameter configures the time interval for the light sensor report. The larger the value, the longer battery life will be."
     },
     "zwave": {
       "index": 24,
@@ -314,7 +314,7 @@
       "en": "Temperature Offset Value"
     },
     "hint": {
-      "en": "The current measuring temperature value can be add and minus a value by this setting."
+      "en": "The measuring temperature value can be added or subtracted using this value setting."
     },
     "zwave": {
       "index": 30,
@@ -333,7 +333,7 @@
       "en": "Light Intensity Offset Value"
     },
     "hint": {
-      "en": "The current measuring light intensity value can be add and minus a value by this setting."
+      "en": "The measuring light intensity value can be added or subtracted using this value setting."
     },
     "zwave": {
       "index": 31,
