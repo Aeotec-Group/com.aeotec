@@ -1,0 +1,100 @@
+{
+	"id": "ZWA021",
+	"name": {
+		"en": "Radiator Thermostat"
+	},
+	"zwave": {
+		"manufacturerId": 881,
+		"productTypeId": 2,
+		"productId": [
+			21
+		],
+		"learnmode": {
+			"image": "/drivers/ZWA021/assets/learnmode.svg",
+			"instruction": {
+				"en": "Press the boost button once.",
+				"nl": "Druk 1 keer op de boost knop."
+			}
+		},
+		"unlearnmode": {
+			"image": "/drivers/ZWA021/assets/unlearnmode.svg",
+			"instruction": {
+				"en": "Hold the boost button for atleast 5 seconds.",
+				"nl": "Houdt de boost knop voor tenminste 5 seconden ingedrukt."
+			}
+		},
+		"associationGroups": [
+			1
+		],
+		"associationGroupsOptions": {
+			"1": {
+				"hint": {
+					"en": "This is the controller group, it is not recommended to change this ID",
+					"nl": "Dit is de controller groep, het is niet aangeraden deze ID te wijzigen"
+				}
+			}
+		},
+		"defaultConfiguration": [
+			{
+				"id": 5,
+				"size": 1,
+				"value": 1
+			}
+		]
+	},
+	"class": "thermostat",
+	"capabilities": [
+		"measure_battery",
+		"ZWA021_mode",
+		"measure_temperature",
+		"target_temperature",
+		"ZWA021_manual_value",
+		"ZWA021_protection"
+	],
+	"capabilitiesOptions": {
+		"target_temperature": {
+			"min": 8,
+			"max": 28,
+			"step": 0.5
+		}
+	},
+	"mobile": {
+		"components": [
+			{
+				"id": "icon",
+				"capabilities": [ ]
+			},
+			{
+				"id": "battery",
+				"capabilities": [
+					"measure_battery"
+				]
+			},
+			{
+				"id": "picker",
+				"capabilities": [
+					"ZW021_mode"
+				]
+			},
+			{
+				"id": "sensor",
+				"capabilities": [
+					"measure_temperature"
+				]
+			},
+			{
+				"id": "thermostat",
+				"capabilities": [
+					"target_temperature"
+				]
+			}
+		]
+	},
+	  "energy": {
+    "batteries": [ "AA","AA" ]
+  },
+	"images": {
+		"large": "/drivers/ZWA021/assets/images/large.png",
+		"small": "/drivers/ZWA021/assets/images/small.png"
+	}
+}
