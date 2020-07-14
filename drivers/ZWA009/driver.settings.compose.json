@@ -13,7 +13,7 @@
       "value": 5,
       "label": {
         "en": "Minimum Temperature change to report",
-        "nl": "Minimale temperatuursverandering te melden",
+        "nl": "Minimale temperatuurverandering voor rapport",
 		"de": "Minimale Temperaturänderung für den Bericht"
       },
       "hint": {
@@ -36,7 +36,7 @@
       "value": 5,
       "label": {
         "en": "Minimum humidity change to report",
-        "nl": "Minimale vochtigheidsverandering te melden",
+        "nl": "Minimale vochtverandering voor het rapport",
 		"de": "Minimale Feuchtigkeitsänderung für den Bericht"
       },
       "hint": {
@@ -83,13 +83,13 @@
       "type": "number",
       "value": 0,
       "label": {
-        "en": "Temperature Upper Watermark value",
-        "nl": "Temperatuur Bovenste watermerk waarde",
+        "en": "Upper temperature threshold",
+        "nl": "Bovenste temperatuurdrempel",
 		"de": "Oberer Temperaturschwellwert"
       },
       "hint": {
-        "en": "This parameter defines a temperature. If the measured temperature surpasses this watermark a BASIC command is sent into Association Group 2  (0-1000, 1/10 degree)",
-        "nl": "Deze parameter definieert een temperatuur. Als de gemeten temperatuur dit watermerk overschrijdt, wordt een BASIC-commando naar Associatiegroep 2 gestuurd (0-1000, 1/10 graad).",
+        "en": "This parameter defines a temperature. If the measured temperature surpasses this value, a BASIC command is sent into Association Group 2  (0-1000, 1/10 degree)",
+        "nl": "Deze parameter definieert een temperatuur. Als de gemeten temperatuur deze waarde overschrijdt, wordt een BASIC-commando naar Associatiegroep 2 gestuurd (0-1000, 1/10 graad).",
 		"de": "Dieser Parameter definiert eine Temperatur. Überschreitet die gemessene Temperatur diesen Schwellwert, wird ein BASIC-Befehl an die Verknüpfungsgruppe 2 gesendet (0-1000, 0.1° Schritte)"
       }
     },
@@ -107,8 +107,8 @@
       "type": "number",
       "value": 0,
       "label": {
-        "en": "Temperature Lower Watermark value",
-        "nl": "Temperatuur Lagere watermerkwaarde",
+        "en": "Lower temperature threshold",
+        "nl": "Lagere temperatuurdrempel",
 		"de": "Unterer Temperaturschwellwert"
       },
       "hint": {
@@ -130,13 +130,13 @@
       "type": "number",
       "value": 0,
       "label": {
-        "en": "Humidity Upper Watermark value",
-        "nl": "Vochtigheid Bovenste watermerkwaarde",
+        "en": "Humidity upper threshold",
+        "nl": "Luchtvochtigheid bovendrempel",
 		"de": "Luftfeuchtigkeit oberer Schwellwert "
       },
       "hint": {
-        "en": "This parameter defines a relative humidity. If the measured relative humidity surpasses this watermark a BASIC command is sent into Association Group 4 (0, 10-100 %)",
-        "nl": "Deze parameter definieert een relatieve vochtigheid. Als de gemeten relatieve vochtigheid dit watermerk overschrijdt, wordt een BASIC-commando naar Associatiegroep 4 gestuurd (0, 10-100 %)",
+        "en": "This parameter defines a relative humidity. If the measured humidity falls below this threshold, a BASIC command is sent to link group 4. (0, 10-100 in %)",
+        "nl": "Deze parameter definieert een relatieve vochtigheid. Als de gemeten relatieve vochtigheid deze drempel overschrijdt, wordt een BASIC-commando verzonden naar koppelingsgroep 4. (0, 10-100 in %)",
 		"de": "Dieser Parameter definiert eine relative Luftfeuchtigkeit. Überschreitet die gemessene relative Luftfeuchtigkeit diesen Schwellwert, wird ein BASIC-Befehl an die Verknüpfungsgruppe 4 gesendet. (0, 10-100 in %)"
       }
     },
@@ -153,13 +153,13 @@
       "type": "number",
       "value": 0,
       "label": {
-        "en": "Humidity Lower Watermark value",
-        "nl": "Vochtigheid Lagere watermerkwaarde ",
+        "en": "Humidity lower threshold",
+        "nl": "Luchtvochtigheid onderdrempel",
 		"de": "Luftfeuchtigkeit unterer Schwellwert"
       },
       "hint": {
-        "en": "This parameter defines a relative humidity. If the measured temperature dropps below this relative humidity a BASIC command is sent into Association Group 5 (0, 1-90 %)",
-        "nl": "Deze parameter definieert een relatieve vochtigheid. Als de gemeten temperatuur onder deze relatieve vochtigheid zakt, wordt een BASIC-commando naar Associatiegroep 5 gestuurd.  (0, 1-90 %)",
+        "en": "This parameter defines a relative humidity. If the measured humidity falls below this threshold, a BASIC command is sent to link group 5. (0, 1-90 in %)",
+        "nl": "Deze parameter definieert een relatieve vochtigheid. Als de gemeten luchtvochtigheid onder deze drempel komt, wordt een BASIC-commando verzonden naar koppelingsgroep 5. (0, 1-90 in %)",
 		"de": "Dieser Parameter definiert eine relative Luftfeuchtigkeit. Fällt die gemessene Luftfeuchtigkeit unter diesen Schwellwert, wird ein BASIC-Befehl an die Verknüpfungsgruppe 5 gesendet.  (0, 1-90 in %)"
       }
     },
@@ -182,8 +182,8 @@
 		"de": "Basic Werte bei unterer Temperaturschwelle"
       },
       "hint": {
-        "en": "This defines what BASIC command shall be sent out into association group 3",
-        "nl": "Dit definieert wat het BASIC-commando moet worden verzonden naar groep 3 van de vereniging",
+        "en": "This defines which BASIC command should be sent to association group 3.",
+        "nl": "Dit definieert welk BASIC-commando naar associatiegroep 3 moet worden gestuurd.",
 		"de": "Hiermit wird definiert, welcher BASIC-Befehl in die Assoziationsgruppe 3 gesendet werden soll. "
       }
     },
@@ -206,8 +206,8 @@
 		"de": "Basic Wert bei oberen Temperaturschwellwert"
       },
       "hint": {
-        "en": "This defines what BASIC command shall be sent out into association group 2",
-        "nl": "Dit definieert wat het BASIC-commando moet worden verzonden naar associaties met groep 2",
+        "en": "This defines which BASIC command should be sent to association group 2.",
+        "nl": "Dit definieert welk BASIC-commando naar associatiegroep 2 moet worden gestuurd.",
 		"de": "Hiermit wird definiert, welcher BASIC-Befehl in die Assoziationsgruppe 2 gesendet werden soll. "
       }
     },
@@ -226,12 +226,12 @@
       "value": 255,
       "label": {
         "en": "Low Humidity  Trigger BASIC Set Command Value",
-        "nl": "Laage Vochtigheid Trigger BASIC Ingestelde Commandowaarde",
+        "nl": "Lage Vochtigheid Trigger BASIC Ingestelde Commandowaarde",
 		"de": "Basic Wert bei unterem Luftfeuchtigkeitsschwellwert "
       },
       "hint": {
-        "en": "This defines what BASIC command shall be sent out into association group 5",
-        "nl": "Dit definieert wat het BASIC-commando moet worden verzonden naar associaties met groep 5",
+        "en": "This defines which BASIC command is to be sent to association group 5.",
+        "nl": "Dit definieert welk BASIC-commando naar associatiegroep 5 moet worden gestuurd.",
 		"de": "Hiermit wird definiert, welcher BASIC-Befehl in die Assoziationsgruppe 5 gesendet werden soll. "
       }
     },
@@ -254,9 +254,9 @@
 		"de": "Basic Wert bei oberen Luftfeuchtigkeitsschwellwert"
       },
       "hint": {
-        "en": "This defines what BASIC command shall be sent out into association group 4",
-        "nl": "Dit definieert wat het BASIC-commando moet worden verzonden naar associaties met groep 4",
-		"de": "Hiermit wird definiert, welcher BASIC-Befehl in die Assoziationsgruppe 4 gesendet werden soll. "
+        "en": "This defines which BASIC command should be sent to association group 4.",
+        "nl": "Dit definieert welk BASIC-commando naar associatiegroep 4 moet worden gestuurd.",
+		"de": "Hiermit wird definiert, welcher BASIC-Befehl in die Assoziationsgruppe 4 gesendet werden soll."
       }
     },
 	{
