@@ -5,28 +5,28 @@
       "value": "0",
       "label": {
         "en": "Contact alarm when window is tilted",
-        "nl": "De Wijze van de sensorverrichting",
-		"de": "Kontakt-Alarm wenn Fenster gekippt"
+        "nl": "Contactalarm wanneer raam gekanteld is",
+	    	"de": "Kontakt-Alarm wenn Fenster gekippt"
       },
       "hint": {
         "en": "If disabled, the contact alarm is set to No when the window is tilted.",
         "nl": "Als het contactalarm is uitgeschakeld, wordt het contactalarm bij het kantelen van het venster op Nee gezet.",
-		"de": "Wenn deaktiviert wird der Kontakt-Alarm wenn Fenster gekippt wurde auf Nein gesetzt"
+		    "de": "Wenn deaktiviert wird der Kontakt-Alarm wenn Fenster gekippt wurde auf Nein gesetzt"
       },
 	   "values": [{
           "id": "0",
           "label": {
             "en": "Enabled (default)",
             "nl": "ingeschakeld (standaard)",
-			"de": "Aktiviert (Standard)"
+			      "de": "Aktiviert (Standard)"
           }
         },
         {
           "id": "1",
           "label": {
-			"en": "disabled",
+			      "en": "disabled",
             "nl": "uitgeschakeld",
-			"de": "Deaktiviert"
+			      "de": "Deaktiviert"
           }
         }
       ]
@@ -41,28 +41,28 @@
       "value": "0",
       "label": {
         "en": "Sensor Operation Mode",
-        "nl": "De Wijze van de sensorverrichting",
-		"de": "Sensor-Betriebsart"
+        "nl": "Sensor werkings modus",
+		    "de": "Sensor-Betriebsart"
       },
       "hint": {
         "en": "This parameter defines if the internal magnet sensor or the external terminal input is detected and used to issue alarm notification. There is always one input active only. The other sensor input the deactivated.",
         "nl": "Deze parameter bepaalt of de interne magneetsensor of de externe klemmeningang wordt gedetecteerd en gebruikt voor het afgeven van alarmmeldingen. Er is altijd maar één ingang actief. De andere sensoringang is gedeactiveerd.",
-		"de": "Dieser Parameter legt fest, ob der interne Magnetsensor oder der Eingang des externen Terminals erkannt und zur Alarmmeldung verwendet wird. Es ist immer nur ein Eingang aktiv. Der andere Sensoreingang ist der deaktivierte. "
+	    	"de": "Dieser Parameter legt fest, ob der interne Magnetsensor oder der Eingang des externen Terminals erkannt und zur Alarmmeldung verwendet wird. Es ist immer nur ein Eingang aktiv. Der andere Sensoreingang ist der deaktivierte. "
       },
 	   "values": [{
           "id": "0",
           "label": {
             "en": "Internal Magnet Sensor Used (default)",
             "nl": "Gebruikte interne magneetsensor (standaard)",
-			"de": "Interner Magnetsensor verwendet (Standard)"
+	      		"de": "Interner Magnetsensor verwendet (Standard)"
           }
         },
         {
           "id": "1",
           "label": {
-			"en": "External Terminal Inputs Used",
+		      	"en": "External Terminal Inputs Used",
             "nl": "Gebruikte externe klemmeningangen",
-			"de": "Externe Binäreingänge verwendet"
+		      	"de": "Externe Binäreingänge verwendet"
           }
         }
       ]
@@ -78,27 +78,27 @@
       "label": {
         "en": "Sensor State Polarity",
         "nl": "Sensorstaat Polariteit van de sensor",
-		"de": "Polarität des Sensorzustands"
+	     	"de": "Polarität des Sensorzustands"
       },
       "hint": {
         "en": "This parameter defines if the internal magnet sensor or the external terminal input is detected and used to issue alarm notification. There is always one input active only. The other sensor input the deactivated.",
         "nl": "Deze parameter bepaalt of de interne magneetsensor of de externe klemmeningang wordt gedetecteerd en gebruikt voor het afgeven van alarmmeldingen. Er is altijd maar één ingang actief. De andere sensoringang is gedeactiveerd.",
-		"de": "Dieser Parameter legt fest, ob der interne Magnetsensor oder der Eingang des externen Terminals erkannt und zur Alarmmeldung verwendet wird. Es ist immer nur ein Eingang aktiv. Der andere Sensoreingang ist der deaktivierte. "
+	    	"de": "Dieser Parameter legt fest, ob der interne Magnetsensor oder der Eingang des externen Terminals erkannt und zur Alarmmeldung verwendet wird. Es ist immer nur ein Eingang aktiv. Der andere Sensoreingang ist der deaktivierte. "
       },
 	   "values": [{
           "id": "0",
           "label": {
             "en": "Closed when Magnet in proximity (default)",
             "nl": "Gesloten wanneer de magneet in de buurt is. (standaard)",
-			"de": "Geschlossen, wenn der Magnet in der Nähe ist. (Standard)"
+			      "de": "Geschlossen, wenn der Magnet in der Nähe ist. (Standard)"
           }
         },
         {
           "id": "1",
           "label": {
-			"en": "Opened when Magnet in proximity",
+			      "en": "Opened when Magnet in proximity",
             "nl": "Geopend wanneer de magneet in de buurt is.",
-			"de": "Geöffnet, wenn der Magnet in der Nähe ist."
+			      "de": "Geöffnet, wenn der Magnet in der Nähe ist."
           }
         }
       ]
@@ -114,75 +114,75 @@
       "label": {
         "en": "Visual LED Indications",
         "nl": "Visuele LED-indicaties",
-		"de": "Optische LED-Anzeige"
+		     "de": "Optische LED-Anzeige"
       },
       "hint": {
         "en": "This parameter defines when the red LED will indicate events. Disabling all indications may extend battery life. ",
         "nl": "Deze parameter bepaalt wanneer de rode LED gebeurtenissen aangeeft. Het uitschakelen van alle indicaties kan de levensduur van de batterij verlengen.",
-		"de": "Dieser Parameter legt fest, wann die rote LED Ereignisse anzeigt. Das Deaktivieren aller Anzeigen kann die Lebensdauer der Batterie verlängern."
+	    	"de": "Dieser Parameter legt fest, wann die rote LED Ereignisse anzeigt. Das Deaktivieren aller Anzeigen kann die Lebensdauer der Batterie verlängern."
       },
 	   "values": [{
           "id": "7",
           "label": {
             "en": "On at all events (default)",
             "nl": "Aan in ieder geval (standaard)",
-			"de": "An bei allen Events (Standard)"
+		      	"de": "An bei allen Events (Standard)"
           }
         },
 		 {
           "id": "0",
           "label": {
-			"en": "Off",
+			      "en": "Off",
             "nl": "Uit",
-			"de": "Aus"
+		      	"de": "Aus"
           }
         },
         {
           "id": "1",
           "label": {
-			"en": "Open/Close Status Change only",
+		      	"en": "Open/Close Status Change only",
             "nl": "Alleen openen/sluiten van de statuswijziging",
-			"de": "Nur bei Statusänderung Öffnen/Schließen"
+		      	"de": "Nur bei Statusänderung Öffnen/Schließen"
           }
         },
 		        {
           "id": "2",
           "label": {
-			"en": "Wake Up only",
+	      		"en": "Wake Up only",
             "nl": "Alleen Wake Up",
-			"de": "Nur bei Wake Up"
+		      	"de": "Nur bei Wake Up"
           }
         },
 		        {
           "id": "4",
           "label": {
-			"en": "Device Tampering only",
+	      		"en": "Device Tampering only",
             "nl": "Alleen Apparaat manipulatie",
-			"de": "Nur bei Auslösen des Tamper-Tasters"
+		      	"de": "Nur bei Auslösen des Tamper-Tasters"
           }
         },
 		        {
           "id": "3",
           "label": {
-			"en": "Open/Close Status Change + Wake Up",
+		      	"en": "Open/Close Status Change + Wake Up",
             "nl": "openen/sluiten van de statuswijziging + Wake Up",
-			"de": "Statusänderung Öffnen/Schließen + Wake Up"
+		      	"de": "Statusänderung Öffnen/Schließen + Wake Up"
           }
         },
 		        {
           "id": "5",
           "label": {
-			"en": "Open/Close Status Change + Device Tampering",
+	      		"en": "Open/Close Status Change + Device Tampering",
             "nl": "openen/sluiten van de statuswijziging + Apparaat manipulatie",
-			"de": "Statusänderung Öffnen/Schließen + Tamper-Taster"
+			      "de": "Statusänderung Öffnen/Schließen + Tamper-Taster"
           }
         },
 		        {
           "id": "6",
           "label": {
-			"en": "Wake Up + Device Tampering",
+		      	"en": "Wake Up + Device Tampering",
             "nl": "Wake Up + Apparaat manipulatie",
-			"de": "Wake Up + Tamper-Taster"
+	      		"de": "Wake Up + Tamper-Taster"
           }
         }
       ]
@@ -198,27 +198,27 @@
       "label": {
         "en": "Range Test after double click",
         "nl": "Bereiktest na dubbelklikken",
-		"de": "Reichweitentest nach Doppelklick"
+	    	"de": "Reichweitentest nach Doppelklick"
       },
       "hint": {
         "en": "Allows to enable the activation of a Z-Wave range test with double clicking the tamper switch.",
         "nl": "Maakt het mogelijk om een Z-Wave-bereiktest te activeren met een dubbelklik op de sabotageschakelaar. ",
-		"de": "Ermöglicht die Aktivierung eines Z-Wave-Reichweitentests durch Doppelklicken des Manipulationsschalters."
+	    	"de": "Ermöglicht die Aktivierung eines Z-Wave-Reichweitentests durch Doppelklicken des Manipulationsschalters."
       },
 	   "values": [{
           "id": "0",
           "label": {
             "en": "Enabled (default)",
             "nl": "Ingeschakeld",
-			"de": "Deaktiviert (Standard)"
+		      	"de": "Deaktiviert (Standard)"
           }
         },
         {
           "id": "1",
           "label": {
-			"en": "Disabled",
+		      	"en": "Disabled",
             "nl": "Uitgeschakeld",
-			"de": "Aktiviert"
+		      	"de": "Aktiviert"
           }
         }
       ]
