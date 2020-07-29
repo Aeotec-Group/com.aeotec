@@ -21,7 +21,7 @@
           "id": "7",
           "label": {
             "en": "On at all events (default)",
-            "nl": "Aan in ieder geval (standaard)",
+            "nl": "Altijd aan (standaard)",
 	      		"de": "An bei allen Events (Standard)"
           }
         },
@@ -37,7 +37,7 @@
           "id": "1",
           "label": {
 			      "en": "Water Leakage Status Change only",
-            "nl": "Alleen verandering van de waterlekkerstatus",
+            "nl": "Alleen bij status verandering van waterlekkage",
 		      	"de": "Nur bei Statusänderung des Wasseralarm"
           }
         },
@@ -45,7 +45,7 @@
           "id": "2",
           "label": {
 			      "en": "Wake Up only",
-            "nl": "Alleen Wake Up",
+            "nl": "Alleen bij Wake Up",
 			      "de": "Nur bei Wake Up"
           }
         },
@@ -53,7 +53,7 @@
           "id": "4",
           "label": {
 			      "en": "Device Tampering only",
-            "nl": "Alleen Apparaat manipulatie",
+            "nl": "Alleen bij apparaat sabotage",
 			      "de": "Nur bei Auslösen des Tamper-Tasters"
           }
         },
@@ -61,7 +61,7 @@
           "id": "3",
           "label": {
 			      "en": "Water Sensor Status Change + Wake Up",
-            "nl": "waterlekkerstatus van de statuswijziging + Wake Up",
+            "nl": "Status verandering van water sensor + Wake Up",
 		      	"de": "Statusänderung Wasser Sensor + Wake Up"
           }
         },
@@ -69,7 +69,7 @@
           "id": "5",
           "label": {
 			      "en": "Open/Close Status Change + Device Tampering",
-            "nl": "openen/sluiten van de statuswijziging + Apparaat manipulatie",
+            "nl": "Statuswijziging open / dicht + apparaat sabotage",
 		      	"de": "Statusänderung Öffnen/Schließen + Tamper-Taster"
           }
         },
@@ -77,7 +77,7 @@
           "id": "6",
           "label": {
 			      "en": "Wake Up + Device Tampering",
-            "nl": "Wake Up + Apparaat manipulatie",
+            "nl": "Wake Up + apparaat sabotage",
 			      "de": "Wake Up + Tamper-Taster"
           }
         }
@@ -201,7 +201,7 @@
           "id": "2",
           "label": {
 			      "en": "Off",
-            "nl": "Uuit",
+            "nl": "Uit",
 		      	"de": "Off"
           }
         }
@@ -297,8 +297,8 @@
       },
       "hint": {
         "en": "Off command is sent after a delay defined in this parameter. (0-32400) (Default: 0)",
-        "nl": "Off command is sent after a delay defined in this parameter. (0-32400) (Standaard: 0)",
-		"de": "Das Off Kommando wird nach einer in diesem Parameter definierten Verzögerung gesendet.  (0-32400) (Standard: 0)"
+        "nl": "Off-opdracht wordt verzonden na een in deze parameter gedefinieerde vertraging. (0-32400) (Standaard: 0)",
+		    "de": "Das Off Kommando wird nach einer in diesem Parameter definierten Verzögerung gesendet.  (0-32400) (Standard: 0)"
       }
     },
    {
@@ -315,7 +315,7 @@
       "value": 0,
       "label": {
         "en": "Delay of Tamper Alarm Cancellation",
-        "nl": "Vertraging van de Annulering van het stamperalarm door een manipulatiealarm",
+        "nl": "Tijdsvertraging tot het sabotagealarm wordt gereset",
 	    	"de": "Zeitverzögerung bis der Tamper Alarm zurückgesetzt wird "
       },
       "hint": {
@@ -334,7 +334,7 @@
       "value": "1",
       "label": {
         "en": "Reporting Tamper Alarm Cancellation",
-        "nl": "Melden van het stamperalarm annuleren",
+        "nl": "Melding dat het sabotagealarm is gereset",
 	    	"de": "Notification, dass der Tamper Alarm zurückgesetzt wurde "
       },
       "hint": {
@@ -346,7 +346,7 @@
           "id": "0",
           "label": {
             "en": "Do not send Report",
-            "nl": "Niet verzenden Rapport",
+            "nl": "Rapport niet verzenden",
 		      	"de": "Bericht nicht senden"
           }
         },
@@ -374,9 +374,9 @@
       "type": "number",
       "value": 5,
       "label": {
-        "en": "This value defines the minimum change of temperature to cause an unsolicited report of humidity to the central controller using Lifeline. If the value is set to 0, there will be no reports sent to the controller when the temperature changes. However, periodic reports managed by configuration parameter 18 may still be active.",
-        "nl": "Deze waarde definieert de minimale verandering van de temperatuur om een ongevraagde melding van de luchtvochtigheid aan de centrale te veroorzaken met behulp van de Lifeline. Als de waarde op 0 staat, worden er geen meldingen naar de regelaar gestuurd als de temperatuur verandert. Periodieke rapporten, beheerd door configuratieparameter 18, kunnen echter nog steeds actief zijn.",
-    		"de": "Dieser Wert definiert die minimale Temperaturänderung, die eine unaufgeforderte Meldung der Luftfeuchtigkeit an die zentrale Steuerung unter Verwendung von Lifeline verursacht. Wenn der Wert auf 0 gesetzt ist, werden bei einer Temperaturänderung keine Berichte an den Controller gesendet. Periodische Berichte, die durch Konfigurationsparameter 18 verwaltet werden, können jedoch weiterhin aktiv sein."
+        "en": "This value defines the minimum change of temperature to cause a temperature report.",
+        "nl": "Deze waarde definieert de minimale verandering van de temperatuur om een temperatuurrapport te veroorzaken.",
+    		"de": "Dieser Wert definiert die minimale Temperaturänderung, die einen Temperaturbericht verursacht."
       }
       
     },
@@ -394,9 +394,9 @@
       "type": "number",
       "value": 2,
       "label": {
-        "en": "This value defines the minimum change of humidity to cause an unsolicited report of humidity to the central controller using Lifeline. If the value is set to 0, there will be no reports sent to the controller when the humidity changes. However, periodic reports managed by configuration parameter 18 may still be active.",
-        "nl": "Deze waarde definieert de minimale verandering van de luchtvochtigheid om een ongevraagde melding van de luchtvochtigheid aan de centrale te veroorzaken met behulp van de Lifeline. Als de waarde op 0 wordt gezet, worden er geen meldingen naar de regelaar gestuurd als de luchtvochtigheid verandert. Periodieke rapporten, beheerd door configuratieparameter 18, kunnen echter nog steeds actief zijn.",
-    		"de": "Dieser Wert definiert die minimale Änderung der Luftfeuchtigkeit, die eine unaufgeforderte Meldung der Luftfeuchtigkeit an die zentrale Steuerung unter Verwendung von Lifeline bewirkt. Wenn der Wert auf 0 gesetzt ist, werden bei einer Änderung der Luftfeuchtigkeit keine Berichte an den Controller gesendet. Periodische Berichte, die durch Konfigurationsparameter 18 verwaltet werden, können jedoch weiterhin aktiv sein."
+        "en": "This value defines the minimum change of humidity to cause a humidity report.",
+        "nl": "Deze waarde definieert de minimale verandering van de luchtvochtigheid om een vochtigheidsrapport te veroorzaken.",
+    		"de": "Dieser Wert definiert die minimale Änderung der Feuchtigkeit, die einen Feuchtigkeitsbericht verursacht."
       }
 	},
 	{
@@ -413,9 +413,9 @@
       "type": "number",
       "value": 900,
       "label": {
-        "en": "This parameter defines the time interval to send an unsolicited report. If the value is set to 0, there will be no periodic reports sent to the controller. However, reports on temperature/humidity changes managed by configuration parameters 16 and 17, may still be active.",
-        "nl": "Deze parameter definieert het tijdsinterval voor het verzenden van een ongevraagd rapport. Als de waarde op 0 wordt gezet, worden er geen periodieke rapporten naar de regelaar gestuurd. Rapporten over temperatuur- en vochtigheidsveranderingen, beheerd door de configuratieparameters 16 en 17, kunnen echter nog steeds actief zijn.",
-	    	"de": "Dieser Parameter definiert das Zeitintervall zum Senden eines unaufgeforderten Berichts. Wenn der Wert auf 0 gesetzt ist, werden keine periodischen Berichte an den Controller gesendet. Berichte über Temperatur-/Feuchtigkeitsänderungen, die durch die Konfigurationsparameter 16 und 17 verwaltet werden, können jedoch weiterhin aktiv sein."
+        "en": "This parameter defines the time interval to send a report for both humidity and temperature.",
+        "nl": "Deze parameter definieert het tijdsinterval voor het verzenden van een rapport voor zowel de luchtvochtigheid als de temperatuur.",
+	    	"de": "Dieser Parameter definiert das Zeitintervall, in dem ein Bericht sowohl für Feuchtigkeit als auch für Temperatur gesendet werden soll."
       }
 	  }
 ]
