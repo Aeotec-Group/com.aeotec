@@ -1,8 +1,8 @@
 {
       "type": "boolean",
       "title": {
-        "en": "Tilt",
-		"nl": "Gekanteld",
+        	"en": "Tilt",
+		"nl": "Niet gekanteld",
 		"de": "Gekippt"
       },
       "getable": true,
