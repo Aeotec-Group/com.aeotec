@@ -3,17 +3,17 @@
     {
       "id": "tilt_info_on",
       "title": {
-        "en": "Has been tilted",
-		"nl": "Is gekanteld",
-		"de": "Ist gekippt worden"
+        "en": "Is tilted",
+	    	"nl": "Is gekanteld",
+	    	"de": "Ist gekippt worden"
       }
     },
     {
       "id": "tilt_info_off",
       "title": {
-        "en": "Has not tilted any more",
-		"nl": "Heeft niet meer gekanteld",
-		"de": "Ist nichtmehr gekippt"
+        "en": "Is no longer tilted",
+	    	"nl": "Is niet meer gekanteld",
+		    "de": "Ist nichtmehr gekippt"
       }
     },
 	
@@ -22,7 +22,7 @@
       "title": {
         "en": "Button/binary contact",
         "nl": "Drukknop/binair contact",
-		"de": "Taster/Binärkontakt"
+	    	"de": "Taster/Binärkontakt"
       },
       "args": [
         {
@@ -34,14 +34,14 @@
               "label": {
                 "en": "Pressed 1x",
                 "nl": "1x Ingedrukt",
-				"de": "1x gedrückt"
+			        	"de": "1x gedrückt"
               }
             },
             {
               "id": "Key Pressed 2 times",
               "label": {
                 "en": "Pressed 2x",
-				"nl": "2x Ingedrukt",
+		        		"nl": "2x Ingedrukt",
                 "de": "2x gedrückt"
               }
             },
@@ -49,7 +49,7 @@
               "id": "Key Pressed 3 times",
               "label": {
                 "en": "Pressed 3x",
-				"nl": "3x Ingedrukt",
+				        "nl": "3x Ingedrukt",
                 "de": "3x gedrückt"
               }
             },
@@ -58,7 +58,7 @@
               "label": {
                 "en": "Pressed 4x",
                 "nl": "4x Ingedrukt",
-				"de": "4x gedrückt"
+			        	"de": "4x gedrückt"
               }
             },
 			{
@@ -66,7 +66,7 @@
               "label": {
                 "en": "Pressed 5x",
                 "nl": "5x Ingedrukt",
-				"de": "5x gedrückt"
+			        	"de": "5x gedrückt"
               }
 			  },
 			 {
@@ -74,7 +74,7 @@
               "label": {
                 "en": "Hold switch",
                 "nl": "Lang ingedrukt",
-				"de": "Lang gedrückt"
+				        "de": "Lang gedrückt"
               }
 			},
             {
@@ -82,7 +82,7 @@
               "label": {
                 "en": "Hold released",
                 "nl": "Lang ingedrukt los gelaten",
-				"en": "Lang gedrückt losgelassen"
+				        "de": "Lang gedrückt losgelassen"
               }
             }
           ]
@@ -95,7 +95,7 @@
         "id": "is_tilted",
         "title": {
           "en": "Is !{{|not}} tilted",
-		  "nl": "Heeft {{|niet}} gekanteld",
+		      "nl": "Heeft {{|niet}} gekanteld",
           "de": "Ist !{{|nicht}} gekippt"
         },
         "args": []
@@ -106,12 +106,12 @@
       "id": "disabletampercontact",
       "title": {
         "en": "Switch off Tamper alert",
-		"de": "Het sabotagealarm uitschakelen",
+	    	"nl": "Het sabotagealarm uitschakelen",
         "de": "Sabotage-Alarm ausschalten"
       },
       "hint": {
         "en": "Tamper alert set to off",
-		"de": "Sabotage-alarm is ingesteld op Nee",
+	    	"nl": "Sabotage-alarm is ingesteld op Nee",
         "de": "Sabotage-Alarm-Alarm wird auf Nein gesetzt"
       },
       "args": []
