@@ -1,11 +1,12 @@
 {
-  "id": "ZW141V3",
+  "id": "ZW141",
   "name": {
     "en": "Nano Shutter V3"
   },
   "class": "blinds",
   "capabilities": [
-    "dim"
+    "windowcoverings_set"
+	
 	
     
 	
@@ -35,9 +36,13 @@
     "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=product_documents/3742/Nano%20Shutter%20-%20Product%20Manual.pdf",
     "learnmode": {
       "instruction": {
-        "en": "Add: Short press the action button on the back of the Nano Shutter. Remove: Press six times quickly the action button of the Nano Shutter.",
-        "nl": "Toevoegen: Druk kort op de actieknop aan de achterzijde van de Nano Shutter. Verwijderen: Druk zes keer snel op de actieknop van de nano-luik."
+        "en": "Add: Short press the action button on the back of the Nano Shutter."
       }
+    },
+	"unlearnmode": {
+	   "instruction": {
+	 "en": "Press six times quickly the action button of the Nano Shutter."
+             }
     },
     "associationGroups": [
       1,
