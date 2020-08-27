@@ -1,0 +1,171 @@
+[
+  {
+    "id": "2",
+    "type": "dropdown",
+    "label": {
+      "en": "Sensor Reports"
+    },
+    "hint": {
+      "en": "Reverse Sensor Reports (both Sensor Binary Report and Notification Report."
+    },
+    "zwave": {
+      "index": 2,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Open Status when Magnet is away, Close Status when magnet is near."
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Close Status when Magnet is away, Open Status when magnet is near."
+        }
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "type": "dropdown",
+    "label": {
+      "en": "Association Group 2 Settings"
+    },
+    "hint": {
+      "en": "Configure the Basic Set value. Determine the Basic Set value to control other Z-Wave devices directly when Magnet is away or near."
+    },
+    "zwave": {
+      "index": 3,
+      "size": 1
+    },
+    "value": "1",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disable completely."
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "ON when Magnet is away, and send OFF when Magnet is near."
+        }
+      },
+	  {
+        "id": "2",
+        "label": {
+          "en": "OFF when Magnet is away, and send ON when Magnet is near."
+        }
+      },
+	  {
+        "id": "3",
+        "label": {
+          "en": "Only send ON when Magnet is away."
+        }
+      },
+	  {
+        "id": "4",
+        "label": {
+          "en": "Only send OFF when Magnet is near."
+        }
+      },
+	  {
+        "id": "5",
+        "label": {
+          "en": "Only send OFF when Magnet is away."
+        }
+      },
+	  {
+        "id": "6",
+        "label": {
+          "en": "Only send ON when Magnet is near."
+        }
+      }
+    ]
+  },
+  {
+    "id": "81",
+    "type": "dropdown",
+    "label": {
+      "en": "Led Indicator"
+    },
+    "hint": {
+      "en": "Control LED Indicator. Determine whether the LED flash or not when sending Basic Set, Sensor Binary Report, Notification Report (Access Control) or Wake Up Notification."
+    },
+    "zwave": {
+      "index": 81,
+      "size": 1
+    },
+    "value": "3",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Completely disable LED."
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "LED quickly flashes only when sending Basic Set, Sensor Binary Report or Notification Report (Access Control)."
+        }
+      },
+	  {
+        "id": "2",
+        "label": {
+          "en": "LED activates only when sending Wake Up Notification."
+        }
+      },
+	  {
+        "id": "3",
+        "label": {
+          "en": "LED quickly flashes when sending Basic Set, Sensor Binary Report or Notification Report (Access Control), and activates when sending Wake Up Notification."
+        }
+      }
+    ]
+  },
+  
+  
+  {
+    "id": "90",
+    "type": "number",
+    "label": {
+      "en": "Low battery threshold"
+    },
+    "hint": {
+      "en": "Configure the low battery threshold. Induce battery report when battery level is less than or equal to threshold. Forward low battery report."
+    },
+    "zwave": {
+      "index": 90,
+      "size": 1
+    },
+	"attr": {
+      "min": 10,
+      "max": 50
+	  },
+    "value": 30
+  },
+  {
+    "id": "101",
+    "type": "number",
+    "label": {
+      "en": "Timed battery report"
+    },
+    "hint": {
+      "en": "Set how often battery is reported in minutes."
+    },
+    "zwave": {
+      "index": 101,
+      "size": 2
+    },
+	"attr": {
+      "min": 1,
+      "max": 14400
+	  },
+    "value": 70
+  }
+]

@@ -171,12 +171,12 @@
           "nl": "Automatisch"
         }
       },
-      {
+       {
         "id": "1",
         "label": {
-          "en": "Momentary switch",
-          "nl": "Pulsdruk schakelaar"
-        }
+          "en": "2-state switch mode",
+          "nl": "2-state schakel modus"
+                  }
       },
       {
         "id": "2",
@@ -188,10 +188,10 @@
       {
         "id": "3",
         "label": {
-          "en": "2-state switch mode",
-          "nl": "2-state schakel modus"
+          "en": "Momentary switch",
+          "nl": "Pulsdruk schakelaar"
         }
-      }
+	   }
     ]
   },
   {
@@ -218,12 +218,12 @@
           "nl": "Automatisch"
         }
       },
-      {
+       {
         "id": "1",
         "label": {
-          "en": "Momentary switch",
-          "nl": "Pulsdruk schakelaar"
-        }
+          "en": "2-state switch mode",
+          "nl": "2-state schakel modus"
+                  }
       },
       {
         "id": "2",
@@ -235,10 +235,238 @@
       {
         "id": "3",
         "label": {
-          "en": "2-state switch mode",
-          "nl": "2-state schakel modus"
+          "en": "Momentary switch",
+          "nl": "Pulsdruk schakelaar"
         }
       }
     ]
+  },
+  {
+    "id": "101",
+    "type": "number",
+    "label": {
+      "en": "Report group 1 report type",
+      "nl": "Rapport type groep 1"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the type of reports sent to devices in the 1st report group.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welk type rapporten er worden verstuurd naar apparaten in de 1e groep."
+    },
+    "zwave": {
+      "index": 101,
+      "size": 4
+    },
+    "value": 8
+  },
+  {
+    "id": "102",
+    "type": "number",
+    "label": {
+      "en": "Report group 2 report type",
+      "nl": "Rapport type groep 2"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the type of reports sent to devices in the 2nd report group.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welk type rapporten er worden verstuurd naar apparaten in de 2e groep."
+    },
+    "zwave": {
+      "index": 102,
+      "size": 4
+    },
+    "value": 3
+  },
+  {
+    "id": "103",
+    "type": "number",
+    "label": {
+      "en": "Report group 3 report type",
+      "nl": "Rapport type  groep 3"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the type of reports sent to devices in the 3rd report group.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welk type rapporten er worden verstuurd naar apparaten in de 3e groep."
+    },
+    "zwave": {
+      "index": 103,
+      "size": 4
+    },
+    "value": 0
+  },
+  {
+    "id": "111",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 1",
+      "nl": "Rapportage interval  groep 1"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the interval for sending report to devices in report group 1.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de interval voor het versturen van rapporten naar apparaten in de 1ste groep."
+    },
+    "zwave": {
+      "index": 111,
+      "size": 4
+    },
+    "value": 1800
+  },
+  {
+    "id": "112",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 2",
+      "nl": "Rapportage interval groep 2"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the interval for sending report to devices in report group 2.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de interval voor het versturen van rapporten naar apparaten in de 2e groep."
+    },
+    "zwave": {
+      "index": 112,
+      "size": 4
+    },
+    "value": 300
+  },
+  {
+    "id": "113",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 3",
+      "nl": "Rapportage interval groep 3"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the interval for sending report to devices in report group 3.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de interval voor het versturen van rapporten naar apparaten in de 3e groep."
+    },
+    "zwave": {
+      "index": 113,
+      "size": 4
+    },
+    "value": 600
+  },
+   {
+    "id": "255",
+    "type": "dropdown",
+    "label": {
+      "en": "Set Parameter to default",
+      "nl": "Stel de parameter in op standaardStel de parameter in op standaard"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) resets all parameters to factory settings.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) zet alle parameters terug naar de fabrieksinstellingen."
+    },
+    "zwave": {
+      "index": 255,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Nothing",
+          "nl": "Niets"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Reset Parameters",
+          "nl": "Reset Parameters"
+        }
+      }
+    ]
+  },
+ {
+    "id": "249",
+    "type": "dropdown",
+    "label": {
+      "en": "Set the recognition way of load",
+      "nl": "Stel de herkenningswijze van de belasting in"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) sets how the load is reorganized.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) stelt in hoe de lading wordt gereorganiseerd."
+    },
+    "zwave": {
+      "index": 249,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Never recognize the load when power on",
+          "nl": "Herken nooit de belasting bij het inschakelen"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Only recognize once when first power on.",
+          "nl": "Herken je maar één keer als je het apparaat voor het eerst inschakelt."
+        }
+      },
+	  {
+        "id": "2",
+        "label": {
+          "en": "Recognize the load once power on.",
+          "nl": "Herken de belasting als deze eenmaal is ingeschakeld."
+        }
+      }
+    ]
+  },
+  {
+    "id": "125",
+    "type": "number",
+    "label": {
+      "en": "Set the default dimming rate."
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}})set the default dimming rate."
+    },
+    "zwave": {
+      "index": 125,
+      "size": 1
+    },
+    "value": 3
+  },
+  {
+    "id": "131",
+    "type": "number",
+    "label": {
+      "en": "Min brightness level"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) Set the min brightness level that the load can reach to. Note: When the level is determined, this level value will not be reset after exclusion."
+    },
+    "zwave": {
+      "index": 131,
+      "size": 1
+    },
+	 "attr": {
+      "min": 0,
+      "max": 99
+    },
+    "value": 0
+  },
+  {
+    "id": "132",
+    "type": "number",
+    "label": {
+      "en": "Max brightness level"
+    },
+    "hint": {
+      "en": "Set the max brightness level that the load can reach to. Note: When the level is determined, this level value will not be reset after exclusion."
+    },
+    "zwave": {
+      "index": 132,
+      "size": 1
+    },
+	 "attr": {
+      "min": 0,
+      "max": 99
+    },
+    "value": 99
   }
-]
+  ]

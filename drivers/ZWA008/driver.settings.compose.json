@@ -1,98 +1,561 @@
 [
-  {
-    "type": "group",
-    "label": {
-      "en": "Contact sensor",
-      "nl": "Contact sensor"
-    },
-    "collapsed": false,
-    "children": [
-      {
-        "$extends": "ledStyle",
-        "$id": "led_indications",
-        "zwave": {
-          "index": 3,
-          "size": 1
-        },
-        "values": [
-          {
-            "id": "0",
-            "label": {
-              "en": "No indications",
-              "nl": "Geen indicatie"
-            }
-          },
-          {
-            "id": "1",
-            "label": {
-              "en": "indication on change in opening state",
-              "nl": "indicatie bij het openen/sluiten"
-            }
-          },
-          {
-            "id": "2",
-            "label": {
-              "en": "indication on wake up",
-              "nl": "indicatie bij het ontwaken"
-            }
-          },
-          {
-            "id": "4",
-            "label": {
-              "en": "indication on device tampering",
-              "nl": "indicatie bij sabotage"
-            }
-          }
-        ],
-        "value": "7"
+{
+      "id": "no_alarm_if_tilt",
+      "type": "dropdown",
+      "value": "0",
+      "label": {
+        "en": "Contact alarm when window is tilted",
+        "nl": "Contactalarm wanneer raam gekanteld is",
+	    	"de": "Kontakt-Alarm wenn Fenster gekippt"
       },
-      {
-        "$extends": "defaultPosition",
-        "$id": "door_window_state",
-        "zwave": {
-          "index": 2,
-          "size": 1
-        },
-        "values": [
-          {
-            "id": "0",
-            "label": {
-              "en": "Closed by default",
-              "nl": "Normaal gesloten"
-            }
-          },
-          {
-            "id": "1",
-            "label": {
-              "en": "Opened by default",
-              "nl": "Normaal open"
-            }
+      "hint": {
+        "en": "If disabled, the contact alarm is set to No when the window is tilted.",
+        "nl": "Als het contactalarm is uitgeschakeld, wordt het contactalarm bij het kantelen van het venster op Nee gezet.",
+		    "de": "Wenn deaktiviert wird der Kontakt-Alarm wenn Fenster gekippt wurde auf Nein gesetzt"
+      },
+	   "values": [{
+          "id": "0",
+          "label": {
+            "en": "Enabled (default)",
+            "nl": "ingeschakeld (standaard)",
+			      "de": "Aktiviert (Standard)"
           }
-        ]
-      }
-    ]
-  },
-  {
-    "type": "group",
-    "label": {
-      "en": "Tamper alarm",
-      "nl": "Sabotage alarm"
+        },
+        {
+          "id": "1",
+          "label": {
+			      "en": "disabled",
+            "nl": "uitgeschakeld",
+			      "de": "Deaktiviert"
+          }
+        }
+      ]
     },
-    "collapsed": true,
-    "children": [
-      {
-        "$extends": "cancellationDelay",
-        "$id": "tamper_cancellation_delay",
-        "zwave": {
-          "index": 11,
-          "size": 2
+{
+      "id": "sensor_operation_mode",
+      "zwave": {
+        "index": 1,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "0",
+      "label": {
+        "en": "Sensor Operation Mode",
+        "nl": "Sensor werkings modus",
+		    "de": "Sensor-Betriebsart"
+      },
+      "hint": {
+        "en": "This parameter defines if the internal magnet sensor or the external terminal input is detected and used to issue alarm notification. There is always one input active only. The other sensor input the deactivated.",
+        "nl": "Deze parameter bepaalt of de interne magneetsensor of de externe klemmeningang wordt gedetecteerd en gebruikt voor het afgeven van alarmmeldingen. Er is altijd maar één ingang actief. De andere sensoringang is gedeactiveerd.",
+	    	"de": "Dieser Parameter legt fest, ob der interne Magnetsensor oder der Eingang des externen Terminals erkannt und zur Alarmmeldung verwendet wird. Es ist immer nur ein Eingang aktiv. Der andere Sensoreingang ist der deaktivierte. "
+      },
+	   "values": [{
+          "id": "0",
+          "label": {
+            "en": "Internal Magnet Sensor Used (default)",
+            "nl": "Gebruikte interne magneetsensor (standaard)",
+	      		"de": "Interner Magnetsensor verwendet (Standard)"
+          }
         },
-        "attr": {
-          "min": 0,
-          "max": 32400
+        {
+          "id": "1",
+          "label": {
+		      	"en": "External Terminal Inputs Used",
+            "nl": "Gebruikte externe klemmeningangen",
+		      	"de": "Externe Binäreingänge verwendet"
+          }
+        }
+      ]
+    },
+	{
+      "id": "sensor_state_polarity",
+      "zwave": {
+        "index": 2,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "0",
+      "label": {
+        "en": "Sensor State Polarity",
+        "nl": "Sensorstaat Polariteit van de sensor",
+	     	"de": "Polarität des Sensorzustands"
+      },
+      "hint": {
+        "en": "This parameter defines if the internal magnet sensor or the external terminal input is detected and used to issue alarm notification. There is always one input active only. The other sensor input the deactivated.",
+        "nl": "Deze parameter bepaalt of de interne magneetsensor of de externe klemmeningang wordt gedetecteerd en gebruikt voor het afgeven van alarmmeldingen. Er is altijd maar één ingang actief. De andere sensoringang is gedeactiveerd.",
+	    	"de": "Dieser Parameter legt fest, ob der interne Magnetsensor oder der Eingang des externen Terminals erkannt und zur Alarmmeldung verwendet wird. Es ist immer nur ein Eingang aktiv. Der andere Sensoreingang ist der deaktivierte. "
+      },
+	   "values": [{
+          "id": "0",
+          "label": {
+            "en": "Closed when Magnet in proximity (default)",
+            "nl": "Gesloten wanneer de magneet in de buurt is. (standaard)",
+			      "de": "Geschlossen, wenn der Magnet in der Nähe ist. (Standard)"
+          }
         },
-        "value": 5
+        {
+          "id": "1",
+          "label": {
+			      "en": "Opened when Magnet in proximity",
+            "nl": "Geopend wanneer de magneet in de buurt is.",
+			      "de": "Geöffnet, wenn der Magnet in der Nähe ist."
+          }
+        }
+      ]
+    },
+	{
+      "id": "visual_led_indications",
+      "zwave": {
+        "index": 3,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "7",
+      "label": {
+        "en": "Visual LED Indications",
+        "nl": "Visuele LED-indicaties",
+		     "de": "Optische LED-Anzeige"
+      },
+      "hint": {
+        "en": "This parameter defines when the red LED will indicate events. Disabling all indications may extend battery life. ",
+        "nl": "Deze parameter bepaalt wanneer de rode LED gebeurtenissen aangeeft. Het uitschakelen van alle indicaties kan de levensduur van de batterij verlengen.",
+	    	"de": "Dieser Parameter legt fest, wann die rote LED Ereignisse anzeigt. Das Deaktivieren aller Anzeigen kann die Lebensdauer der Batterie verlängern."
+      },
+	   "values": [{
+          "id": "7",
+          "label": {
+            "en": "On at all events (default)",
+            "nl": "Aan in ieder geval (standaard)",
+		      	"de": "An bei allen Events (Standard)"
+          }
+        },
+		 {
+          "id": "0",
+          "label": {
+			      "en": "Off",
+            "nl": "Uit",
+		      	"de": "Aus"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+		      	"en": "Open/Close Status Change only",
+            "nl": "Alleen openen/sluiten van de statuswijziging",
+		      	"de": "Nur bei Statusänderung Öffnen/Schließen"
+          }
+        },
+		        {
+          "id": "2",
+          "label": {
+	      		"en": "Wake Up only",
+            "nl": "Alleen Wake Up",
+		      	"de": "Nur bei Wake Up"
+          }
+        },
+		        {
+          "id": "4",
+          "label": {
+	      		"en": "Device Tampering only",
+            "nl": "Alleen Apparaat manipulatie",
+		      	"de": "Nur bei Auslösen des Tamper-Tasters"
+          }
+        },
+		        {
+          "id": "3",
+          "label": {
+		      	"en": "Open/Close Status Change + Wake Up",
+            "nl": "openen/sluiten van de statuswijziging + Wake Up",
+		      	"de": "Statusänderung Öffnen/Schließen + Wake Up"
+          }
+        },
+		        {
+          "id": "5",
+          "label": {
+	      		"en": "Open/Close Status Change + Device Tampering",
+            "nl": "openen/sluiten van de statuswijziging + Apparaat manipulatie",
+			      "de": "Statusänderung Öffnen/Schließen + Tamper-Taster"
+          }
+        },
+		        {
+          "id": "6",
+          "label": {
+		      	"en": "Wake Up + Device Tampering",
+            "nl": "Wake Up + Apparaat manipulatie",
+	      		"de": "Wake Up + Tamper-Taster"
+          }
+        }
+      ]
+    },
+    {
+      "id": "range_test",
+      "zwave": {
+        "index": 4,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "0",
+      "label": {
+        "en": "Range Test after double click",
+        "nl": "Bereiktest na dubbelklikken",
+	    	"de": "Reichweitentest nach Doppelklick"
+      },
+      "hint": {
+        "en": "Allows to enable the activation of a Z-Wave range test with double clicking the tamper switch.",
+        "nl": "Maakt het mogelijk om een Z-Wave-bereiktest te activeren met een dubbelklik op de sabotageschakelaar. ",
+	    	"de": "Ermöglicht die Aktivierung eines Z-Wave-Reichweitentests durch Doppelklicken des Manipulationsschalters."
+      },
+	   "values": [{
+          "id": "0",
+          "label": {
+            "en": "Enabled (default)",
+            "nl": "Ingeschakeld",
+		      	"de": "Deaktiviert (Standard)"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+		      	"en": "Disabled",
+            "nl": "Uitgeschakeld",
+		      	"de": "Aktiviert"
+          }
+        }
+      ]
+    },
+	{
+      "id": "group_trigger",
+      "zwave": {
+        "index": 5,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "0",
+      "label": {
+        "en": "2nd Association Group Trigger",
+        "nl": "2de Association Group Trigger",
+		"de": "Auslöser für Assoziationsgruppe 2"
+      },
+      "hint": {
+        "en": "This parameter defines the status of the magnet switch that causes sending a BASIC command to all devices of Association Group 2. ",
+        "nl": "Deze parameter definieert de status van de magneetschakelaar die ervoor zorgt dat een BASIC-commando naar alle apparaten van Associatiegroep 2 wordt verzonden.",
+		"de": "Dieser Parameter definiert den Status des Magnetschalters, der das Senden eines BASIC-Befehls an alle Geräte der Verbindungsgruppe 2 bewirkt."
+      },
+	   "values": [{
+          "id": "0",
+          "label": {
+            "en": "Switch after Open and Close (default)",
+            "nl": "Schakelaar na openen en sluiten (standaard)",
+			"de": "Umschalten nach Open und Close (Standard)"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+			"en": "Switch after Open",
+            "nl": "Schakelaar na openen",
+			"de": "Umschalten nach Open"
+          }
+        },
+		{
+          "id": "2",
+          "label": {
+			"en": "Switch after Close",
+            "nl": "Schakelaar na sluiten",
+			"de": "Umschalten nach Close"
+          }
+        }
+      ]
+    },
+	{
+      "id": "group_command",
+      "zwave": {
+        "index": 6,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "0",
+      "label": {
+        "en": "Command Sent to Devices of Association Group 2",
+        "nl": "Commando Verzonden naar apparaten van de Associatiegroep 2",
+		"de": "Befehl, der an Geräte der Assoziationsgruppe 2 gesendet wird"
+      },
+      "hint": {
+        "en": "This parameter defines which commands is sent to 2nd Association Group ",
+        "nl": "Deze parameter definieert welke commando's naar de 2e Associatiegroep worden gestuurd.",
+		"de": "Dieser Parameter definiert, welche Befehle an die Assoziationsgruppe 2 gesendet werden."
+      },
+	   "values": [{
+          "id": "0",
+          "label": {
+            "en": "On and Off (default)",
+            "nl": "Aan en uit (standaard)",
+			"de": "On und Off (Standard)"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+			"en": "On",
+            "nl": "Aan",
+			"de": "On"
+          }
+        },
+		{
+          "id": "2",
+          "label": {
+			"en": "Off",
+            "nl": "Uuit",
+			"de": "Off"
+          }
+        }
+      ]
+    },
+	{
+      "id": "basic_group_on",
+      "zwave": {
+        "index": 7,
+        "size": 1,
+        "signed": false
+      },
+	  "attr": {
+      "min": 0,
+      "max": 255
+    },
+      "type": "number",
+      "value": 255,
+      "label": {
+        "en": "BASIC command value sent to 2nd Association Group on On event",
+        "nl": "BASIC command verzonden naar 2de Associatiegroep On evenement",
+		"de": "BASIC Command wird an die Assoziationsgruppe 2 gesendet, wenn das Ereignis On eintritt "
+      },
+      "hint": {
+        "en": "This is the BASIC command value sent in case of On event. (1-99, 255) (Default: 255)",
+        "nl": "BASIC-commandowaarde verzonden in het geval van On event. (1-99, 255) (Standaard: 255)",
+		"de": "Dies ist das BASIC Command, das im Falle des Ereignisses On gesendet wird. (1-99, Standard: 255)"
       }
-    ]
-  }
-]
+    },
+    {
+      "id": "basic_group_off",
+      "zwave": {
+        "index": 8,
+        "size": 1,
+        "signed": false
+      },
+	  "attr": {
+      "min": 0,
+      "max": 255
+    },
+      "type": "number",
+      "value": 255,
+      "label": {
+        "en": "BASIC command value sent to 2nd Association Group off event",
+        "nl": "BASIC command verzonden naar 2de Associatiegroep off evenement",
+		"de": "BASIC Command wird an die Assoziationsgruppe 2 gesendet, wenn das Ereignis Off eintritt "
+      },
+      "hint": {
+        "en": "This is the BASIC command value sent in case of Off event. (1-99, 255) (Default: 255)",
+        "nl": "BASIC-commandowaarde verzonden in het geval van Off event. (1-99, 255) (Standaard: 255=-1)",
+		"de": "Dies ist das BASIC Command, das im Falle des Ereignisses Off gesendet wird. (1-99, 255) (Standard: 255=-1)"
+      }
+    },
+    {
+      "id": "time_delay_on",
+      "zwave": {
+        "index": 9,
+        "size": 2
+      },
+	  "attr": {
+      "min": 0,
+      "max": 32400
+    },
+      "type": "number",
+      "value": 0,
+      "label": {
+        "en": "Time Delay of On command frame",
+        "nl": "Tijdvertraging van het On-commandokader",
+		"de": "Zeitverzögerung des BASIC Commands On"
+      },
+      "hint": {
+        "en": "On command is sent after a delay defined in this parameter. (0-32400) (Default: 0)",
+        "nl": "On command is sent after a delay defined in this parameter. (0-32400) (Standaard: 0)",
+		"de": "Das On Kommando wird nach einer in diesem Parameter definierten Verzögerung gesendet.  (0-32400) (Standard: 0)"
+      }
+    },
+    {
+      "id": "time_delay_off",
+      "zwave": {
+        "index": 10,
+        "size": 2
+      },
+	  "attr": {
+      "min": 0,
+      "max": 32400
+    },
+      "type": "number",
+      "value": 0,
+      "label": {
+        "en": "Time Delay of Off command frame",
+        "nl": "Tijdvertraging van het Off-commandokader",
+		"de": "Zeitverzögerung des BASIC Commands Off"
+      },
+      "hint": {
+        "en": "Off command is sent after a delay defined in this parameter. (0-32400) (Default: 0)",
+        "nl": "Off command is sent after a delay defined in this parameter. (0-32400) (Standaard: 0)",
+		"de": "Das Off Kommando wird nach einer in diesem Parameter definierten Verzögerung gesendet.  (0-32400) (Standard: 0)"
+      }
+    },
+   {
+      "id": "time_delay_tamper",
+      "zwave": {
+        "index": 12,
+        "size": 2
+      },
+	  "attr": {
+      "min": 0,
+      "max": 32400
+    },
+      "type": "number",
+      "value": 0,
+      "label": {
+        "en": "Delay of Tamper Alarm Cancellation",
+        "nl": "Vertraging van de Annulering van het stamperalarm door een manipulatiealarm",
+		"de": "Zeitverzögerung bis der Tamper Alarm zurückgesetzt wird "
+      },
+      "hint": {
+        "en": "Time a tamper alarm is delayed. (0-32400) (Default: 0)",
+        "nl": "Tijd dat een sabotagealarm wordt uitgesteld.  (0-32400) (Standaard: 0)",
+		"de": "Zeitverzögerung bis der Tamper Alarm zurückgesetzt wird. (0-32400) (Standard: 0)"
+      }
+    },
+	{
+      "id": "alarm_cancellation",
+      "zwave": {
+        "index": 12,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "1",
+      "label": {
+        "en": "Reporting Tamper Alarm Cancellation",
+        "nl": "Melden van het stamperalarm annuleren",
+		"de": "Notification, dass der Tamper Alarm zurückgesetzt wurde "
+      },
+      "hint": {
+        "en": "This parameter defines if the alarm cancellation event is reported.",
+        "nl": "Deze parameter bepaalt of de alarmannulering wordt gemeld.",
+		"de": "Dieser Parameter legt fest, ob das Ereignis Tamper Alarm zurückgesetzt gemeldet wird."
+      },
+	   "values": [{
+          "id": "0",
+          "label": {
+            "en": "Do not send Report",
+            "nl": "Niet verzenden Rapport",
+			"de": "Bericht nicht senden"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+			"en": "Send Report (default)",
+            "nl": "Rapport verzenden (standaard)",
+			"de": "Bericht senden (Standard)"
+          }
+        }
+      ]
+    },
+	{
+      "id": "central_scene",
+      "zwave": {
+        "index": 13,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "1",
+      "label": {
+        "en": "Central Scene Event Functionality",
+        "nl": "Central Scene Event Functionality ",
+		"de": "Central Scene Funktionalität"
+      },
+      "hint": {
+        "en": "This parameter enables/disables  the central scene function.",
+        "nl": "Deze parameter activeert/uitschakelt de central scene function.",
+		"de": "Dieser Parameter legt fest, ob die Central scene function aktiviert ist. "
+      },
+	   "values": [{
+          "id": "0",
+          "label": {
+            "en": "Disabled",
+            "nl": "Uitgeschakeld",
+			"de": "Deaktiviert"
+          }
+        },
+		{
+          "id": "1",
+          "label": {
+			"en": "Enabled (default)",
+            "nl": "Ingeschakeld (standaard)",
+			"de": "Aktiviert (Stdnard)"
+          }
+        }]
+      },
+	{
+      "id": "tilt_on",
+      "zwave": {
+        "index": 14,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "1",
+      "label": {
+        "en": "Tilt Sensor Functionality",
+        "nl": "Tilt Sensor Functionality ",
+		"de": "Neigungssensorensor Funktionalität"
+      },
+      "hint": {
+        "en": "This parameter enables/disables  the tilt function.",
+        "nl": "Deze parameter schakelt de kantelfunctie in of uit.",
+		"de": "Dieser Parameter aktiviert/deaktiviert den Neigungssensorensor."
+      },
+	   "values": [{
+          "id": "0",
+          "label": {
+            "en": "Disabled",
+            "nl": "Uitgeschakeld",
+			"de": "Deaktiviert"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+			"en": "Enabled (default)",
+            "nl": "Ingeschakeld (standaard)",
+			"de": "Aktiviert (Standard)"
+          }
+        }
+      ]
+    },
+	{
+      "id": "tilt_sensitivity",
+      "zwave": {
+        "index": 15,
+        "size": 1
+      },
+	  "attr": {
+      "min": 0,
+      "max": 100
+    },
+      "type": "number",
+      "value": 50,
+      "label": {
+        "en": "Tilt sensitivity",
+        "nl": "Kantelgevoeligheid",
+		"de": "Neigungssensitivität"
+      },
+      "hint": {
+        "en": "You can use this parameter to adjust the tilt sensitivity if the tilt is too low or too high. (0-100, default: 50)",
+        "nl": "Met deze parameter kunt u de kantelgevoeligheid aanpassen als de kantelgevoeligheid te laag of te hoog is.  (0-100, standaard: 50)",
+		"de": "Mit diesem Parameter können Sie bei zu geringer oder zu starker Neigung die Neigungssensitivität anpassen. (0-100, Standard: 50)"
+      }
+    }
+  ]

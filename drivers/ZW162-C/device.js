@@ -29,6 +29,11 @@ class AeotecDoorbellSixDevice extends ZwaveDevice {
     this.registerReportListener('NOTIFICATION', 'NOTIFICATION_REPORT', report => {
       if (report['Notification Type'] && report['Notification Status']) {
         if (report['Notification Type'] === 'Siren') {
+          // Trigger doorbell rang flow
+          const currentSirenValue = this.getCapabilityValue('onoff.siren');
+          if (!currentSirenValue && !!report['Notification Status (Raw)']) {
+            this.getDriver().triggerDoorbellRangFlow(this);
+          }
           this.setCapabilityValue('onoff.siren', !!report['Notification Status (Raw)']);
 
           if (this.sirenTimeout) clearTimeout(this.sirenTimeout);

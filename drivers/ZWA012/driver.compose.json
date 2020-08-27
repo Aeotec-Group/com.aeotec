@@ -1,0 +1,81 @@
+{
+  "id": "ZWA012",
+  "name": {
+    "en": "Door and Window Sensor 7 PRO",
+    "nl": "Deur/raam-sensor 7 PRO",
+	"de": "Tür-/Fensterkontakt 7 PRO"
+  },
+  "zwave": {
+    "manufacturerId": 881,
+    "productTypeId": 2,
+    "productId": 12,
+    "learnmode": {
+	"image": "{{driverAssetsPath}}/learnmode.svg",
+	"instruction": {
+        "en": "Tripple click the tamper switch (on the right side below the battery housing)",
+        "nl": "Druk driemaal op knop (aan de rechterkant onder de batterijbehuizing)",
+		"de": "Dreimal schnell hintereinander den Tamper-Taster (auf der rechten Seite unterhalb des Batteriegehäuses) betätigen. "
+      }
+    },
+	 "unlearnmode": {
+	 "image": "{{driverAssetsPath}}/learnmode.svg",
+	"instruction": {
+        "en": "Tripple click the tamper switch (on the right side below the battery housing)",
+        "nl": "Druk driemaal op knop (aan de rechterkant onder de batterijbehuizing)",
+		"de": "Dreimal schnell hintereinander den Tamper-Taster (auf der rechten Seite unterhalb des Batteriegehäuses) betätigen. "
+      }
+    },
+    "associationGroups": [1, 1],
+	 "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Lifeline (Max. Nodes: 5)",
+			  "nl": "Lifeline",
+			  "de": "Lifeline"
+            }
+			},
+          "2": {
+            "hint": {
+              "en": "Control devices when magnet or external dry contacts trips",
+			  "nl": "Bedieningsorganen bij uitval van de magneet of externe droge contacten",
+			  "de": "Steuere Geräte, wenn der Magnet oder der externe potenzialfreie Kontakt ausgelöst wird"
+            }
+			},
+          "3": {
+            "hint": {
+              "en": "Sends our alarm message when magnet controlled or external dry sensor trips",
+			  "nl": "Stuurt onze alarmmelding wanneer er een magneetgestuurde of externe droge sensor uitvalt",
+			  "de": "Sendet eine Alarmmeldung, wenn der Magnet oder der externe potenzialfreie Kontakt ausgelöst wird"
+            }
+			},
+          "4": {
+            "hint": {
+              "en": "Sends alarm messages when tamper is tripped",
+			  "nl": "Stuurt alarmmeldingen wanneer de sabotage wordt geactiveerd",
+			  "de": "Sendet Alarmmeldungen, wenn die Tamper-Taste ausgelöst wird"
+            }
+			}
+			},
+	"defaultConfiguration": [
+			{
+				"id": 14,
+				"size": 1,
+				"value": 1
+			}
+]
+  },
+  "class": "sensor",
+  "capabilities": [
+        "measure_battery",
+        "alarm_contact",
+        "alarm_tamper",
+		"info_tilt"
+],
+  "energy": {
+    "batteries": [ "LS14250" ]
+  },
+  "images": {
+    "large": "/drivers/ZWA012/assets/images/large.png",
+    "small": "/drivers/ZWA012/assets/images/small.png"
+  }
+}

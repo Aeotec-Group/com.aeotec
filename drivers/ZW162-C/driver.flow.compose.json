@@ -1,5 +1,13 @@
 {
-  "triggers": [],
+  "triggers": [
+    {
+      "id": "ZW162-doorbell-rang",
+      "title": {
+        "en": "Doorbell is pressed",
+        "nl": "Er is aangebeld"
+      }
+    }
+  ],
   "conditions": [],
   "actions": [
     {

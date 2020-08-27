@@ -1,0 +1,47 @@
+{
+  "id": "ZW141",
+  "name": {
+    "en": "Nano Shutter V3"
+  },
+  "class": "blinds",
+  "capabilities": [
+    "windowcoverings_set"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 881,
+    "productTypeId": [
+      3,
+      515
+    ],
+    "productId": [
+      141
+    ],
+    "zwaveAllianceProductId": 3742,
+    "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=product_documents/3742/Nano%20Shutter%20-%20Product%20Manual.pdf",
+    "learnmode": {
+      "instruction": {
+        "en": "Add: Short press the action button on the back of the Nano Shutter."
+      }
+    },
+	"unlearnmode": {
+	   "instruction": {
+	 "en": "Press six times quickly the action button of the Nano Shutter."
+             }
+    },
+    "associationGroups": [
+      1,
+      2
+    ],
+    "defaultConfiguration": [
+      {
+        "id": 80,
+        "value": 2,
+        "size": 1
+      }
+    ]
+  }
+}

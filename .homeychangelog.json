@@ -6,7 +6,7 @@
   "2.1.1": {
     "en": "Changed pairing instructions for Siren 6."
   },
-  "2.2.1":{
+  "2.2.3":{
       "en":"Include support for Smart Switch 7 and Range extender 7. Various small fixes and code cleanup",
       "nl":"Deze update voegt ondersteuning toe voor de Smart Switch 7 en Range Extender 7."
   }

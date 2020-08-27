@@ -1,0 +1,367 @@
+[
+  {
+    "id": "1",
+    "type": "number",
+    "label": {
+      "en": "Motion Retrigger Time"
+      
+    },
+    "hint": {
+      "en": "This parameter configures the delay time before PIR sensor can be triggered again to reset motion timeout counter. Value = 0 will disable PIR sensor from triggering until motion timeout has finished."
+    },
+    "zwave": {
+      "index": 1,
+      "size": 2
+    },
+	"attr": {
+      "min": 0,
+      "max": 32767
+	  },
+    "value": 30
+  },
+  {
+    "id": "2",
+    "type": "number",
+    "label": {
+      "en": "Motion Clear Time"
+    },
+    "hint": {
+      "en": "This parameter configures the time to clear a motion event after a motion event detected."      
+    },
+    "zwave": {
+      "index": 2,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 32767
+    },
+    "value": 60
+  },
+  {
+    "id": "3",
+    "type": "dropdown",
+    "label": {
+      "en": "Motion Sensor Sensitivity",
+      "nl": "Gevoeligheid Bewegingssensor"
+    },
+    "hint": {
+      "en": "Determines sensitivity of the motion sensor.",
+      "nl": "Bepaald de gevoeligheid van de bewegingssensor."
+    },
+    "zwave": {
+      "index": 3,
+      "size": 1
+    },
+    "value": "11",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Off",
+          "nl": "Uit"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Level 1 (minimum)",
+          "nl": "Level 1 (minimum)"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Level 2",
+          "nl": "Level 2"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Level 3",
+          "nl": "Level 3"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Level 4",
+          "nl": "Level 4"
+        }
+	  },
+		 {
+        "id": "5",
+        "label": {
+          "en": "Level 5",
+          "nl": "Level 5"
+        }
+      },
+	   {
+        "id": "6",
+        "label": {
+          "en": "Level 6",
+          "nl": "Level 6"
+        }
+      },
+	   {
+        "id": "7",
+        "label": {
+          "en": "Level 7",
+          "nl": "Level 7"
+        }
+      },
+	   {
+        "id": "8",
+        "label": {
+          "en": "Level 8",
+          "nl": "Level 8"
+        }
+      },
+	   {
+        "id": "9",
+        "label": {
+          "en": "Level 9",
+          "nl": "Level 9"
+        }
+      },
+	   {
+        "id": "10",
+        "label": {
+          "en": "Level 10",
+          "nl": "Level 10"
+        }
+      },
+      {
+        "id": "11",
+        "label": {
+          "en": "Level 11 (maximum)",
+          "nl": "Level 11 (maximum)"
+        }
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "type": "dropdown",
+    "label": {
+      "en": "Disable BASIC_SET to Associated nodes"
+    },
+    "hint": {
+      "en": "This parameter enables or disables sending the BASIC_SET command to nodes that are associated in group 2 and group 3."
+    },
+    "zwave": {
+      "index": 5,
+      "size": 1
+    },
+    "value": "3",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled All Group Basic Set Command"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Enabled Group 2 Basic Set Command"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Group 3 Basic Set Command is disabled"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Enabled Group 2 and Group 3 Basic Set Command"
+        }
+      }
+  ]
+  },
+    {
+    "id": "6",
+    "type": "dropdown",
+    "label": {
+      "en": "Basic Set Value Settings for Group 2"
+    },
+    "hint": {
+      "en": "This parameter enables or disables sending the BASIC_SET command to nodes that are associated in group 2 and group 3."
+    },
+    "zwave": {
+      "index": 6,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Send ON/OFF when Motion triggered"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Send OFF/ON when Motion triggered"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Send only ON when Motion triggered"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Send only OFF when Motion triggered"
+        }
+      },
+	   {
+        "id": "4",
+        "label": {
+          "en": "Send only OFF when Motion cleared"
+        }
+      },
+	   {
+        "id": "5",
+        "label": {
+          "en": "Send only ON when Motion cleared"
+        }
+      }
+ ] 
+ }, 
+  {
+    "id": "7",
+    "type": "number",
+    "label": {
+      "en": "Temperature Alarm Value"
+    },
+    "hint": {
+      "en": "This parameter configures the threshold value for the temperature alarm. When the current ambient temperature value is larger than the configured value, the device will send ON to all nodes associated in group 3. If the current temperature value is less than this value, the device will send OFF to all nodes associated in group 3."
+    },
+    "zwave": {
+      "index": 7,
+      "size": 2
+    },
+    "attr": {
+      "min": -400,
+      "max": 850
+    },
+    "value": 239
+  },
+  {
+    "id": "10",
+    "type": "checkbox",
+    "label": {
+      "en": "Led Indicate Disable"
+    },
+    "hint": {
+      "en": "This parameter enables or disables the Led light."
+    },
+    "zwave": {
+      "index": 10,
+      "size": 1
+    },
+    "value": true
+  },
+  {
+    "id": "23",
+    "type": "number",
+    "label": {
+      "en": "Temperature Sensor Report Interval"
+    },
+    "hint": {
+      "en": "This parameter configures the time interval for the temperature sensor report. The larger the value, the longer battery life will be."
+    },
+    "zwave": {
+      "index": 23,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 32767
+    },
+    "value": 600
+  },
+  {
+    "id": "24",
+    "type": "number",
+    "label": {
+      "en": "Light Sensor Report Interval"
+    },
+    "hint": {
+      "en": "This parameter configures the time interval for the light sensor report. The larger the value, the longer battery life will be."
+    },
+    "zwave": {
+      "index": 24,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 32767
+    },
+    "value": 1800
+  },
+  {
+    "id": "30",
+    "type": "number",
+    "label": {
+      "en": "Temperature Offset Value"
+    },
+    "hint": {
+      "en": "The measuring temperature value can be added or subtracted using this value setting."
+    },
+    "zwave": {
+      "index": 30,
+      "size": 2
+    },
+    "attr": {
+      "min": -200,
+      "max": 200
+    },
+    "value": 0
+  },
+  {
+    "id": "31",
+    "type": "number",
+    "label": {
+      "en": "Light Intensity Offset Value"
+    },
+    "hint": {
+      "en": "The measuring light intensity value can be added or subtracted using this value setting."
+    },
+    "zwave": {
+      "index": 31,
+      "size": 2
+    },
+    "attr": {
+      "min": -1000,
+      "max": 1000
+    },
+    "value": 0
+  },
+  {
+    "id": "100",
+    "type": "number",
+    "label": {
+      "en": "Light Sensor Calibrated Coefficient"
+    },
+    "hint": {
+      "en": "This configuration defines the calibrated scale for ambient light intensity. Please read the Aeotec manual."
+    },
+    "zwave": {
+      "index": 100,
+      "size": 2
+    },
+    "attr": {
+      "min": 1,
+      "max": 32767
+    },
+    "value": 1024
+  }
+]

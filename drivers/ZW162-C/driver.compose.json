@@ -37,8 +37,8 @@
     "unlearnmode": {
       "image": "{{driverAssetsPath}}/learnmode.svg",
       "instruction": {
-        "en": "Quickly press the action button on the rear of {{driverNameEn}} 6 times.",
-        "nl": "Druk 6 keer snel achter elkaar op de actie knop van de achterkant van {{driverNameNl}}."
+        "en": "Press the action button on the rear of {{driverNameEn}} once, if nothing happens quickly press 6 times.",
+        "nl": "Druk een keer op de actie knop op de achterkant van {{driverNameNl}}, gebeurt er niks, druk dan 6 keer snel achter elkaar op de actie knop."
       }
     },
     "associationGroupsMultiChannel": [

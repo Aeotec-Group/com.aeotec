@@ -1,0 +1,57 @@
+[
+    {
+    "id": "43",
+    "type": "checkbox",
+    "label": {
+      "en": "Buzzer Alarm"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) enable/disable the buzzer alarm when battery is running low."
+    },
+    "zwave": {
+      "index": 43,
+      "size": 1
+    },
+    "value": false
+  },
+  {
+    "id": "32",
+    "type": "number",
+    "label": {
+      "en": "Low battery level",
+      "nl": "Laag batterij niveau"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the percentage of battery value to at which the low battery alarm will go off.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt hoe laag het batterijpercentage moet zijn om het alarm af te laten gaan."
+    },
+    "zwave": {
+      "index": 32,
+      "size": 1
+    },
+    "value": 20,
+    "attr": {
+      "min": 10,
+      "max": 50
+    }
+  },
+   {
+    "id": "42",
+    "type": "number",
+    "label": {
+      "en": "Multilevel value"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) setting the duration value of the command switch multilevel."
+    },
+    "zwave": {
+      "index": 42,
+      "size": 1
+    },
+    "value": 255,
+    "attr": {
+      "min": 0,
+      "max": 127
+    }
+  } 
+]

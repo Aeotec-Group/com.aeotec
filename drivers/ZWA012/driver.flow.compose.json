@@ -1,0 +1,120 @@
+{
+  "triggers": [
+    {
+      "id": "tilt_info_on",
+      "title": {
+        "en": "Is tilted",
+	    	"nl": "Is gekanteld",
+	    	"de": "Ist gekippt worden"
+      }
+    },
+    {
+      "id": "tilt_info_off",
+      "title": {
+        "en": "Is no longer tilted",
+	    	"nl": "Is niet meer gekanteld",
+		    "de": "Ist nichtmehr gekippt"
+      }
+    },
+	
+ {
+      "id": "binary_contact_trigger",
+      "title": {
+        "en": "Button/binary contact",
+        "nl": "Drukknop/binair contact",
+	    	"de": "Taster/Binärkontakt"
+      },
+      "args": [
+        {
+          "name": "scene",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "Key Pressed 1 time",
+              "label": {
+                "en": "Pressed 1x",
+                "nl": "1x Ingedrukt",
+			        	"de": "1x gedrückt"
+              }
+            },
+            {
+              "id": "Key Pressed 2 times",
+              "label": {
+                "en": "Pressed 2x",
+		        		"nl": "2x Ingedrukt",
+                "de": "2x gedrückt"
+              }
+            },
+            {
+              "id": "Key Pressed 3 times",
+              "label": {
+                "en": "Pressed 3x",
+				        "nl": "3x Ingedrukt",
+                "de": "3x gedrückt"
+              }
+            },
+            {
+              "id": "Key Pressed 4 times",
+              "label": {
+                "en": "Pressed 4x",
+                "nl": "4x Ingedrukt",
+			        	"de": "4x gedrückt"
+              }
+            },
+			{
+		     "id": "Key Pressed 5 times",
+              "label": {
+                "en": "Pressed 5x",
+                "nl": "5x Ingedrukt",
+			        	"de": "5x gedrückt"
+              }
+			  },
+			 {
+              "id": "Key Held Down",
+              "label": {
+                "en": "Hold switch",
+                "nl": "Lang ingedrukt",
+				        "de": "Lang gedrückt"
+              }
+			},
+            {
+              "id": "Key Released",
+              "label": {
+                "en": "Hold released",
+                "nl": "Lang ingedrukt los gelaten",
+				        "de": "Lang gedrückt losgelassen"
+              }
+            }
+          ]
+        }
+      ]
+}
+  ],
+    "conditions": [
+      {
+        "id": "is_tilted",
+        "title": {
+          "en": "Is !{{|not}} tilted",
+		      "nl": "Heeft {{|niet}} gekanteld",
+          "de": "Ist !{{|nicht}} gekippt"
+        },
+        "args": []
+      }
+],
+  "actions": [			
+  {
+      "id": "disabletampercontact",
+      "title": {
+        "en": "Switch off Tamper alert",
+	    	"nl": "Het sabotagealarm uitschakelen",
+        "de": "Sabotage-Alarm ausschalten"
+      },
+      "hint": {
+        "en": "Tamper alert set to off",
+	    	"nl": "Sabotage-alarm is ingesteld op Nee",
+        "de": "Sabotage-Alarm-Alarm wird auf Nein gesetzt"
+      },
+      "args": []
+    }
+	]
+}

@@ -1,0 +1,103 @@
+{
+  "id": "ZWA003",
+  "name": {
+    "en": "Namomote Quad"
+  },
+  "class": "button",
+  "capabilities": [
+    "measure_battery"
+   
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "energy": {
+    "batteries": [
+      "CR2450"
+    ]
+  },
+  "zwave": {
+    "manufacturerId": 881,
+    "productTypeId": [
+      2,
+      258,
+      513,
+      514
+    ],
+    "productId": [
+      3
+    ],
+    "zwaveAllianceProductId": 2820,
+    "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=MarketCertificationFiles/2820/NanoMote%20Quad%20USER%20MANUAL%20.pdf",
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press a button 3 times in quick succession.",
+        "nl": "Druk 3 keer snel achter elkaar op een knop.",
+		"de": "Drücken Sie eine Tatse 3x schnell hintereinander"
+      }
+    },
+    "unlearnmode": {
+	 "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+       "en": "Press a button 3 times in quick succession.",
+        "nl": "Druk 3 keer snel achter elkaar op een knop.",
+		"de": "Drücken Sie eine Tatse 3x schnell hintereinander"
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "This is the Z-Wave Lifeline group, it is not recommended to change this.",
+          "nl": "Dit is de Z-Wave Lifeline groep, het is niet aangeraden deze te veranderen."
+        }
+      },
+      "2": {
+        "hint": {
+          "en": "NanoMote Quad sends basic set command when the button 1 is triggered"
+        }
+      },
+      "3": {
+        "hint": {
+          "en": "NanoMote Quad sends switch multilevel set, multilevel start level change and multilevel stop level change command when the button 1 is triggered."
+        }
+      },
+      "4": {
+        "hint": {
+          "en": "NanoMote Quad sends basic set command when the button 2 is triggered."
+        }
+      },
+      "5": {
+        "hint": {
+          "en": "NanoMote Quad sends switch multilevel set, multilevel start level change and multilevel stop level change command when the button 2 is triggered."
+        }
+      },
+      "6": {
+        "hint": {
+          "en": "NanoMote Quad sends basic set command when the button 3 is triggered."
+        }
+      },
+      "7": {
+        "hint": {
+          "en": "NanoMote Quad sends switch multilevel set, multilevel start level change and multilevel stop level change command when the button 2 is triggered."
+        }
+      },
+      "8": {
+        "hint": {
+          "en": "NanoMote Quad sends basic set command when the button 4 is triggered."
+        }
+      },
+      "9": {
+        "hint": {
+          "en": "NanoMote Quad sends switch multilevel set, multilevel start level change and multilevel stop level change command when the button 2 is triggered."
+        }
+      }
+    }
+    
+   
+  }
+}

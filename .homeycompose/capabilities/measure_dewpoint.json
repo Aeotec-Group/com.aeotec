@@ -1,0 +1,24 @@
+{
+      "type": "number",
+      "title": {
+        "en": "DewPoint",
+        "nl": "Dauwpunt",
+		"de": "Taupunkt"
+      },
+      "units": {
+        "en": "°C",
+		"nl": "°C",
+		"de": "°C"
+      },
+      "desc": {
+        "en": "Celsius (C)",
+        "nl": "Celsius (C)",
+		"nl": "Celsius (C)"
+      },
+      "chartType": "stepLine",
+	  "insights": true,
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+	  "icon": "/assets/measure_dewpoint.svg"
+    }

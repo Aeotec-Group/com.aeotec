@@ -1,0 +1,68 @@
+{
+  "id": "ZW141V2",
+  "name": {
+    "en": "Nano Shutter V2"
+  },
+  "class": "blinds",
+  "capabilities": [
+    "windowcoverings_set",
+	"onoff"
+	
+    
+	
+  ],
+  "capabilitiesOptions": {
+    "dim": {
+      "title": {
+	  "en": "Blind control",
+	  "nl": "Sluiterstatus"
+	  }}
+    },
+	"onoff": {
+      "setOnDim": true,
+	  "insightsTitletrue" : {
+	  "en" : "Open blind" },
+	  "insightsTitlefalse": {
+	  "en" : "Close blind" }
+		
+		
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 134,
+    "productTypeId": [
+      3,
+      515
+    ],
+    "productId": [
+      141
+    ],
+    "zwaveAllianceProductId": 3742,
+    "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=MarketCertificationFiles/2953/Aeon%20Labs%20Nano%20Shutter%20-manual.pdf",
+    "learnmode": {
+      "instruction": {
+        "en": "Add: Short press the action button on the back of the Nano Shutter. Remove: Press six times quickly the action button of the Nano Shutter.",
+        "nl": "Toevoegen: Druk kort op de actieknop aan de achterzijde van de Nano Shutter. Verwijderen: Druk zes keer snel op de actieknop van de Nano Shutter."
+      }
+    },
+    "associationGroups": [
+      1,
+      2
+    ],
+    "defaultConfiguration": [
+      {
+        "id": 80,
+        "value": 1,
+        "size": 2
+      },
+	  {
+        "id": 35,
+        "value": 30,
+        "size": 1
+      }
+    ]
+  }
+}

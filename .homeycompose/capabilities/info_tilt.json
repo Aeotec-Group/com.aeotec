@@ -1,0 +1,14 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Tilt",
+    "nl": "Gekanteld",
+    "de": "Gekippt"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "insightsTitleTrue": { "en": "Tilt", "nl": "Gekanteld", "de": "Gekippt" },
+  "insightsTitleFalse": { "en": "No Tilt", "nl": "Niet gekanteld", "de": "Nicht Gekippt" },
+  "icon": "/assets/tilt.svg"
+}

@@ -3,7 +3,7 @@
   "name": {
     "en": "Aeotec"
   },
-  "version": "2.2.1",
+  "version": "2.2.3",
   "compatibility": ">=3.1.0",
   "sdk": 2,
   "brandColor": "#00A2DA",
@@ -494,6 +494,457 @@
             "filter": "driver_id=ZW130"
           }
         ]
+      },
+      {
+        "id": "ZW162-doorbell-rang",
+        "title": {
+          "en": "Doorbell is pressed",
+          "nl": "Er is aangebeld"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW162-C"
+          }
+        ]
+      },
+      {
+        "id": "zw130_scene",
+        "title": {
+          "en": "Scene is activated",
+          "nl": "Scene is geactiveerd"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZWA003"
+          },
+          {
+            "name": "button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Top",
+                  "nl": "Links",
+                  "de": "Oben"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Bottom left",
+                  "nl": "Links onder",
+                  "de": "Links unten"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Bottom right",
+                  "nl": "Rechts onder",
+                  "de": "Rechts unten"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Cental button",
+                  "nl": "Middelste knop",
+                  "de": "Mittlere Taste"
+                }
+              }
+            ]
+          },
+          {
+            "name": "scene",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "Key Pressed 1 time",
+                "label": {
+                  "en": "Pressed 1x",
+                  "nl": "1x gedrukt",
+                  "de": "1x gedrückt"
+                }
+              },
+              {
+                "id": "Key Held Down",
+                "label": {
+                  "en": "Hold press (5x a second)",
+                  "nl": "Lang drukken (5x per seconde)",
+                  "de": "Gedrückt gehalten"
+                }
+              },
+              {
+                "id": "Key Released",
+                "label": {
+                  "en": "Press released",
+                  "nl": "Drukken losgelaten",
+                  "de": "Losgelassen"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "zw130_dim",
+        "title": {
+          "en": "Dim level has been sent",
+          "nl": "Het helderheidsniveau is verzonden"
+        },
+        "hint": {
+          "en": "The dim level is send when you slide your finger over the wallmote. The brightness level will be the height you stopped at (full height of the Namomote Quad).",
+          "nl": "Het helderheidsniveau wordt verzonden bij het schuiven van de vinger over de wallmote. Het helderheidsniveau is de hoogte waar je stopt (volle hoogte van de Namomote Quad)."
+        },
+        "tokens": [
+          {
+            "name": "dim",
+            "type": "number",
+            "title": {
+              "en": "level",
+              "nl": "niveau"
+            },
+            "example": 0.5
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZWA003"
+          },
+          {
+            "name": "button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Top",
+                  "nl": "Links",
+                  "de": "Oben"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Bottom left",
+                  "nl": "Links onder",
+                  "de": "Links unten"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Bottom right",
+                  "nl": "Rechts onder",
+                  "de": "Rechts unten"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Cental button",
+                  "nl": "Middelste knop",
+                  "de": "Mittlere Taste"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "zw130_battery_full",
+        "title": {
+          "en": "Battery fully charged",
+          "nl": "Batterij volledig opgeladen"
+        },
+        "hint": {
+          "en": "This card will only trigger if the Namomote Quad has been included as secure.",
+          "nl": "Deze kaart zal alleen activeren als de Namomote Quad beveiligd is toevoegd."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZWA003"
+          }
+        ]
+      },
+      {
+        "id": "tilt_info_on",
+        "title": {
+          "en": "Has been tilted",
+          "nl": "Is gekanteld",
+          "de": "Ist gekippt worden"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZWA008"
+          }
+        ]
+      },
+      {
+        "id": "tilt_info_off",
+        "title": {
+          "en": "Is not tilted anymore",
+          "nl": "Is niet meer gekanteld",
+          "de": "Ist nichtmehr gekippt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZWA008"
+          }
+        ]
+      },
+      {
+        "id": "binary_contact_trigger",
+        "title": {
+          "en": "Button/binary contact",
+          "nl": "Drukknop/binair contact",
+          "de": "Taster/Binärkontakt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZWA008"
+          },
+          {
+            "name": "scene",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "Key Pressed 1 time",
+                "label": {
+                  "en": "Pressed 1x",
+                  "nl": "1x Ingedrukt",
+                  "de": "1x gedrückt"
+                }
+              },
+              {
+                "id": "Key Pressed 2 times",
+                "label": {
+                  "en": "Pressed 2x",
+                  "nl": "2x Ingedrukt",
+                  "de": "2x gedrückt"
+                }
+              },
+              {
+                "id": "Key Pressed 3 times",
+                "label": {
+                  "en": "Pressed 3x",
+                  "nl": "3x Ingedrukt",
+                  "de": "3x gedrückt"
+                }
+              },
+              {
+                "id": "Key Pressed 4 times",
+                "label": {
+                  "en": "Pressed 4x",
+                  "nl": "4x Ingedrukt",
+                  "de": "4x gedrückt"
+                }
+              },
+              {
+                "id": "Key Pressed 5 times",
+                "label": {
+                  "en": "Pressed 5x",
+                  "nl": "5x Ingedrukt",
+                  "de": "5x gedrückt"
+                }
+              },
+              {
+                "id": "Key Held Down",
+                "label": {
+                  "en": "Hold switch",
+                  "nl": "Lang ingedrukt",
+                  "de": "Lang gedrückt"
+                }
+              },
+              {
+                "id": "Key Released",
+                "label": {
+                  "en": "Hold released",
+                  "nl": "Lang ingedrukt los gelaten",
+                  "de": "Lang gedrückt losgelassen"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mold_alarm_on",
+        "title": {
+          "en": "The mold alarm is on",
+          "nl": "Het schimmelalarm is aan",
+          "de": "Der Schimmel Alarm is angegangen"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZWA009"
+          }
+        ]
+      },
+      {
+        "id": "mold_alarm_off",
+        "title": {
+          "en": "The mold alarm is off",
+          "nl": "Het schimmelalarm is uit",
+          "de": "Der Schimmel Alarm is ausgegangen"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZWA009"
+          }
+        ]
+      },
+      {
+        "id": "dewpoint_value",
+        "title": {
+          "en": "The dew point has changed",
+          "nl": "Het dauwpunt is veranderd",
+          "de": "Der Taupunkt hat sich geändert"
+        },
+        "tokens": [
+          {
+            "name": "dewpoint",
+            "type": "number",
+            "title": {
+              "en": "Dew Point",
+              "nl": "Dauwpunt",
+              "de": "Taupunkt"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZWA009"
+          }
+        ]
+      },
+      {
+        "id": "tilt_info_on",
+        "title": {
+          "en": "Is tilted",
+          "nl": "Is gekanteld",
+          "de": "Ist gekippt worden"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZWA012"
+          }
+        ]
+      },
+      {
+        "id": "tilt_info_off",
+        "title": {
+          "en": "Is no longer tilted",
+          "nl": "Is niet meer gekanteld",
+          "de": "Ist nichtmehr gekippt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZWA012"
+          }
+        ]
+      },
+      {
+        "id": "binary_contact_trigger",
+        "title": {
+          "en": "Button/binary contact",
+          "nl": "Drukknop/binair contact",
+          "de": "Taster/Binärkontakt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZWA012"
+          },
+          {
+            "name": "scene",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "Key Pressed 1 time",
+                "label": {
+                  "en": "Pressed 1x",
+                  "nl": "1x Ingedrukt",
+                  "de": "1x gedrückt"
+                }
+              },
+              {
+                "id": "Key Pressed 2 times",
+                "label": {
+                  "en": "Pressed 2x",
+                  "nl": "2x Ingedrukt",
+                  "de": "2x gedrückt"
+                }
+              },
+              {
+                "id": "Key Pressed 3 times",
+                "label": {
+                  "en": "Pressed 3x",
+                  "nl": "3x Ingedrukt",
+                  "de": "3x gedrückt"
+                }
+              },
+              {
+                "id": "Key Pressed 4 times",
+                "label": {
+                  "en": "Pressed 4x",
+                  "nl": "4x Ingedrukt",
+                  "de": "4x gedrückt"
+                }
+              },
+              {
+                "id": "Key Pressed 5 times",
+                "label": {
+                  "en": "Pressed 5x",
+                  "nl": "5x Ingedrukt",
+                  "de": "5x gedrückt"
+                }
+              },
+              {
+                "id": "Key Held Down",
+                "label": {
+                  "en": "Hold switch",
+                  "nl": "Lang ingedrukt",
+                  "de": "Lang gedrückt"
+                }
+              },
+              {
+                "id": "Key Released",
+                "label": {
+                  "en": "Hold released",
+                  "nl": "Lang ingedrukt los gelaten",
+                  "de": "Lang gedrückt losgelassen"
+                }
+              }
+            ]
+          }
+        ]
       }
     ],
     "actions": [
@@ -852,6 +1303,76 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=ZW164-C"
+          }
+        ]
+      },
+      {
+        "id": "disabletampercontact",
+        "title": {
+          "en": "Switch off Tamper alert",
+          "de": "Sabotage-Alarm ausschalten"
+        },
+        "hint": {
+          "en": "Tamper alert set to off",
+          "de": "Sabotage-Alarm-Alarm wird auf Nein gesetzt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZWA008"
+          }
+        ]
+      },
+      {
+        "id": "disabletampercontact",
+        "title": {
+          "en": "Switch off Tamper alert",
+          "nl": "Het sabotagealarm uitschakelen",
+          "de": "Sabotage-Alarm ausschalten"
+        },
+        "hint": {
+          "en": "Tamper alert set to off",
+          "nl": "Sabotage-alarm is ingesteld op Nee",
+          "de": "Sabotage-Alarm-Alarm wird auf Nein gesetzt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZWA012"
+          }
+        ]
+      }
+    ],
+    "conditions": [
+      {
+        "id": "is_tilted",
+        "title": {
+          "en": "Is !{{|not}} tilted",
+          "nl": "Is {{|niet}} gekanteld",
+          "de": "Ist !{{|nicht}} gekippt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZWA008"
+          }
+        ]
+      },
+      {
+        "id": "is_tilted",
+        "title": {
+          "en": "Is !{{|not}} tilted",
+          "nl": "Heeft {{|niet}} gekanteld",
+          "de": "Ist !{{|nicht}} gekippt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZWA012"
           }
         ]
       }
@@ -5170,7 +5691,9 @@
         "dim",
         "measure_power",
         "meter_power",
-        "onoff"
+        "onoff",
+        "measure_voltage",
+        "measure_current"
       ],
       "capabilitiesOptions": {
         "onoff": {
@@ -5218,6 +5741,26 @@
             "id": 92,
             "size": 1,
             "value": 30
+          },
+          {
+            "id": 101,
+            "size": 4,
+            "value": 8
+          },
+          {
+            "id": 111,
+            "size": 4,
+            "value": 1800
+          },
+          {
+            "id": 102,
+            "size": 4,
+            "value": 3
+          },
+          {
+            "id": 112,
+            "size": 4,
+            "value": 300
           }
         ]
       },
@@ -5397,8 +5940,8 @@
             {
               "id": "1",
               "label": {
-                "en": "Momentary switch",
-                "nl": "Pulsdruk schakelaar"
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
               }
             },
             {
@@ -5411,8 +5954,8 @@
             {
               "id": "3",
               "label": {
-                "en": "2-state switch mode",
-                "nl": "2-state schakel modus"
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
               }
             }
           ]
@@ -5444,8 +5987,8 @@
             {
               "id": "1",
               "label": {
-                "en": "Momentary switch",
-                "nl": "Pulsdruk schakelaar"
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
               }
             },
             {
@@ -5458,11 +6001,239 @@
             {
               "id": "3",
               "label": {
-                "en": "2-state switch mode",
-                "nl": "2-state schakel modus"
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
               }
             }
           ]
+        },
+        {
+          "id": "101",
+          "type": "number",
+          "label": {
+            "en": "Report group 1 report type",
+            "nl": "Rapport type groep 1"
+          },
+          "hint": {
+            "en": "This parameter (101) determines the type of reports sent to devices in the 1st report group.",
+            "nl": "Deze parameter (101) bepaalt welk type rapporten er worden verstuurd naar apparaten in de 1e groep."
+          },
+          "zwave": {
+            "index": 101,
+            "size": 4
+          },
+          "value": 8
+        },
+        {
+          "id": "102",
+          "type": "number",
+          "label": {
+            "en": "Report group 2 report type",
+            "nl": "Rapport type groep 2"
+          },
+          "hint": {
+            "en": "This parameter (102) determines the type of reports sent to devices in the 2nd report group.",
+            "nl": "Deze parameter (102) bepaalt welk type rapporten er worden verstuurd naar apparaten in de 2e groep."
+          },
+          "zwave": {
+            "index": 102,
+            "size": 4
+          },
+          "value": 3
+        },
+        {
+          "id": "103",
+          "type": "number",
+          "label": {
+            "en": "Report group 3 report type",
+            "nl": "Rapport type  groep 3"
+          },
+          "hint": {
+            "en": "This parameter (103) determines the type of reports sent to devices in the 3rd report group.",
+            "nl": "Deze parameter (103) bepaalt welk type rapporten er worden verstuurd naar apparaten in de 3e groep."
+          },
+          "zwave": {
+            "index": 103,
+            "size": 4
+          },
+          "value": 0
+        },
+        {
+          "id": "111",
+          "type": "number",
+          "label": {
+            "en": "Report interval report group 1",
+            "nl": "Rapportage interval  groep 1"
+          },
+          "hint": {
+            "en": "This parameter (111) determines the interval for sending report to devices in report group 1.",
+            "nl": "Deze parameter (111) bepaalt de interval voor het versturen van rapporten naar apparaten in de 1ste groep."
+          },
+          "zwave": {
+            "index": 111,
+            "size": 4
+          },
+          "value": 1800
+        },
+        {
+          "id": "112",
+          "type": "number",
+          "label": {
+            "en": "Report interval report group 2",
+            "nl": "Rapportage interval groep 2"
+          },
+          "hint": {
+            "en": "This parameter (112) determines the interval for sending report to devices in report group 2.",
+            "nl": "Deze parameter (112) bepaalt de interval voor het versturen van rapporten naar apparaten in de 2e groep."
+          },
+          "zwave": {
+            "index": 112,
+            "size": 4
+          },
+          "value": 300
+        },
+        {
+          "id": "113",
+          "type": "number",
+          "label": {
+            "en": "Report interval report group 3",
+            "nl": "Rapportage interval groep 3"
+          },
+          "hint": {
+            "en": "This parameter (113) determines the interval for sending report to devices in report group 3.",
+            "nl": "Deze parameter (113) bepaalt de interval voor het versturen van rapporten naar apparaten in de 3e groep."
+          },
+          "zwave": {
+            "index": 113,
+            "size": 4
+          },
+          "value": 600
+        },
+        {
+          "id": "255",
+          "type": "dropdown",
+          "label": {
+            "en": "Set Parameter to default",
+            "nl": "Stel de parameter in op standaardStel de parameter in op standaard"
+          },
+          "hint": {
+            "en": "This parameter (255) resets all parameters to factory settings.",
+            "nl": "Deze parameter (255) zet alle parameters terug naar de fabrieksinstellingen."
+          },
+          "zwave": {
+            "index": 255,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Nothing",
+                "nl": "Niets"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Reset Parameters",
+                "nl": "Reset Parameters"
+              }
+            }
+          ]
+        },
+        {
+          "id": "249",
+          "type": "dropdown",
+          "label": {
+            "en": "Set the recognition way of load",
+            "nl": "Stel de herkenningswijze van de belasting in"
+          },
+          "hint": {
+            "en": "This parameter (249) sets how the load is reorganized.",
+            "nl": "Deze parameter (249) stelt in hoe de lading wordt gereorganiseerd."
+          },
+          "zwave": {
+            "index": 249,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Never recognize the load when power on",
+                "nl": "Herken nooit de belasting bij het inschakelen"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Only recognize once when first power on.",
+                "nl": "Herken je maar één keer als je het apparaat voor het eerst inschakelt."
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Recognize the load once power on.",
+                "nl": "Herken de belasting als deze eenmaal is ingeschakeld."
+              }
+            }
+          ]
+        },
+        {
+          "id": "125",
+          "type": "number",
+          "label": {
+            "en": "Set the default dimming rate."
+          },
+          "hint": {
+            "en": "This parameter (125)set the default dimming rate."
+          },
+          "zwave": {
+            "index": 125,
+            "size": 1
+          },
+          "value": 3
+        },
+        {
+          "id": "131",
+          "type": "number",
+          "label": {
+            "en": "Min brightness level"
+          },
+          "hint": {
+            "en": "This parameter (131) Set the min brightness level that the load can reach to. Note: When the level is determined, this level value will not be reset after exclusion."
+          },
+          "zwave": {
+            "index": 131,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 99
+          },
+          "value": 0
+        },
+        {
+          "id": "132",
+          "type": "number",
+          "label": {
+            "en": "Max brightness level"
+          },
+          "hint": {
+            "en": "Set the max brightness level that the load can reach to. Note: When the level is determined, this level value will not be reset after exclusion."
+          },
+          "zwave": {
+            "index": 132,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 99
+          },
+          "value": 99
         }
       ]
     },
@@ -5608,7 +6379,7 @@
       "name": {
         "en": "Nano Switch (ZW116)"
       },
-      "class": "light",
+      "class": "socket",
       "capabilities": [
         "measure_power",
         "meter_power",
@@ -5655,6 +6426,16 @@
             "id": 92,
             "size": 1,
             "value": 30
+          },
+          {
+            "id": 101,
+            "size": 4,
+            "value": 1
+          },
+          {
+            "id": 111,
+            "size": 4,
+            "value": 1800
           }
         ]
       },
@@ -5766,6 +6547,108 @@
           ]
         },
         {
+          "id": "101",
+          "type": "number",
+          "label": {
+            "en": "Report group 1 report type",
+            "nl": "Rapport type groep 1"
+          },
+          "hint": {
+            "en": "This parameter (101) determines the type of reports sent to devices in the 1st report group.",
+            "nl": "Deze parameter (101) bepaalt welk type rapporten er worden verstuurd naar apparaten in de 1e groep."
+          },
+          "zwave": {
+            "index": 101,
+            "size": 4
+          },
+          "value": 1
+        },
+        {
+          "id": "102",
+          "type": "number",
+          "label": {
+            "en": "Report group 2 report type",
+            "nl": "Rapport type groep 2"
+          },
+          "hint": {
+            "en": "This parameter (102) determines the type of reports sent to devices in the 2nd report group.",
+            "nl": "Deze parameter (102) bepaalt welk type rapporten er worden verstuurd naar apparaten in de 2e groep."
+          },
+          "zwave": {
+            "index": 102,
+            "size": 4
+          },
+          "value": 0
+        },
+        {
+          "id": "103",
+          "type": "number",
+          "label": {
+            "en": "Report group 3 report type",
+            "nl": "Rapport type  groep 3"
+          },
+          "hint": {
+            "en": "This parameter (103) determines the type of reports sent to devices in the 3rd report group.",
+            "nl": "Deze parameter (103) bepaalt welk type rapporten er worden verstuurd naar apparaten in de 3e groep."
+          },
+          "zwave": {
+            "index": 103,
+            "size": 4
+          },
+          "value": 0
+        },
+        {
+          "id": "111",
+          "type": "number",
+          "label": {
+            "en": "Report interval report group 1",
+            "nl": "Rapportage interval  groep 1"
+          },
+          "hint": {
+            "en": "This parameter (111) determines the interval for sending report to devices in report group 1.",
+            "nl": "Deze parameter (111) bepaalt de interval voor het versturen van rapporten naar apparaten in de 1ste groep."
+          },
+          "zwave": {
+            "index": 111,
+            "size": 4
+          },
+          "value": 1800
+        },
+        {
+          "id": "112",
+          "type": "number",
+          "label": {
+            "en": "Report interval report group 2",
+            "nl": "Rapportage interval groep 2"
+          },
+          "hint": {
+            "en": "This parameter (112) determines the interval for sending report to devices in report group 2.",
+            "nl": "Deze parameter (112) bepaalt de interval voor het versturen van rapporten naar apparaten in de 2e groep."
+          },
+          "zwave": {
+            "index": 112,
+            "size": 4
+          },
+          "value": 600
+        },
+        {
+          "id": "113",
+          "type": "number",
+          "label": {
+            "en": "Report interval report group 3",
+            "nl": "Rapportage interval groep 3"
+          },
+          "hint": {
+            "en": "This parameter (113) determines the interval for sending report to devices in report group 3.",
+            "nl": "Deze parameter (113) bepaalt de interval voor het versturen van rapporten naar apparaten in de 3e groep."
+          },
+          "zwave": {
+            "index": 113,
+            "size": 4
+          },
+          "value": 600
+        },
+        {
           "id": "120",
           "type": "dropdown",
           "label": {
@@ -5792,8 +6675,8 @@
             {
               "id": "1",
               "label": {
-                "en": "Momentary switch",
-                "nl": "Pulsdruk schakelaar"
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
               }
             },
             {
@@ -5806,8 +6689,8 @@
             {
               "id": "3",
               "label": {
-                "en": "2-state switch mode",
-                "nl": "2-state schakel modus"
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
               }
             }
           ]
@@ -5839,8 +6722,8 @@
             {
               "id": "1",
               "label": {
-                "en": "Momentary switch",
-                "nl": "Pulsdruk schakelaar"
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
               }
             },
             {
@@ -5853,8 +6736,8 @@
             {
               "id": "3",
               "label": {
-                "en": "2-state switch mode",
-                "nl": "2-state schakel modus"
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
               }
             }
           ]
@@ -7345,7 +8228,7 @@
       "name": {
         "en": "Dual Nano Switch (ZW132)"
       },
-      "class": "light",
+      "class": "socket",
       "capabilities": [
         "measure_power",
         "meter_power",
@@ -7386,6 +8269,21 @@
             "id": 90,
             "size": 1,
             "value": 1
+          },
+          {
+            "id": 92,
+            "size": 1,
+            "value": 30
+          },
+          {
+            "id": 101,
+            "size": 4,
+            "value": 6145
+          },
+          {
+            "id": 111,
+            "size": 4,
+            "value": 1800
           }
         ],
         "associationGroupsMultiChannel": [
@@ -7398,7 +8296,7 @@
               "en": "Dual Nano Switch 1"
             },
             "icon": "/drivers/ZW132/assets/icon.svg",
-            "class": "light",
+            "class": "socket",
             "capabilities": [
               "measure_power",
               "meter_power",
@@ -7410,7 +8308,7 @@
               "en": "Dual Nano Switch 2"
             },
             "icon": "/drivers/ZW132/assets/icon.svg",
-            "class": "light",
+            "class": "socket",
             "capabilities": [
               "measure_power",
               "meter_power",
@@ -7447,8 +8345,8 @@
             {
               "id": "1",
               "label": {
-                "en": "Momentary switch",
-                "nl": "Pulsdruk schakelaar"
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
               }
             },
             {
@@ -7461,8 +8359,8 @@
             {
               "id": "3",
               "label": {
-                "en": "2-state switch mode",
-                "nl": "2-state schakel modus"
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
               }
             }
           ]
@@ -7494,8 +8392,8 @@
             {
               "id": "1",
               "label": {
-                "en": "Momentary switch",
-                "nl": "Pulsdruk schakelaar"
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
               }
             },
             {
@@ -7508,8 +8406,8 @@
             {
               "id": "3",
               "label": {
-                "en": "2-state switch mode",
-                "nl": "2-state schakel modus"
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
               }
             }
           ]
@@ -7619,6 +8517,108 @@
               }
             }
           ]
+        },
+        {
+          "id": "101",
+          "type": "number",
+          "label": {
+            "en": "Report group 1 report type",
+            "nl": "Rapport type groep 1"
+          },
+          "hint": {
+            "en": "This parameter (101) determines the type of reports sent to devices in the 1st group.",
+            "nl": "Deze parameter (101) bepaalt welk type rapporten er worden verstuurd naar apparaten in de 1e groep."
+          },
+          "zwave": {
+            "index": 101,
+            "size": 4
+          },
+          "value": 6145
+        },
+        {
+          "id": "102",
+          "type": "number",
+          "label": {
+            "en": "Report group 2 report type",
+            "nl": "Rapport type groep 2"
+          },
+          "hint": {
+            "en": "This parameter (102) determines the type of reports sent to devices in the 2nd group.",
+            "nl": "Deze parameter (102) bepaalt welk type rapporten er worden verstuurd naar apparaten in de 2e groep."
+          },
+          "zwave": {
+            "index": 102,
+            "size": 4
+          },
+          "value": 0
+        },
+        {
+          "id": "103",
+          "type": "number",
+          "label": {
+            "en": "Report group 3 report type",
+            "nl": "Rapport type groep 3"
+          },
+          "hint": {
+            "en": "This parameter (103) determines the type of reports sent to devices in the 3rd group.",
+            "nl": "Deze parameter (103) bepaalt welk type rapporten er worden verstuurd naar apparaten in de 3e  groep."
+          },
+          "zwave": {
+            "index": 103,
+            "size": 4
+          },
+          "value": 0
+        },
+        {
+          "id": "111",
+          "type": "number",
+          "label": {
+            "en": "Report interval report group 1",
+            "nl": "Rapportage interval groep 1"
+          },
+          "hint": {
+            "en": "This parameter (111) determines the interval for sending report to devices in report group 1.",
+            "nl": "Deze parameter (111) bepaalt de interval voor het versturen van rapporten naar apparaten in de 1ste groep."
+          },
+          "zwave": {
+            "index": 111,
+            "size": 4
+          },
+          "value": 1800
+        },
+        {
+          "id": "112",
+          "type": "number",
+          "label": {
+            "en": "Report interval report group 2",
+            "nl": "Rapportage interval groep 2"
+          },
+          "hint": {
+            "en": "This parameter (112) determines the interval for sending report to devices in report group 2.",
+            "nl": "Deze parameter (112) bepaalt de interval voor het versturen van rapporten naar apparaten in de 2e groep."
+          },
+          "zwave": {
+            "index": 112,
+            "size": 4
+          },
+          "value": 600
+        },
+        {
+          "id": "113",
+          "type": "number",
+          "label": {
+            "en": "Report interval report group 3",
+            "nl": "Rapportage interval groep 3"
+          },
+          "hint": {
+            "en": "This parameter (113) determines the interval for sending report to devices in report group 3.",
+            "nl": "Deze parameter (113) bepaalt de interval voor het versturen van rapporten naar apparaten in de 3e groep."
+          },
+          "zwave": {
+            "index": 113,
+            "size": 4
+          },
+          "value": 600
         }
       ]
     },
@@ -8157,6 +9157,642 @@
       ]
     },
     {
+      "id": "ZW141V2",
+      "name": {
+        "en": "Nano Shutter V2"
+      },
+      "class": "blinds",
+      "capabilities": [
+        "windowcoverings_set",
+        "onoff"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "title": {
+            "en": "Blind control",
+            "nl": "Sluiterstatus"
+          }
+        }
+      },
+      "onoff": {
+        "setOnDim": true,
+        "insightsTitletrue": {
+          "en": "Open blind"
+        },
+        "insightsTitlefalse": {
+          "en": "Close blind"
+        }
+      },
+      "images": {
+        "large": "/drivers/ZW141V2/assets/images/large.png",
+        "small": "/drivers/ZW141V2/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          3,
+          515
+        ],
+        "productId": [
+          141
+        ],
+        "zwaveAllianceProductId": 3742,
+        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=MarketCertificationFiles/2953/Aeon%20Labs%20Nano%20Shutter%20-manual.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "Add: Short press the action button on the back of the Nano Shutter. Remove: Press six times quickly the action button of the Nano Shutter.",
+            "nl": "Toevoegen: Druk kort op de actieknop aan de achterzijde van de Nano Shutter. Verwijderen: Druk zes keer snel op de actieknop van de Nano Shutter."
+          }
+        },
+        "associationGroups": [
+          1,
+          2
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 80,
+            "value": 1,
+            "size": 2
+          },
+          {
+            "id": 35,
+            "value": 30,
+            "size": 1
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "35",
+          "type": "number",
+          "label": {
+            "en": "Moving time",
+            "nl": "Bewegende tijd"
+          },
+          "hint": {
+            "en": "This parameter (35) sets the time the roller blind needs to move from top to bottom.",
+            "nl": "Deze parameter (35) stelt de tijd in die het rolgordijn nodig heeft om van boven naar beneden te bewegen."
+          },
+          "zwave": {
+            "index": 35,
+            "size": 1
+          },
+          "attr": {
+            "min": 5,
+            "max": 127
+          },
+          "value": 150
+        },
+        {
+          "id": "80",
+          "type": "dropdown",
+          "label": {
+            "en": "Instant Report"
+          },
+          "hint": {
+            "en": "This parameter (80) defines the report type of Nano Shutter when controlling from the external switches."
+          },
+          "zwave": {
+            "index": 80,
+            "size": 1
+          },
+          "value": "1",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "No report"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Basic report"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Switch multilevel report"
+              }
+            }
+          ]
+        },
+        {
+          "id": "85",
+          "type": "dropdown",
+          "label": {
+            "en": "Extern Button Operation Mode",
+            "nl": "Externe knop Bedieningswijze"
+          },
+          "hint": {
+            "en": "This parameter (85) defines the operating mode of the externally connected switches.",
+            "nl": "Deze parameter (85) definieert de bedrijfsmodus van de extern aangesloten schakelaars."
+          },
+          "zwave": {
+            "index": 85,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "S1, S2 open, close and stop shutter",
+                "nl": "S1, S2 openen, sluiten en stoppen van de sluiter"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "S1 Open/Stop, S2 Close/Stop",
+                "nl": "S1 Open/Stop, S2 Sluiten/Stop"
+              }
+            }
+          ]
+        },
+        {
+          "id": "120",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch type input 1",
+            "nl": "Schakelaar type input 1"
+          },
+          "hint": {
+            "en": "This parameter (120) determines the input device mode for input 1.",
+            "nl": "Deze parameter (120) bepaalt de modus voor het invoer apparaat verbonden aan ingang 1."
+          },
+          "zwave": {
+            "index": 120,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Automatic",
+                "nl": "Automatisch"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "3-way switch mode",
+                "nl": "3-way schakel modus"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
+              }
+            }
+          ]
+        },
+        {
+          "id": "121",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch type input 2",
+            "nl": "Schakelaar type input 2"
+          },
+          "hint": {
+            "en": "This parameter (121) determines the input device mode for input 2.",
+            "nl": "Deze parameter (121) bepaalt de modus voor het invoer apparaat verbonden aan ingang 2."
+          },
+          "zwave": {
+            "index": 121,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Automatic",
+                "nl": "Automatisch"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "3-way switch mode",
+                "nl": "3-way schakel modus"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ZW141V3",
+      "name": {
+        "en": "Nano Shutter V3"
+      },
+      "class": "blinds",
+      "capabilities": [
+        "windowcoverings_set"
+      ],
+      "images": {
+        "large": "/drivers/ZW141V3/assets/images/large.png",
+        "small": "/drivers/ZW141V3/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 881,
+        "productTypeId": [
+          3,
+          515
+        ],
+        "productId": [
+          141
+        ],
+        "zwaveAllianceProductId": 3742,
+        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=product_documents/3742/Nano%20Shutter%20-%20Product%20Manual.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "Add: Short press the action button on the back of the Nano Shutter."
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "Press six times quickly the action button of the Nano Shutter."
+          }
+        },
+        "associationGroups": [
+          1,
+          2
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 80,
+            "value": 2,
+            "size": 1
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "20",
+          "type": "dropdown",
+          "label": {
+            "en": "Motor behavior after Power ON",
+            "nl": "Motorisch gedrag na het inschakelen van de stroom"
+          },
+          "hint": {
+            "en": "This parameter (20) determines the behaviour of the device after power loss.",
+            "nl": "Deze parameter (20) bepaalt het gedrag van het apparaat na stroom uitval."
+          },
+          "zwave": {
+            "index": 20,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Status before re-power",
+                "nl": "Status voor stroomonderbreking"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Moves to 99%",
+                "nl": "Verplaatst naar 99%"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Moves to 0%",
+                "nl": "Verplaatst naar 0%"
+              }
+            }
+          ]
+        },
+        {
+          "id": "22",
+          "type": "dropdown",
+          "label": {
+            "en": "Configure motor run direction",
+            "nl": "Configuratie van de looprichting van de motor"
+          },
+          "hint": {
+            "en": "This parameter (22) determines the behaviour of the motor control.",
+            "nl": "Deze parameter (22) bepaalt het gedrag van de motorbesturing."
+          },
+          "zwave": {
+            "index": 22,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Both mode, motor run in default direction",
+                "nl": "Beide modi, de motor loopt in de standaardrichting"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Only Shutter Mode reverse direction",
+                "nl": "Alleen de sluitermodus in omgekeerde richting"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Only Venetian Mode reverce direction",
+                "nl": "Alleen Venetiaanse Modus reverceerrichting"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Both mode, motor runs in reverse direction",
+                "nl": "Beide modi, de motor loopt in omgekeerde richting"
+              }
+            }
+          ]
+        },
+        {
+          "id": "34",
+          "type": "number",
+          "label": {
+            "en": "(venetian blinds) Blade turn time * 0.1",
+            "nl": "(Jaloezieën) Bladdraaitijd * 0,1"
+          },
+          "hint": {
+            "en": "This parameter (34) determines the maximum time for blade turn time.",
+            "nl": "Deze parameter (34) bepaalt de maximale tijd voor het draaien van de messen."
+          },
+          "zwave": {
+            "index": 34,
+            "size": 2
+          },
+          "attr": {
+            "min": 10,
+            "max": 32767
+          },
+          "value": 150
+        },
+        {
+          "id": "35",
+          "type": "number",
+          "label": {
+            "en": "Blind up/down time * 0.01",
+            "nl": "Blinde op/neer tijd * 0,01"
+          },
+          "hint": {
+            "en": "This parameter (35) determines the maximum time up/down time for motor.",
+            "nl": "Deze parameter (35) bepaalt de maximale op/neer-tijd van de motor."
+          },
+          "zwave": {
+            "index": 35,
+            "size": 2
+          },
+          "attr": {
+            "min": 500,
+            "max": 32767
+          },
+          "value": 15000
+        },
+        {
+          "id": "36",
+          "type": "dropdown",
+          "label": {
+            "en": "Enter Calibration",
+            "nl": "Voer Kalibratie in"
+          },
+          "hint": {
+            "en": "This parameter (36) starts the calibration.",
+            "nl": "Deze parameter (36) start de kalibratie."
+          },
+          "zwave": {
+            "index": 36,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Exit calibration",
+                "nl": "Kalibratie bij uitgang"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Enter Shutter Mode Calibration",
+                "nl": "Ga naar de sluitertijdkalibratiemodus"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Enter Venetian Mode Calibration",
+                "nl": "Voer de Venetiaanse modus kalibratie ins"
+              }
+            }
+          ]
+        },
+        {
+          "id": "39",
+          "type": "dropdown",
+          "label": {
+            "en": "Set curtain mode",
+            "nl": "Stel de gordijnmodus in"
+          },
+          "hint": {
+            "en": "This parameter (39) sets the curtain mode used.",
+            "nl": "Deze parameter (39) stelt de gordijnmodus in gebruik."
+          },
+          "zwave": {
+            "index": 39,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Shutter Mode",
+                "nl": "sluitermodus"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Venetian Mode",
+                "nl": "Venetiaanse mode"
+              }
+            }
+          ]
+        },
+        {
+          "id": "85",
+          "type": "dropdown",
+          "label": {
+            "en": "Extern Button Operation Mode",
+            "nl": "Externe knop Bedieningswijze"
+          },
+          "hint": {
+            "en": "This parameter (85) defines the operating mode of the externally connected switches.",
+            "nl": "Deze parameter (85) definieert de bedrijfsmodus van de extern aangesloten schakelaars."
+          },
+          "zwave": {
+            "index": 85,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "S1, S2 open, close and stop shutter",
+                "nl": "S1, S2 openen, sluiten en stoppen van de sluiter"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "S1 Open/Stop, S2 Close/Stop",
+                "nl": "S1 Open/Stop, S2 Sluiten/Stop"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Venetian Control",
+                "nl": "Venetiaanse controle"
+              }
+            }
+          ]
+        },
+        {
+          "id": "120",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch type input 1",
+            "nl": "Schakelaar type input 1"
+          },
+          "hint": {
+            "en": "This parameter (120) determines the input device mode for input 1.",
+            "nl": "Deze parameter (120) bepaalt de modus voor het invoer apparaat verbonden aan ingang 1."
+          },
+          "zwave": {
+            "index": 120,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Automatic",
+                "nl": "Automatisch"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "3-way switch mode",
+                "nl": "3-way schakel modus"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
+              }
+            }
+          ]
+        },
+        {
+          "id": "121",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch type input 2",
+            "nl": "Schakelaar type input 2"
+          },
+          "hint": {
+            "en": "This parameter (121) determines the input device mode for input 2.",
+            "nl": "Deze parameter (121) bepaalt de modus voor het invoer apparaat verbonden aan ingang 2."
+          },
+          "zwave": {
+            "index": 121,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Automatic",
+                "nl": "Automatisch"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "3-way switch mode",
+                "nl": "3-way schakel modus"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "ZW162-C",
       "name": {
         "en": "Doorbell 6"
@@ -8195,8 +9831,8 @@
         "unlearnmode": {
           "image": "/drivers/ZW162-C/assets/learnmode.svg",
           "instruction": {
-            "en": "Quickly press the action button on the rear of Doorbell 6 6 times.",
-            "nl": "Druk 6 keer snel achter elkaar op de actie knop van de achterkant van Doorbell 6."
+            "en": "Press the action button on the rear of Doorbell 6 once, if nothing happens quickly press 6 times.",
+            "nl": "Druk een keer op de actie knop op de achterkant van Doorbell 6, gebeurt er niks, druk dan 6 keer snel achter elkaar op de actie knop."
           }
         },
         "associationGroupsMultiChannel": [
@@ -8910,6 +10546,218 @@
       ]
     },
     {
+      "id": "ZW187",
+      "name": {
+        "en": "Recessed Door Sensor 7 (ZW187)"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_battery",
+        "alarm_contact"
+      ],
+      "images": {
+        "large": "/drivers/ZW187/assets/images/large.png",
+        "small": "/drivers/ZW187/assets/images/small.png"
+      },
+      "energy": {
+        "batteries": [
+          "CR2"
+        ]
+      },
+      "zwave": {
+        "manufacturerId": 881,
+        "productTypeId": [
+          2,
+          514
+        ],
+        "productId": [
+          187
+        ],
+        "zwaveAllianceProductId": 3736,
+        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=product_documents/3736/Recessed%20Door%20Sensor%207%20-%20Product%20Manual.pdf",
+        "learnmode": {
+          "image": "/drivers/ZW187/assets/learnmode.svg",
+          "instruction": {
+            "en": "Use a small tool to press the button on the Recessed Door Sensor 7 (ZW187) once.",
+            "nl": "Druk met een klein hulpmiddel eenmaal op de knop op de Recessed Door Sensor 7 (ZW187).",
+            "de": "Drücken Sie mit einem kleinen Werkzeugt die Taste am Recessed Door Sensor 7 (ZW187) einmal."
+          }
+        },
+        "associationGroups": [
+          1
+        ]
+      },
+      "settings": [
+        {
+          "id": "2",
+          "type": "dropdown",
+          "label": {
+            "en": "Sensor Reports"
+          },
+          "hint": {
+            "en": "Reverse Sensor Reports (both Sensor Binary Report and Notification Report."
+          },
+          "zwave": {
+            "index": 2,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Open Status when Magnet is away, Close Status when magnet is near."
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Close Status when Magnet is away, Open Status when magnet is near."
+              }
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "type": "dropdown",
+          "label": {
+            "en": "Association Group 2 Settings"
+          },
+          "hint": {
+            "en": "Configure the Basic Set value. Determine the Basic Set value to control other Z-Wave devices directly when Magnet is away or near."
+          },
+          "zwave": {
+            "index": 3,
+            "size": 1
+          },
+          "value": "1",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disable completely."
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "ON when Magnet is away, and send OFF when Magnet is near."
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "OFF when Magnet is away, and send ON when Magnet is near."
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Only send ON when Magnet is away."
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Only send OFF when Magnet is near."
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Only send OFF when Magnet is away."
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Only send ON when Magnet is near."
+              }
+            }
+          ]
+        },
+        {
+          "id": "81",
+          "type": "dropdown",
+          "label": {
+            "en": "Led Indicator"
+          },
+          "hint": {
+            "en": "Control LED Indicator. Determine whether the LED flash or not when sending Basic Set, Sensor Binary Report, Notification Report (Access Control) or Wake Up Notification."
+          },
+          "zwave": {
+            "index": 81,
+            "size": 1
+          },
+          "value": "3",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Completely disable LED."
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "LED quickly flashes only when sending Basic Set, Sensor Binary Report or Notification Report (Access Control)."
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "LED activates only when sending Wake Up Notification."
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "LED quickly flashes when sending Basic Set, Sensor Binary Report or Notification Report (Access Control), and activates when sending Wake Up Notification."
+              }
+            }
+          ]
+        },
+        {
+          "id": "90",
+          "type": "number",
+          "label": {
+            "en": "Low battery threshold"
+          },
+          "hint": {
+            "en": "Configure the low battery threshold. Induce battery report when battery level is less than or equal to threshold. Forward low battery report."
+          },
+          "zwave": {
+            "index": 90,
+            "size": 1
+          },
+          "attr": {
+            "min": 10,
+            "max": 50
+          },
+          "value": 30
+        },
+        {
+          "id": "101",
+          "type": "number",
+          "label": {
+            "en": "Timed battery report"
+          },
+          "hint": {
+            "en": "Set how often battery is reported in minutes."
+          },
+          "zwave": {
+            "index": 101,
+            "size": 2
+          },
+          "attr": {
+            "min": 1,
+            "max": 14400
+          },
+          "value": 70
+        }
+      ]
+    },
+    {
       "id": "ZW189",
       "name": {
         "en": "Range Extender 7"
@@ -8945,19 +10793,2681 @@
       }
     },
     {
+      "id": "ZWA001",
+      "name": {
+        "en": "LED Bulb 6 MW",
+        "nl": "LED lamp 6 MW"
+      },
+      "class": "light",
+      "capabilities": [
+        "light_temperature",
+        "dim",
+        "onoff"
+      ],
+      "images": {
+        "large": "/drivers/ZWA001/assets/images/large.png",
+        "small": "/drivers/ZWA001/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 881,
+        "productTypeId": [
+          3,
+          515
+        ],
+        "productId": [
+          1
+        ],
+        "zwaveAllianceProductId": 2840,
+        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/2840/AA%20LED%20Bulb%206%20%E8%AF%B4%E6%98%8E%E4%B9%A6%EF%BC%88RGBW-AL001%EF%BC%89%20%E8%BD%AC%E6%9B%B2.pdf",
+        "learnmode": {
+          "image": "/drivers/ZWA001/assets/learnmode.svg",
+          "instruction": {
+            "en": "Quickly turn the LED Bulb 6 MW off and on again. For secure pairing quickly turn the LED Bulb 6 MW off and on 3 times.",
+            "nl": "Schakel de LED lamp 6 MW snel uit en aan. Voor beveiligd koppelen schakel de LED lamp 6 MW 3 keer snel uit en aan.",
+            "de": "Schalten Sie die LED Bulb 6 MW schnell aus und wieder ein. Für eine sichere Paarung schalten Sie die LED Bulb 6 MW} schnell 3 Mal aus und wieder ein."
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "Quickly turn the LED Bulb 6 MW off and on again 3 times.",
+            "nl": "Schakel de LED lamp 6 MW 3 keer snel uit en aan.",
+            "de": "Schalten Sie die LED Bulb 6 MW schnell 3 Mal aus und wieder ein."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "The association group 1 is the Z-Wave Lifeline group. The Hail CC and Basic Report CC (configurable) will be sent to the associated nodes.",
+              "nl": "De 1e associatie groep is de Z-Wave levenslijn groep. De Hail CC en Basic Report CC (configureerbaar) worden verzonden naar de apparaten in deze groep.",
+              "de": "Die Assoziationsgruppe 1 ist die Z-Wave-Lifeline-Gruppe. Die Hail CC und Basic Report CC (konfigurierbar) werden an die assoziierten Knoten gesendet"
+            }
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "80",
+          "type": "dropdown",
+          "label": {
+            "en": "Enable to send notifications to associated devices when the state of LED Bulb is changed.",
+            "de": "Aktivieren Sie diese Option, um Benachrichtigungen an zugehörige Geräte (Gruppe 1) zu senden, wenn der Status der LED-Birne geändert wird."
+          },
+          "hint": {
+            "en": "This parameter (80) determines if this bulb reports its status",
+            "de": "Dieser Parameter (80) bestimmt wenn diese Glühbirne ihren Status meldet."
+          },
+          "zwave": {
+            "index": 80,
+            "size": 1
+          },
+          "value": "1",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disable.",
+                "de": "Deaktiviert."
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Send status update.",
+                "de": "Sendet Status-Update."
+              }
+            }
+          ]
+        },
+        {
+          "id": "81",
+          "type": "number",
+          "label": {
+            "en": "Warm White color adjustment",
+            "de": "Einstellung der Farbe Warmweiß"
+          },
+          "hint": {
+            "en": "This parameter (81) determines the warmth of warm white.",
+            "de": "Dieser Parameter (81) bestimmt die Wärme von warmem Weiß."
+          },
+          "zwave": {
+            "index": 81,
+            "size": 2
+          },
+          "attr": {
+            "min": 2700,
+            "max": 4999
+          },
+          "value": 2700
+        },
+        {
+          "id": "82",
+          "type": "number",
+          "label": {
+            "en": "Cold White color adjustment",
+            "de": "Einstellung der Farbe Kaltweiß"
+          },
+          "hint": {
+            "en": "This parameter (81) determines the warmth of cold white.",
+            "de": "Dieser Parameter (81) bestimmt die Wärme von kaltem Weiß."
+          },
+          "zwave": {
+            "index": 81,
+            "size": 2
+          },
+          "attr": {
+            "min": 5000,
+            "max": 6500
+          },
+          "value": 6470
+        }
+      ]
+    },
+    {
+      "id": "ZWA003",
+      "name": {
+        "en": "Namomote Quad"
+      },
+      "class": "button",
+      "capabilities": [
+        "measure_battery"
+      ],
+      "images": {
+        "large": "/drivers/ZWA003/assets/images/large.png",
+        "small": "/drivers/ZWA003/assets/images/small.png"
+      },
+      "energy": {
+        "batteries": [
+          "CR2450"
+        ]
+      },
+      "zwave": {
+        "manufacturerId": 881,
+        "productTypeId": [
+          2,
+          258,
+          513,
+          514
+        ],
+        "productId": [
+          3
+        ],
+        "zwaveAllianceProductId": 2820,
+        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=MarketCertificationFiles/2820/NanoMote%20Quad%20USER%20MANUAL%20.pdf",
+        "learnmode": {
+          "image": "/drivers/ZWA003/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press a button 3 times in quick succession.",
+            "nl": "Druk 3 keer snel achter elkaar op een knop.",
+            "de": "Drücken Sie eine Tatse 3x schnell hintereinander"
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/ZWA003/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press a button 3 times in quick succession.",
+            "nl": "Druk 3 keer snel achter elkaar op een knop.",
+            "de": "Drücken Sie eine Tatse 3x schnell hintereinander"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "This is the Z-Wave Lifeline group, it is not recommended to change this.",
+              "nl": "Dit is de Z-Wave Lifeline groep, het is niet aangeraden deze te veranderen."
+            }
+          },
+          "2": {
+            "hint": {
+              "en": "NanoMote Quad sends basic set command when the button 1 is triggered"
+            }
+          },
+          "3": {
+            "hint": {
+              "en": "NanoMote Quad sends switch multilevel set, multilevel start level change and multilevel stop level change command when the button 1 is triggered."
+            }
+          },
+          "4": {
+            "hint": {
+              "en": "NanoMote Quad sends basic set command when the button 2 is triggered."
+            }
+          },
+          "5": {
+            "hint": {
+              "en": "NanoMote Quad sends switch multilevel set, multilevel start level change and multilevel stop level change command when the button 2 is triggered."
+            }
+          },
+          "6": {
+            "hint": {
+              "en": "NanoMote Quad sends basic set command when the button 3 is triggered."
+            }
+          },
+          "7": {
+            "hint": {
+              "en": "NanoMote Quad sends switch multilevel set, multilevel start level change and multilevel stop level change command when the button 2 is triggered."
+            }
+          },
+          "8": {
+            "hint": {
+              "en": "NanoMote Quad sends basic set command when the button 4 is triggered."
+            }
+          },
+          "9": {
+            "hint": {
+              "en": "NanoMote Quad sends switch multilevel set, multilevel start level change and multilevel stop level change command when the button 2 is triggered."
+            }
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "43",
+          "type": "checkbox",
+          "label": {
+            "en": "Buzzer Alarm"
+          },
+          "hint": {
+            "en": "This parameter (43) enable/disable the buzzer alarm when battery is running low."
+          },
+          "zwave": {
+            "index": 43,
+            "size": 1
+          },
+          "value": false
+        },
+        {
+          "id": "32",
+          "type": "number",
+          "label": {
+            "en": "Low battery level",
+            "nl": "Laag batterij niveau"
+          },
+          "hint": {
+            "en": "This parameter (32) determines the percentage of battery value to at which the low battery alarm will go off.",
+            "nl": "Deze parameter (32) bepaalt hoe laag het batterijpercentage moet zijn om het alarm af te laten gaan."
+          },
+          "zwave": {
+            "index": 32,
+            "size": 1
+          },
+          "value": 20,
+          "attr": {
+            "min": 10,
+            "max": 50
+          }
+        },
+        {
+          "id": "42",
+          "type": "number",
+          "label": {
+            "en": "Multilevel value"
+          },
+          "hint": {
+            "en": "This parameter (42) setting the duration value of the command switch multilevel."
+          },
+          "zwave": {
+            "index": 42,
+            "size": 1
+          },
+          "value": 255,
+          "attr": {
+            "min": 0,
+            "max": 127
+          }
+        }
+      ]
+    },
+    {
+      "id": "ZWA005",
+      "name": {
+        "en": "TriSensor"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_battery",
+        "alarm_motion",
+        "measure_temperature",
+        "measure_luminance"
+      ],
+      "images": {
+        "large": "/drivers/ZWA005/assets/images/large.png",
+        "small": "/drivers/ZWA005/assets/images/small.png"
+      },
+      "energy": {
+        "batteries": [
+          "CR123A",
+          "CR123A"
+        ]
+      },
+      "zwave": {
+        "manufacturerId": 881,
+        "productTypeId": [
+          2,
+          5
+        ],
+        "productId": 5,
+        "zwaveAllianceProductId": 2898,
+        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=MarketCertificationFiles/2898/TriSensor%20user%20manual%2020180416.pdf",
+        "learnmode": {
+          "image": "/drivers/ZWA005/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the action button on your TriSensor.",
+            "nl": "Druk op de actie knop op de TriSensor."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "3": {
+            "hint": {
+              "en": "Basic Group"
+            }
+          }
+        },
+        "defaultConfiguration": [
+          {
+            "id": 1,
+            "value": 30,
+            "size": 2
+          },
+          {
+            "id": 2,
+            "value": 60,
+            "size": 2
+          },
+          {
+            "id": 4,
+            "value": 1,
+            "size": 1
+          },
+          {
+            "id": 21,
+            "value": 0,
+            "size": 2
+          },
+          {
+            "id": 22,
+            "value": 0,
+            "size": 2
+          },
+          {
+            "id": 23,
+            "value": 600,
+            "size": 2
+          },
+          {
+            "id": 24,
+            "value": 1800,
+            "size": 2
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "1",
+          "type": "number",
+          "label": {
+            "en": "Motion Retrigger Time"
+          },
+          "hint": {
+            "en": "This parameter configures the delay time before PIR sensor can be triggered again to reset motion timeout counter. Value = 0 will disable PIR sensor from triggering until motion timeout has finished."
+          },
+          "zwave": {
+            "index": 1,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 32767
+          },
+          "value": 30
+        },
+        {
+          "id": "2",
+          "type": "number",
+          "label": {
+            "en": "Motion Clear Time"
+          },
+          "hint": {
+            "en": "This parameter configures the time to clear a motion event after a motion event detected."
+          },
+          "zwave": {
+            "index": 2,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 32767
+          },
+          "value": 60
+        },
+        {
+          "id": "3",
+          "type": "dropdown",
+          "label": {
+            "en": "Motion Sensor Sensitivity",
+            "nl": "Gevoeligheid Bewegingssensor"
+          },
+          "hint": {
+            "en": "Determines sensitivity of the motion sensor.",
+            "nl": "Bepaald de gevoeligheid van de bewegingssensor."
+          },
+          "zwave": {
+            "index": 3,
+            "size": 1
+          },
+          "value": "11",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Off",
+                "nl": "Uit"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Level 1 (minimum)",
+                "nl": "Level 1 (minimum)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Level 2",
+                "nl": "Level 2"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Level 3",
+                "nl": "Level 3"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Level 4",
+                "nl": "Level 4"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Level 5",
+                "nl": "Level 5"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Level 6",
+                "nl": "Level 6"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Level 7",
+                "nl": "Level 7"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Level 8",
+                "nl": "Level 8"
+              }
+            },
+            {
+              "id": "9",
+              "label": {
+                "en": "Level 9",
+                "nl": "Level 9"
+              }
+            },
+            {
+              "id": "10",
+              "label": {
+                "en": "Level 10",
+                "nl": "Level 10"
+              }
+            },
+            {
+              "id": "11",
+              "label": {
+                "en": "Level 11 (maximum)",
+                "nl": "Level 11 (maximum)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "5",
+          "type": "dropdown",
+          "label": {
+            "en": "Disable BASIC_SET to Associated nodes"
+          },
+          "hint": {
+            "en": "This parameter enables or disables sending the BASIC_SET command to nodes that are associated in group 2 and group 3."
+          },
+          "zwave": {
+            "index": 5,
+            "size": 1
+          },
+          "value": "3",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled All Group Basic Set Command"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Enabled Group 2 Basic Set Command"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Group 3 Basic Set Command is disabled"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Enabled Group 2 and Group 3 Basic Set Command"
+              }
+            }
+          ]
+        },
+        {
+          "id": "6",
+          "type": "dropdown",
+          "label": {
+            "en": "Basic Set Value Settings for Group 2"
+          },
+          "hint": {
+            "en": "This parameter enables or disables sending the BASIC_SET command to nodes that are associated in group 2 and group 3."
+          },
+          "zwave": {
+            "index": 6,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Send ON/OFF when Motion triggered"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Send OFF/ON when Motion triggered"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Send only ON when Motion triggered"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Send only OFF when Motion triggered"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Send only OFF when Motion cleared"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Send only ON when Motion cleared"
+              }
+            }
+          ]
+        },
+        {
+          "id": "7",
+          "type": "number",
+          "label": {
+            "en": "Temperature Alarm Value"
+          },
+          "hint": {
+            "en": "This parameter configures the threshold value for the temperature alarm. When the current ambient temperature value is larger than the configured value, the device will send ON to all nodes associated in group 3. If the current temperature value is less than this value, the device will send OFF to all nodes associated in group 3."
+          },
+          "zwave": {
+            "index": 7,
+            "size": 2
+          },
+          "attr": {
+            "min": -400,
+            "max": 850
+          },
+          "value": 239
+        },
+        {
+          "id": "10",
+          "type": "checkbox",
+          "label": {
+            "en": "Led Indicate Disable"
+          },
+          "hint": {
+            "en": "This parameter enables or disables the Led light."
+          },
+          "zwave": {
+            "index": 10,
+            "size": 1
+          },
+          "value": true
+        },
+        {
+          "id": "23",
+          "type": "number",
+          "label": {
+            "en": "Temperature Sensor Report Interval"
+          },
+          "hint": {
+            "en": "This parameter configures the time interval for the temperature sensor report. The larger the value, the longer battery life will be."
+          },
+          "zwave": {
+            "index": 23,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 32767
+          },
+          "value": 600
+        },
+        {
+          "id": "24",
+          "type": "number",
+          "label": {
+            "en": "Light Sensor Report Interval"
+          },
+          "hint": {
+            "en": "This parameter configures the time interval for the light sensor report. The larger the value, the longer battery life will be."
+          },
+          "zwave": {
+            "index": 24,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 32767
+          },
+          "value": 1800
+        },
+        {
+          "id": "30",
+          "type": "number",
+          "label": {
+            "en": "Temperature Offset Value"
+          },
+          "hint": {
+            "en": "The measuring temperature value can be added or subtracted using this value setting."
+          },
+          "zwave": {
+            "index": 30,
+            "size": 2
+          },
+          "attr": {
+            "min": -200,
+            "max": 200
+          },
+          "value": 0
+        },
+        {
+          "id": "31",
+          "type": "number",
+          "label": {
+            "en": "Light Intensity Offset Value"
+          },
+          "hint": {
+            "en": "The measuring light intensity value can be added or subtracted using this value setting."
+          },
+          "zwave": {
+            "index": 31,
+            "size": 2
+          },
+          "attr": {
+            "min": -1000,
+            "max": 1000
+          },
+          "value": 0
+        },
+        {
+          "id": "100",
+          "type": "number",
+          "label": {
+            "en": "Light Sensor Calibrated Coefficient"
+          },
+          "hint": {
+            "en": "This configuration defines the calibrated scale for ambient light intensity. Please read the Aeotec manual."
+          },
+          "zwave": {
+            "index": 100,
+            "size": 2
+          },
+          "attr": {
+            "min": 1,
+            "max": 32767
+          },
+          "value": 1024
+        }
+      ]
+    },
+    {
       "id": "ZWA008",
       "name": {
-        "en": "Door/Window Sensor 7 (ZWA008)"
+        "en": "Door and Window Sensor 7",
+        "nl": "Deur/raam-sensor 7",
+        "de": "Tür-/Fensterkontakt 7"
+      },
+      "zwave": {
+        "manufacturerId": 881,
+        "productTypeId": 2,
+        "productId": 7,
+        "learnmode": {
+          "image": "/drivers/ZWA008/assets/learnmode.svg",
+          "instruction": {
+            "en": "Tripple click the tamper switch (on the right side below the battery housing)",
+            "nl": "Druk driemaal op knop (aan de rechterkant onder de batterijbehuizing)",
+            "de": "Dreimal schnell hintereinander den Tamper-Taster (auf der rechten Seite unterhalb des Batteriegehäuses) betätigen. "
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/ZWA008/assets/learnmode.svg",
+          "instruction": {
+            "en": "Tripple click the tamper switch (on the right side below the battery housing)",
+            "nl": "Druk driemaal op knop (aan de rechterkant onder de batterijbehuizing)",
+            "de": "Dreimal schnell hintereinander den Tamper-Taster (auf der rechten Seite unterhalb des Batteriegehäuses) betätigen. "
+          }
+        },
+        "associationGroups": [
+          1,
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Lifeline (Max. Nodes: 5)",
+              "nl": "Lifeline",
+              "de": "Lifeline"
+            }
+          },
+          "2": {
+            "hint": {
+              "en": "Control devices when magnet or external dry contacts trips",
+              "nl": "Bedieningsorganen bij uitval van de magneet of externe droge contacten",
+              "de": "Steuere Geräte, wenn der Magnet oder der externe potenzialfreie Kontakt ausgelöst wird"
+            }
+          },
+          "3": {
+            "hint": {
+              "en": "Sends our alarm message when magnet controlled or external dry sensor trips",
+              "nl": "Stuurt onze alarmmelding wanneer er een magneetgestuurde of externe droge sensor uitvalt",
+              "de": "Sendet eine Alarmmeldung, wenn der Magnet oder der externe potenzialfreie Kontakt ausgelöst wird"
+            }
+          },
+          "4": {
+            "hint": {
+              "en": "Sends alarm messages when tamper is tripped",
+              "nl": "Stuurt alarmmeldingen wanneer de sabotage wordt geactiveerd",
+              "de": "Sendet Alarmmeldungen, wenn die Tamper-Taste ausgelöst wird"
+            }
+          }
+        },
+        "defaultConfiguration": [
+          {
+            "id": 13,
+            "size": 1,
+            "value": 1
+          }
+        ]
       },
       "class": "sensor",
       "capabilities": [
         "measure_battery",
         "alarm_contact",
-        "alarm_tamper"
+        "alarm_tamper",
+        "info_tilt"
       ],
+      "energy": {
+        "batteries": [
+          "LS14250"
+        ]
+      },
       "images": {
         "large": "/drivers/ZWA008/assets/images/large.png",
         "small": "/drivers/ZWA008/assets/images/small.png"
+      },
+      "settings": [
+        {
+          "id": "no_alarm_if_tilt",
+          "type": "dropdown",
+          "value": "0",
+          "label": {
+            "en": "Contact alarm when window is tilted",
+            "nl": "Contactalarm wanneer raam gekanteld is",
+            "de": "Kontakt-Alarm wenn Fenster gekippt"
+          },
+          "hint": {
+            "en": "If disabled, the contact alarm is set to No when the window is tilted.",
+            "nl": "Als het contactalarm is uitgeschakeld, wordt het contactalarm bij het kantelen van het venster op Nee gezet.",
+            "de": "Wenn deaktiviert wird der Kontakt-Alarm wenn Fenster gekippt wurde auf Nein gesetzt"
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Enabled (default)",
+                "nl": "ingeschakeld (standaard)",
+                "de": "Aktiviert (Standard)"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "disabled",
+                "nl": "uitgeschakeld",
+                "de": "Deaktiviert"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sensor_operation_mode",
+          "zwave": {
+            "index": 1,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "0",
+          "label": {
+            "en": "Sensor Operation Mode",
+            "nl": "Sensor werkings modus",
+            "de": "Sensor-Betriebsart"
+          },
+          "hint": {
+            "en": "This parameter defines if the internal magnet sensor or the external terminal input is detected and used to issue alarm notification. There is always one input active only. The other sensor input the deactivated.",
+            "nl": "Deze parameter bepaalt of de interne magneetsensor of de externe klemmeningang wordt gedetecteerd en gebruikt voor het afgeven van alarmmeldingen. Er is altijd maar één ingang actief. De andere sensoringang is gedeactiveerd.",
+            "de": "Dieser Parameter legt fest, ob der interne Magnetsensor oder der Eingang des externen Terminals erkannt und zur Alarmmeldung verwendet wird. Es ist immer nur ein Eingang aktiv. Der andere Sensoreingang ist der deaktivierte. "
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Internal Magnet Sensor Used (default)",
+                "nl": "Gebruikte interne magneetsensor (standaard)",
+                "de": "Interner Magnetsensor verwendet (Standard)"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "External Terminal Inputs Used",
+                "nl": "Gebruikte externe klemmeningangen",
+                "de": "Externe Binäreingänge verwendet"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sensor_state_polarity",
+          "zwave": {
+            "index": 2,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "0",
+          "label": {
+            "en": "Sensor State Polarity",
+            "nl": "Sensorstaat Polariteit van de sensor",
+            "de": "Polarität des Sensorzustands"
+          },
+          "hint": {
+            "en": "This parameter defines if the internal magnet sensor or the external terminal input is detected and used to issue alarm notification. There is always one input active only. The other sensor input the deactivated.",
+            "nl": "Deze parameter bepaalt of de interne magneetsensor of de externe klemmeningang wordt gedetecteerd en gebruikt voor het afgeven van alarmmeldingen. Er is altijd maar één ingang actief. De andere sensoringang is gedeactiveerd.",
+            "de": "Dieser Parameter legt fest, ob der interne Magnetsensor oder der Eingang des externen Terminals erkannt und zur Alarmmeldung verwendet wird. Es ist immer nur ein Eingang aktiv. Der andere Sensoreingang ist der deaktivierte. "
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Closed when Magnet in proximity (default)",
+                "nl": "Gesloten wanneer de magneet in de buurt is. (standaard)",
+                "de": "Geschlossen, wenn der Magnet in der Nähe ist. (Standard)"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Opened when Magnet in proximity",
+                "nl": "Geopend wanneer de magneet in de buurt is.",
+                "de": "Geöffnet, wenn der Magnet in der Nähe ist."
+              }
+            }
+          ]
+        },
+        {
+          "id": "visual_led_indications",
+          "zwave": {
+            "index": 3,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "7",
+          "label": {
+            "en": "Visual LED Indications",
+            "nl": "Visuele LED-indicaties",
+            "de": "Optische LED-Anzeige"
+          },
+          "hint": {
+            "en": "This parameter defines when the red LED will indicate events. Disabling all indications may extend battery life. ",
+            "nl": "Deze parameter bepaalt wanneer de rode LED gebeurtenissen aangeeft. Het uitschakelen van alle indicaties kan de levensduur van de batterij verlengen.",
+            "de": "Dieser Parameter legt fest, wann die rote LED Ereignisse anzeigt. Das Deaktivieren aller Anzeigen kann die Lebensdauer der Batterie verlängern."
+          },
+          "values": [
+            {
+              "id": "7",
+              "label": {
+                "en": "On at all events (default)",
+                "nl": "Aan in ieder geval (standaard)",
+                "de": "An bei allen Events (Standard)"
+              }
+            },
+            {
+              "id": "0",
+              "label": {
+                "en": "Off",
+                "nl": "Uit",
+                "de": "Aus"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Open/Close Status Change only",
+                "nl": "Alleen openen/sluiten van de statuswijziging",
+                "de": "Nur bei Statusänderung Öffnen/Schließen"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Wake Up only",
+                "nl": "Alleen Wake Up",
+                "de": "Nur bei Wake Up"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Device Tampering only",
+                "nl": "Alleen Apparaat manipulatie",
+                "de": "Nur bei Auslösen des Tamper-Tasters"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Open/Close Status Change + Wake Up",
+                "nl": "openen/sluiten van de statuswijziging + Wake Up",
+                "de": "Statusänderung Öffnen/Schließen + Wake Up"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Open/Close Status Change + Device Tampering",
+                "nl": "openen/sluiten van de statuswijziging + Apparaat manipulatie",
+                "de": "Statusänderung Öffnen/Schließen + Tamper-Taster"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Wake Up + Device Tampering",
+                "nl": "Wake Up + Apparaat manipulatie",
+                "de": "Wake Up + Tamper-Taster"
+              }
+            }
+          ]
+        },
+        {
+          "id": "range_test",
+          "zwave": {
+            "index": 4,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "0",
+          "label": {
+            "en": "Range Test after double click",
+            "nl": "Bereiktest na dubbelklikken",
+            "de": "Reichweitentest nach Doppelklick"
+          },
+          "hint": {
+            "en": "Allows to enable the activation of a Z-Wave range test with double clicking the tamper switch.",
+            "nl": "Maakt het mogelijk om een Z-Wave-bereiktest te activeren met een dubbelklik op de sabotageschakelaar. ",
+            "de": "Ermöglicht die Aktivierung eines Z-Wave-Reichweitentests durch Doppelklicken des Manipulationsschalters."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Enabled (default)",
+                "nl": "Ingeschakeld",
+                "de": "Deaktiviert (Standard)"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Disabled",
+                "nl": "Uitgeschakeld",
+                "de": "Aktiviert"
+              }
+            }
+          ]
+        },
+        {
+          "id": "group_trigger",
+          "zwave": {
+            "index": 5,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "0",
+          "label": {
+            "en": "2nd Association Group Trigger",
+            "nl": "2de Association Group Trigger",
+            "de": "Auslöser für Assoziationsgruppe 2"
+          },
+          "hint": {
+            "en": "This parameter defines the status of the magnet switch that causes sending a BASIC command to all devices of Association Group 2. ",
+            "nl": "Deze parameter definieert de status van de magneetschakelaar die ervoor zorgt dat een BASIC-commando naar alle apparaten van Associatiegroep 2 wordt verzonden.",
+            "de": "Dieser Parameter definiert den Status des Magnetschalters, der das Senden eines BASIC-Befehls an alle Geräte der Verbindungsgruppe 2 bewirkt."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Switch after Open and Close (default)",
+                "nl": "Schakelaar na openen en sluiten (standaard)",
+                "de": "Umschalten nach Open und Close (Standard)"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Switch after Open",
+                "nl": "Schakelaar na openen",
+                "de": "Umschalten nach Open"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Switch after Close",
+                "nl": "Schakelaar na sluiten",
+                "de": "Umschalten nach Close"
+              }
+            }
+          ]
+        },
+        {
+          "id": "group_command",
+          "zwave": {
+            "index": 6,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "0",
+          "label": {
+            "en": "Command Sent to Devices of Association Group 2",
+            "nl": "Commando Verzonden naar apparaten van de Associatiegroep 2",
+            "de": "Befehl, der an Geräte der Assoziationsgruppe 2 gesendet wird"
+          },
+          "hint": {
+            "en": "This parameter defines which commands is sent to 2nd Association Group ",
+            "nl": "Deze parameter definieert welke commando's naar de 2e Associatiegroep worden gestuurd.",
+            "de": "Dieser Parameter definiert, welche Befehle an die Assoziationsgruppe 2 gesendet werden."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "On and Off (default)",
+                "nl": "Aan en uit (standaard)",
+                "de": "On und Off (Standard)"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "On",
+                "nl": "Aan",
+                "de": "On"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Off",
+                "nl": "Uuit",
+                "de": "Off"
+              }
+            }
+          ]
+        },
+        {
+          "id": "basic_group_on",
+          "zwave": {
+            "index": 7,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number",
+          "value": 255,
+          "label": {
+            "en": "BASIC command value sent to 2nd Association Group on On event",
+            "nl": "BASIC command verzonden naar 2de Associatiegroep On evenement",
+            "de": "BASIC Command wird an die Assoziationsgruppe 2 gesendet, wenn das Ereignis On eintritt "
+          },
+          "hint": {
+            "en": "This is the BASIC command value sent in case of On event. (1-99, 255) (Default: 255)",
+            "nl": "BASIC-commandowaarde verzonden in het geval van On event. (1-99, 255) (Standaard: 255)",
+            "de": "Dies ist das BASIC Command, das im Falle des Ereignisses On gesendet wird. (1-99, Standard: 255)"
+          }
+        },
+        {
+          "id": "basic_group_off",
+          "zwave": {
+            "index": 8,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number",
+          "value": 255,
+          "label": {
+            "en": "BASIC command value sent to 2nd Association Group off event",
+            "nl": "BASIC command verzonden naar 2de Associatiegroep off evenement",
+            "de": "BASIC Command wird an die Assoziationsgruppe 2 gesendet, wenn das Ereignis Off eintritt "
+          },
+          "hint": {
+            "en": "This is the BASIC command value sent in case of Off event. (1-99, 255) (Default: 255)",
+            "nl": "BASIC-commandowaarde verzonden in het geval van Off event. (1-99, 255) (Standaard: 255=-1)",
+            "de": "Dies ist das BASIC Command, das im Falle des Ereignisses Off gesendet wird. (1-99, 255) (Standard: 255=-1)"
+          }
+        },
+        {
+          "id": "time_delay_on",
+          "zwave": {
+            "index": 9,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 32400
+          },
+          "type": "number",
+          "value": 0,
+          "label": {
+            "en": "Time Delay of On command frame",
+            "nl": "Tijdvertraging van het On-commandokader",
+            "de": "Zeitverzögerung des BASIC Commands On"
+          },
+          "hint": {
+            "en": "On command is sent after a delay defined in this parameter. (0-32400) (Default: 0)",
+            "nl": "On command is sent after a delay defined in this parameter. (0-32400) (Standaard: 0)",
+            "de": "Das On Kommando wird nach einer in diesem Parameter definierten Verzögerung gesendet.  (0-32400) (Standard: 0)"
+          }
+        },
+        {
+          "id": "time_delay_off",
+          "zwave": {
+            "index": 10,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 32400
+          },
+          "type": "number",
+          "value": 0,
+          "label": {
+            "en": "Time Delay of Off command frame",
+            "nl": "Tijdvertraging van het Off-commandokader",
+            "de": "Zeitverzögerung des BASIC Commands Off"
+          },
+          "hint": {
+            "en": "Off command is sent after a delay defined in this parameter. (0-32400) (Default: 0)",
+            "nl": "Off command is sent after a delay defined in this parameter. (0-32400) (Standaard: 0)",
+            "de": "Das Off Kommando wird nach einer in diesem Parameter definierten Verzögerung gesendet.  (0-32400) (Standard: 0)"
+          }
+        },
+        {
+          "id": "time_delay_tamper",
+          "zwave": {
+            "index": 12,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 32400
+          },
+          "type": "number",
+          "value": 0,
+          "label": {
+            "en": "Delay of Tamper Alarm Cancellation",
+            "nl": "Vertraging van de Annulering van het stamperalarm door een manipulatiealarm",
+            "de": "Zeitverzögerung bis der Tamper Alarm zurückgesetzt wird "
+          },
+          "hint": {
+            "en": "Time a tamper alarm is delayed. (0-32400) (Default: 0)",
+            "nl": "Tijd dat een sabotagealarm wordt uitgesteld.  (0-32400) (Standaard: 0)",
+            "de": "Zeitverzögerung bis der Tamper Alarm zurückgesetzt wird. (0-32400) (Standard: 0)"
+          }
+        },
+        {
+          "id": "alarm_cancellation",
+          "zwave": {
+            "index": 12,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "1",
+          "label": {
+            "en": "Reporting Tamper Alarm Cancellation",
+            "nl": "Melden van het stamperalarm annuleren",
+            "de": "Notification, dass der Tamper Alarm zurückgesetzt wurde "
+          },
+          "hint": {
+            "en": "This parameter defines if the alarm cancellation event is reported.",
+            "nl": "Deze parameter bepaalt of de alarmannulering wordt gemeld.",
+            "de": "Dieser Parameter legt fest, ob das Ereignis Tamper Alarm zurückgesetzt gemeldet wird."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Do not send Report",
+                "nl": "Niet verzenden Rapport",
+                "de": "Bericht nicht senden"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Send Report (default)",
+                "nl": "Rapport verzenden (standaard)",
+                "de": "Bericht senden (Standard)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "central_scene",
+          "zwave": {
+            "index": 13,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "1",
+          "label": {
+            "en": "Central Scene Event Functionality",
+            "nl": "Central Scene Event Functionality ",
+            "de": "Central Scene Funktionalität"
+          },
+          "hint": {
+            "en": "This parameter enables/disables  the central scene function.",
+            "nl": "Deze parameter activeert/uitschakelt de central scene function.",
+            "de": "Dieser Parameter legt fest, ob die Central scene function aktiviert ist. "
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled",
+                "nl": "Uitgeschakeld",
+                "de": "Deaktiviert"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Enabled (default)",
+                "nl": "Ingeschakeld (standaard)",
+                "de": "Aktiviert (Stdnard)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "tilt_on",
+          "zwave": {
+            "index": 14,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "1",
+          "label": {
+            "en": "Tilt Sensor Functionality",
+            "nl": "Tilt Sensor Functionality ",
+            "de": "Neigungssensorensor Funktionalität"
+          },
+          "hint": {
+            "en": "This parameter enables/disables  the tilt function.",
+            "nl": "Deze parameter schakelt de kantelfunctie in of uit.",
+            "de": "Dieser Parameter aktiviert/deaktiviert den Neigungssensorensor."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled",
+                "nl": "Uitgeschakeld",
+                "de": "Deaktiviert"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Enabled (default)",
+                "nl": "Ingeschakeld (standaard)",
+                "de": "Aktiviert (Standard)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "tilt_sensitivity",
+          "zwave": {
+            "index": 15,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 100
+          },
+          "type": "number",
+          "value": 50,
+          "label": {
+            "en": "Tilt sensitivity",
+            "nl": "Kantelgevoeligheid",
+            "de": "Neigungssensitivität"
+          },
+          "hint": {
+            "en": "You can use this parameter to adjust the tilt sensitivity if the tilt is too low or too high. (0-100, default: 50)",
+            "nl": "Met deze parameter kunt u de kantelgevoeligheid aanpassen als de kantelgevoeligheid te laag of te hoog is.  (0-100, standaard: 50)",
+            "de": "Mit diesem Parameter können Sie bei zu geringer oder zu starker Neigung die Neigungssensitivität anpassen. (0-100, Standard: 50)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ZWA009",
+      "name": {
+        "en": "aërQ Temperature & Humidity Sensor"
+      },
+      "capabilities": [
+        "measure_temperature",
+        "measure_humidity",
+        "measure_dewpoint",
+        "alarm_generic.mold",
+        "measure_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2477"
+        ]
+      },
+      "capabilitiesOptions": {
+        "alarm_generic.mold": {
+          "title": {
+            "en": "Mold Alert",
+            "nl": "Schimmel Alarm",
+            "de": "Schimmel Alarm"
+          }
+        }
+      },
+      "zwave": {
+        "manufacturerId": 881,
+        "productTypeId": 2,
+        "productId": 9,
+        "learnmode": {
+          "image": "/drivers/ZWA009/assets/learnmode.svg",
+          "instruction": {
+            "en": "Tripple clicking the button includes (adds) the device. \nThe LED flashes alternately red/green until inclusion is started. ",
+            "nl": "De Tripple-klik op de knop bevat (voegt) het apparaat toe. \nDe LED knippert afwisselend rood/groen tot de opname wordt gestart.",
+            "de": "Ein dreifaches Anklicken des Knopfes fügt das Gerät hinzu. \nDie LED blinkt bis zum Start der Inklusion abwechselnd rot/grün."
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/ZWA009/assets/learnmode.svg",
+          "instruction": {
+            "en": "Tripple clicking the button includes (adds) the device. \n The LED flashes alternately red/green until exclusion is started. ",
+            "nl": "Tripple-klikken op de knop omvat (voegt toe) het apparaat. \n De LED knippert afwisselend rood/groen tot de uitsluiting wordt gestart.",
+            "de": "Ein dreifaches Anklicken des Knopfes fügt das Gerät hinzu. \n Die LED blinkt bis zum Start der Exklusion abwechselnd rot/grün."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Z-Wave Plus Lifeline"
+            }
+          },
+          "2": {
+            "hint": {
+              "en": "Temperature High Trigger",
+              "nl": "Temperatuur Hoge Trigger",
+              "de": "Sendet Befehle an die Assozierten Geräte bei überschreiten des oberen Temperaturschwellwertes"
+            }
+          },
+          "3": {
+            "hint": {
+              "en": "Temperature Low Trigger",
+              "nl": "Temperatuur Lage Trigger",
+              "de": "Sendet Befehle an die Assozierten Geräte bei unterschreiten des unteren Temperaturschwellwertes"
+            }
+          },
+          "4": {
+            "hint": {
+              "en": "Humidity High Trigger",
+              "nl": "Vochtigheid Hoge Trigger",
+              "de": "Sendet Befehle an die Assozierten Geräte bei überschreiten des oberen Feuchtigkeitsschwellwertes"
+            }
+          },
+          "5": {
+            "hint": {
+              "en": "Humidity Low Trigger",
+              "nl": "Vochtigheid Lage Trigger",
+              "de": "Sendet Befehle an die Assozierten Geräte bei unterschreiten des unteren Feuchtigkeitsschwellwertes"
+            }
+          },
+          "6": {
+            "hint": {
+              "en": "Air Temperature",
+              "nl": "Air Temperature",
+              "de": "Sendet den Temperaturwert an ein Assoziertes Gerät"
+            }
+          }
+        }
+      },
+      "class": "sensor",
+      "images": {
+        "large": "/drivers/ZWA009/assets/images/large.jpg",
+        "small": "/drivers/ZWA009/assets/images/small.jpg"
+      },
+      "defaultConfiguration": [
+        {
+          "id": 1,
+          "size": 1,
+          "value": 5
+        },
+        {
+          "id": 2,
+          "size": 1,
+          "value": 5
+        }
+      ],
+      "settings": [
+        {
+          "id": "tempchange_to_report",
+          "zwave": {
+            "index": 1,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 100
+          },
+          "type": "number",
+          "value": 5,
+          "label": {
+            "en": "Minimum Temperature change to report",
+            "nl": "Minimale temperatuurverandering voor rapport",
+            "de": "Minimale Temperaturänderung für den Bericht"
+          },
+          "hint": {
+            "en": "This value defines the minimum change of temperature to cause an unsolicited report of humidity to the central controller using Lifeline. If the value is set to 0, there will be no reports sent to the controller, when the temperature changes. However, periodic reports, managed by configuration parameter 4, may still be active. (0-100, 1/10 degree)",
+            "nl": "Deze waarde definieert de minimale temperatuursverandering die een ongevraagde melding van de luchtvochtigheid aan de centrale met behulp van Lifeline veroorzaakt. Als de waarde op 0 is ingesteld, worden er geen meldingen naar de regelaar gestuurd wanneer de temperatuur verandert. Periodieke rapporten, beheerd door configuratieparameter 4, kunnen echter nog steeds actief zijn. (0-100, 1/10 graad)",
+            "de": "Dieser Wert definiert die minimale Temperaturänderung, um eine unaufgeforderte Meldung der Luftfeuchtigkeit an die zentrale Steuerung über die Lifeline zu veranlassen.Wenn der Wert auf 0 gesetzt ist, werden keine Meldungen an die Steuerung gesendet, wenn sich die Temperatur ändert. Periodische Berichte, die über den Konfigurationsparameter 4 verwaltet werden, können jedoch weiterhin aktiv sein. (0-100, 0.1° Schritte)"
+          }
+        },
+        {
+          "id": "humiditychange_to_report",
+          "zwave": {
+            "index": 2,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 100
+          },
+          "type": "number",
+          "value": 5,
+          "label": {
+            "en": "Minimum humidity change to report",
+            "nl": "Minimale vochtverandering voor het rapport",
+            "de": "Minimale Feuchtigkeitsänderung für den Bericht"
+          },
+          "hint": {
+            "en": "This parameter defines the time interval to send an unsolicited report. If the value is set to 0, there will be no periodic reports sent to the controller. However, reports on temperature/humidity changes, managed by configuration parameters 1 and 2, may still be active. (0-100, %)",
+            "nl": "Deze parameter definieert het tijdsinterval voor het verzenden van een ongevraagde melding. Als de waarde op 0 is ingesteld, worden er geen periodieke rapporten naar de regelaar gestuurd. Het is echter mogelijk dat er nog steeds rapporten over temperatuur- en vochtigheidsveranderingen, beheerd door de configuratieparameters 1 en 2, actief zijn. (0-100, %)",
+            "de": "Dieser Wert definiert die minimale Änderung der Luftfeuchtigkeit, um eine unaufgeforderte Meldung der Luftfeuchtigkeit an die zentrale Steuerung über Lifeline zu veranlassen.Wenn der Wert auf 0 gesetzt ist, werden keine Meldungen an die Steuerung gesendet, wenn sich die Luftfeuchtigkeit ändert. Periodische Berichte, die über den Konfigurationsparameter 4 verwaltet werden, können jedoch weiterhin aktiv sein.  (0-100, in %)"
+          }
+        },
+        {
+          "id": "periodic_report",
+          "zwave": {
+            "index": 4,
+            "size": 2,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 65535
+          },
+          "type": "number",
+          "value": 43200,
+          "label": {
+            "en": "Periodic Reports",
+            "nl": "Periodieke rapporten",
+            "de": "Periodische Berichte"
+          },
+          "hint": {
+            "en": "This parameter defines the time interval to send an unsolicited report. If the value is set to 0, there will be no periodic reports sent to the controller. However, reports on temperature/humidity changes, managed by configuration parameters 1 and 2, may still be active. (0, 900-65535)",
+            "nl": "Deze parameter definieert het tijdsinterval voor het verzenden van een ongevraagde melding. Als de waarde op 0 is ingesteld, worden er geen periodieke rapporten naar de regelaar gestuurd. Het is echter mogelijk dat er nog steeds rapporten over temperatuur- en vochtigheidsveranderingen, beheerd door de configuratieparameters 1 en 2, actief zijn.  (0, 900-65535)",
+            "de": "Dieser Parameter definiert das Zeitintervall für das Senden eines unaufgeforderten Berichts.Wenn der Wert auf 0 gesetzt ist, werden keine regelmäßigen Berichte an die Steuerung gesendet. Es ist jedoch möglich, dass Berichte über Temperatur-/Feuchteänderungen, die über die Konfigurationsparameter 1 und 2 verwaltet werden, noch aktiv sind. (0, 900-65535)"
+          }
+        },
+        {
+          "id": "temperature_report_upper",
+          "zwave": {
+            "index": 5,
+            "size": 2,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 1000
+          },
+          "type": "number",
+          "value": 0,
+          "label": {
+            "en": "Upper temperature threshold",
+            "nl": "Bovenste temperatuurdrempel",
+            "de": "Oberer Temperaturschwellwert"
+          },
+          "hint": {
+            "en": "This parameter defines a temperature. If the measured temperature surpasses this value, a BASIC command is sent into Association Group 2  (0-1000, 1/10 degree)",
+            "nl": "Deze parameter definieert een temperatuur. Als de gemeten temperatuur deze waarde overschrijdt, wordt een BASIC-commando naar Associatiegroep 2 gestuurd (0-1000, 1/10 graad).",
+            "de": "Dieser Parameter definiert eine Temperatur. Überschreitet die gemessene Temperatur diesen Schwellwert, wird ein BASIC-Befehl an die Verknüpfungsgruppe 2 gesendet (0-1000, 0.1° Schritte)"
+          }
+        },
+        {
+          "id": "temperature_report_lower",
+          "zwave": {
+            "index": 6,
+            "size": 2,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 65535
+          },
+          "type": "number",
+          "value": 0,
+          "label": {
+            "en": "Lower temperature threshold",
+            "nl": "Lagere temperatuurdrempel",
+            "de": "Unterer Temperaturschwellwert"
+          },
+          "hint": {
+            "en": "This parameter defines a temperature. If the measured temperature dropps below this watermark a BASIC command is sent into Association Group 3. (1 - 1000: 1/10 degree [0,1°C - 100°C]. 65336 - 65535: 1/10 degree [-20,0°C - -0,1°C])",
+            "nl": "Deze parameter definieert een temperatuur. Als de gemeten temperatuur onder dit watermerk daalt, wordt een BASIC-commando naar Associatiegroep 3 gestuurd. (1 - 1000: 1/10 graad [0,1°C - 100°C]. 65336 - 65535: 1/10 graad [-20,0°C - -0,1°C])",
+            "de": "Dieser Parameter definiert eine Temperatur. Unterschreitet die gemessene Temperatur diesen Schwellwert, wird ein BASIC-Befehl an die  Verknüpfungsgruppe 3 gesendet. (1 - 1000: 0,1°C bis 100,0°C.  65336-65535: -20,0°C bis -0,1°C) "
+          }
+        },
+        {
+          "id": "humidtiy_report_upper",
+          "zwave": {
+            "index": 7,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 100
+          },
+          "type": "number",
+          "value": 0,
+          "label": {
+            "en": "Humidity upper threshold",
+            "nl": "Luchtvochtigheid bovendrempel",
+            "de": "Luftfeuchtigkeit oberer Schwellwert "
+          },
+          "hint": {
+            "en": "This parameter defines a relative humidity. If the measured humidity falls below this threshold, a BASIC command is sent to link group 4. (0, 10-100 in %)",
+            "nl": "Deze parameter definieert een relatieve vochtigheid. Als de gemeten relatieve vochtigheid deze drempel overschrijdt, wordt een BASIC-commando verzonden naar koppelingsgroep 4. (0, 10-100 in %)",
+            "de": "Dieser Parameter definiert eine relative Luftfeuchtigkeit. Überschreitet die gemessene relative Luftfeuchtigkeit diesen Schwellwert, wird ein BASIC-Befehl an die Verknüpfungsgruppe 4 gesendet. (0, 10-100 in %)"
+          }
+        },
+        {
+          "id": "humidtiy_report_lower",
+          "zwave": {
+            "index": 8,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 90
+          },
+          "type": "number",
+          "value": 0,
+          "label": {
+            "en": "Humidity lower threshold",
+            "nl": "Luchtvochtigheid onderdrempel",
+            "de": "Luftfeuchtigkeit unterer Schwellwert"
+          },
+          "hint": {
+            "en": "This parameter defines a relative humidity. If the measured humidity falls below this threshold, a BASIC command is sent to link group 5. (0, 1-90 in %)",
+            "nl": "Deze parameter definieert een relatieve vochtigheid. Als de gemeten luchtvochtigheid onder deze drempel komt, wordt een BASIC-commando verzonden naar koppelingsgroep 5. (0, 1-90 in %)",
+            "de": "Dieser Parameter definiert eine relative Luftfeuchtigkeit. Fällt die gemessene Luftfeuchtigkeit unter diesen Schwellwert, wird ein BASIC-Befehl an die Verknüpfungsgruppe 5 gesendet.  (0, 1-90 in %)"
+          }
+        },
+        {
+          "id": "low_temp_trigger",
+          "zwave": {
+            "index": 9,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number",
+          "value": 255,
+          "label": {
+            "en": "Low Temperature Trigger BASIC Set Command Value",
+            "nl": "Lage temperatuur Trigger BASIC Ingestelde opdrachtwaarde voor lage temperatuur Trigger ",
+            "de": "Basic Werte bei unterer Temperaturschwelle"
+          },
+          "hint": {
+            "en": "This defines which BASIC command should be sent to association group 3.",
+            "nl": "Dit definieert welk BASIC-commando naar associatiegroep 3 moet worden gestuurd.",
+            "de": "Hiermit wird definiert, welcher BASIC-Befehl in die Assoziationsgruppe 3 gesendet werden soll. "
+          }
+        },
+        {
+          "id": "high_temp_trigger",
+          "zwave": {
+            "index": 10,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number",
+          "value": 0,
+          "label": {
+            "en": "High Temperature Trigger BASIC Set Command Value",
+            "nl": "Hoge Temperatuur Trigger BASIC Ingestelde Commandowaarde",
+            "de": "Basic Wert bei oberen Temperaturschwellwert"
+          },
+          "hint": {
+            "en": "This defines which BASIC command should be sent to association group 2.",
+            "nl": "Dit definieert welk BASIC-commando naar associatiegroep 2 moet worden gestuurd.",
+            "de": "Hiermit wird definiert, welcher BASIC-Befehl in die Assoziationsgruppe 2 gesendet werden soll. "
+          }
+        },
+        {
+          "id": "low_humidity_trigger",
+          "zwave": {
+            "index": 11,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number",
+          "value": 255,
+          "label": {
+            "en": "Low Humidity  Trigger BASIC Set Command Value",
+            "nl": "Lage Vochtigheid Trigger BASIC Ingestelde Commandowaarde",
+            "de": "Basic Wert bei unterem Luftfeuchtigkeitsschwellwert "
+          },
+          "hint": {
+            "en": "This defines which BASIC command is to be sent to association group 5.",
+            "nl": "Dit definieert welk BASIC-commando naar associatiegroep 5 moet worden gestuurd.",
+            "de": "Hiermit wird definiert, welcher BASIC-Befehl in die Assoziationsgruppe 5 gesendet werden soll. "
+          }
+        },
+        {
+          "id": "high_humidity_trigger",
+          "zwave": {
+            "index": 12,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number",
+          "value": 0,
+          "label": {
+            "en": "High Humidity Trigger BASIC Set Command Value",
+            "nl": "Hoge Vochtigheid Trigger BASIC Ingestelde Commandowaarde",
+            "de": "Basic Wert bei oberen Luftfeuchtigkeitsschwellwert"
+          },
+          "hint": {
+            "en": "This defines which BASIC command should be sent to association group 4.",
+            "nl": "Dit definieert welk BASIC-commando naar associatiegroep 4 moet worden gestuurd.",
+            "de": "Hiermit wird definiert, welcher BASIC-Befehl in die Assoziationsgruppe 4 gesendet werden soll."
+          }
+        },
+        {
+          "id": "mold_offset",
+          "zwave": {
+            "index": 13,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 10
+          },
+          "type": "number",
+          "value": 0,
+          "label": {
+            "en": "Offset value for Mold environment notification",
+            "nl": "Compensatiewaarde voor Schimmelmilieumelding",
+            "de": "Offset-Wert für die Benachrichtigung über die Moldumgebung"
+          },
+          "hint": {
+            "en": "This value allows to increase the humidity threshold for ideal mold environment notification by max 10%.",
+            "nl": "Deze waarde maakt het mogelijk om de vochtigheidsdrempel voor ideale schimmelmeldingen met maximaal 10% te verhogen.",
+            "de": "Dieser Wert erlaubt es, den Feuchtigkeitsschwellenwert für die Meldung einer idealen Schimmelpilzumgebung um maximal 10% zu erhöhen."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ZWA012",
+      "name": {
+        "en": "Door and Window Sensor 7 PRO",
+        "nl": "Deur/raam-sensor 7 PRO",
+        "de": "Tür-/Fensterkontakt 7 PRO"
+      },
+      "zwave": {
+        "manufacturerId": 881,
+        "productTypeId": 2,
+        "productId": 12,
+        "learnmode": {
+          "image": "/drivers/ZWA012/assets/learnmode.svg",
+          "instruction": {
+            "en": "Tripple click the tamper switch (on the right side below the battery housing)",
+            "nl": "Druk driemaal op knop (aan de rechterkant onder de batterijbehuizing)",
+            "de": "Dreimal schnell hintereinander den Tamper-Taster (auf der rechten Seite unterhalb des Batteriegehäuses) betätigen. "
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/ZWA012/assets/learnmode.svg",
+          "instruction": {
+            "en": "Tripple click the tamper switch (on the right side below the battery housing)",
+            "nl": "Druk driemaal op knop (aan de rechterkant onder de batterijbehuizing)",
+            "de": "Dreimal schnell hintereinander den Tamper-Taster (auf der rechten Seite unterhalb des Batteriegehäuses) betätigen. "
+          }
+        },
+        "associationGroups": [
+          1,
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Lifeline (Max. Nodes: 5)",
+              "nl": "Lifeline",
+              "de": "Lifeline"
+            }
+          },
+          "2": {
+            "hint": {
+              "en": "Control devices when magnet or external dry contacts trips",
+              "nl": "Bedieningsorganen bij uitval van de magneet of externe droge contacten",
+              "de": "Steuere Geräte, wenn der Magnet oder der externe potenzialfreie Kontakt ausgelöst wird"
+            }
+          },
+          "3": {
+            "hint": {
+              "en": "Sends our alarm message when magnet controlled or external dry sensor trips",
+              "nl": "Stuurt onze alarmmelding wanneer er een magneetgestuurde of externe droge sensor uitvalt",
+              "de": "Sendet eine Alarmmeldung, wenn der Magnet oder der externe potenzialfreie Kontakt ausgelöst wird"
+            }
+          },
+          "4": {
+            "hint": {
+              "en": "Sends alarm messages when tamper is tripped",
+              "nl": "Stuurt alarmmeldingen wanneer de sabotage wordt geactiveerd",
+              "de": "Sendet Alarmmeldungen, wenn die Tamper-Taste ausgelöst wird"
+            }
+          }
+        },
+        "defaultConfiguration": [
+          {
+            "id": 14,
+            "size": 1,
+            "value": 1
+          }
+        ]
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_battery",
+        "alarm_contact",
+        "alarm_tamper",
+        "info_tilt"
+      ],
+      "energy": {
+        "batteries": [
+          "LS14250"
+        ]
+      },
+      "images": {
+        "large": "/drivers/ZWA012/assets/images/large.png",
+        "small": "/drivers/ZWA012/assets/images/small.png"
+      },
+      "settings": [
+        {
+          "id": "no_alarm_if_tilt",
+          "type": "dropdown",
+          "value": "0",
+          "label": {
+            "en": "Contact alarm when window is tilted",
+            "nl": "De Wijze van de sensorverrichting",
+            "de": "Kontakt-Alarm wenn Fenster gekippt"
+          },
+          "hint": {
+            "en": "If disabled, the contact alarm is set to No when the window is tilted.",
+            "nl": "Als het contactalarm is uitgeschakeld, wordt het contactalarm bij het kantelen van het venster op Nee gezet.",
+            "de": "Wenn deaktiviert wird der Kontakt-Alarm wenn Fenster gekippt wurde auf Nein gesetzt"
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Enabled (default)",
+                "nl": "ingeschakeld (standaard)",
+                "de": "Aktiviert (Standard)"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "disabled",
+                "nl": "uitgeschakeld",
+                "de": "Deaktiviert"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sensor_operation_mode",
+          "zwave": {
+            "index": 1,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "0",
+          "label": {
+            "en": "Sensor Operation Mode",
+            "nl": "De Wijze van de sensorverrichting",
+            "de": "Sensor-Betriebsart"
+          },
+          "hint": {
+            "en": "This parameter defines if the internal magnet sensor or the external terminal input is detected and used to issue alarm notification. There is always one input active only. The other sensor input the deactivated.",
+            "nl": "Deze parameter bepaalt of de interne magneetsensor of de externe klemmeningang wordt gedetecteerd en gebruikt voor het afgeven van alarmmeldingen. Er is altijd maar één ingang actief. De andere sensoringang is gedeactiveerd.",
+            "de": "Dieser Parameter legt fest, ob der interne Magnetsensor oder der Eingang des externen Terminals erkannt und zur Alarmmeldung verwendet wird. Es ist immer nur ein Eingang aktiv. Der andere Sensoreingang ist der deaktivierte. "
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Internal Magnet Sensor Used (default)",
+                "nl": "Gebruikte interne magneetsensor (standaard)",
+                "de": "Interner Magnetsensor verwendet (Standard)"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "External Terminal Inputs Used",
+                "nl": "Gebruikte externe klemmeningangen",
+                "de": "Externe Binäreingänge verwendet"
+              }
+            }
+          ]
+        },
+        {
+          "id": "Dry_Contact_Operation_Mode",
+          "zwave": {
+            "index": 2,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "0",
+          "label": {
+            "en": "Dry Contact Operation Mode",
+            "nl": "Droge Contact Verrichtingswijze",
+            "de": "Funktionsweise des Trockenkontaktsensors"
+          },
+          "hint": {
+            "en": "Parameter defines how dry contact will operate with the sensor or switch that is connected to the dry contact terminals.",
+            "nl": "De parameter bepaalt hoe het droge contact zal werken met de sensor of de schakelaar die op de droge contactklemmen is aangesloten.",
+            "de": "Der Parameter definiert, wie der Trockenkontakt mit dem Sensor oder Schalter funktioniert, der an die Trockenkontaktklemmen angeschlossen ist."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "NO Toggle / OFF is CLOSED, and ON is OPEN.",
+                "nl": "NO Toggle / OFF is DICHT, en ON is OPEN.",
+                "de": "NO wechselnd / Aus ist geschlossen, und An ist offen."
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "NC Toggle / ON is CLOSED, and OFF is OPEN.",
+                "nl": "NC Toggle / ON is DICHT, en OFF is OPEN.",
+                "de": "NC wechselnd / An ist geschlossen und Aus ist offen."
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "NO OPEN/CLOSE based on OFF to ON signal.",
+                "nl": "NO OPEN/DICHT op basis van OFF en ON signaal.",
+                "de": "NO AUF/ZU basierend auf dem AUS zu EIN Signal umzuschalten."
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "NC OPEN/CLOSE based on ON to OFF signal.",
+                "nl": "NC OPEN/DICHT op basis van het AAN/UIT-signaal.",
+                "de": "NC AN/AUS Signal zwischen AUF/ZU umzuschalten."
+              }
+            }
+          ]
+        },
+        {
+          "id": "sensor_state_polarity",
+          "zwave": {
+            "index": 3,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "0",
+          "label": {
+            "en": "Sensor State Polarity",
+            "nl": "Sensorstaat Polariteit van de sensor",
+            "de": "Polarität des Sensorzustands"
+          },
+          "hint": {
+            "en": "This parameter defines if the internal magnet sensor or the external terminal input is detected and used to issue alarm notification. There is always one input active only. The other sensor input the deactivated.",
+            "nl": "Deze parameter bepaalt of de interne magneetsensor of de externe klemmeningang wordt gedetecteerd en gebruikt voor het afgeven van alarmmeldingen. Er is altijd maar één ingang actief. De andere sensoringang is gedeactiveerd.",
+            "de": "Dieser Parameter legt fest, ob der interne Magnetsensor oder der Eingang des externen Terminals erkannt und zur Alarmmeldung verwendet wird. Es ist immer nur ein Eingang aktiv. Der andere Sensoreingang ist der deaktivierte. "
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Closed when Magnet in proximity (default)",
+                "nl": "Gesloten wanneer de magneet in de buurt is. (standaard)",
+                "de": "Geschlossen, wenn der Magnet in der Nähe ist. (Standard)"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Opened when Magnet in proximity",
+                "nl": "Geopend wanneer de magneet in de buurt is.",
+                "de": "Geöffnet, wenn der Magnet in der Nähe ist."
+              }
+            }
+          ]
+        },
+        {
+          "id": "visual_led_indications",
+          "zwave": {
+            "index": 4,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "7",
+          "label": {
+            "en": "Visual LED Indications",
+            "nl": "Visuele LED-indicaties",
+            "de": "Optische LED-Anzeige"
+          },
+          "hint": {
+            "en": "This parameter defines when the red LED will indicate events. Disabling all indications may extend battery life. ",
+            "nl": "Deze parameter bepaalt wanneer de rode LED gebeurtenissen aangeeft. Het uitschakelen van alle indicaties kan de levensduur van de batterij verlengen.",
+            "de": "Dieser Parameter legt fest, wann die rote LED Ereignisse anzeigt. Das Deaktivieren aller Anzeigen kann die Lebensdauer der Batterie verlängern."
+          },
+          "values": [
+            {
+              "id": "7",
+              "label": {
+                "en": "On at all events (default)",
+                "nl": "Aan in ieder geval (standaard)",
+                "de": "An bei allen Events (Standard)"
+              }
+            },
+            {
+              "id": "0",
+              "label": {
+                "en": "Off",
+                "nl": "Uit",
+                "de": "Aus"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Open/Close Status Change only",
+                "nl": "Alleen openen/sluiten van de statuswijziging",
+                "de": "Nur bei Statusänderung Öffnen/Schließen"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Wake Up only",
+                "nl": "Alleen Wake Up",
+                "de": "Nur bei Wake Up"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Device Tampering only",
+                "nl": "Alleen Apparaat manipulatie",
+                "de": "Nur bei Auslösen des Tamper-Tasters"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Open/Close Status Change + Wake Up",
+                "nl": "openen/sluiten van de statuswijziging + Wake Up",
+                "de": "Statusänderung Öffnen/Schließen + Wake Up"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Open/Close Status Change + Device Tampering",
+                "nl": "openen/sluiten van de statuswijziging + Apparaat manipulatie",
+                "de": "Statusänderung Öffnen/Schließen + Tamper-Taster"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Wake Up + Device Tampering",
+                "nl": "Wake Up + Apparaat manipulatie",
+                "de": "Wake Up + Tamper-Taster"
+              }
+            }
+          ]
+        },
+        {
+          "id": "range_test",
+          "zwave": {
+            "index": 5,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "0",
+          "label": {
+            "en": "Range Test after double click",
+            "nl": "Bereiktest na dubbelklikken",
+            "de": "Reichweitentest nach Doppelklick"
+          },
+          "hint": {
+            "en": "Allows to enable the activation of a Z-Wave range test with double clicking the tamper switch.",
+            "nl": "Maakt het mogelijk om een Z-Wave-bereiktest te activeren met een dubbelklik op de sabotageschakelaar. ",
+            "de": "Ermöglicht die Aktivierung eines Z-Wave-Reichweitentests durch Doppelklicken des Manipulationsschalters."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Enabled (default)",
+                "nl": "Ingeschakeld",
+                "de": "Deaktiviert (Standard)"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Disabled",
+                "nl": "Uitgeschakeld",
+                "de": "Aktiviert"
+              }
+            }
+          ]
+        },
+        {
+          "id": "group_trigger",
+          "zwave": {
+            "index": 6,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "0",
+          "label": {
+            "en": "2nd Association Group Trigger",
+            "nl": "2de Association Group Trigger",
+            "de": "Auslöser für Assoziationsgruppe 2"
+          },
+          "hint": {
+            "en": "This parameter defines the status of the magnet switch that causes sending a BASIC command to all devices of Association Group 2. ",
+            "nl": "Deze parameter definieert de status van de magneetschakelaar die ervoor zorgt dat een BASIC-commando naar alle apparaten van Associatiegroep 2 wordt verzonden.",
+            "de": "Dieser Parameter definiert den Status des Magnetschalters, der das Senden eines BASIC-Befehls an alle Geräte der Verbindungsgruppe 2 bewirkt."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Switch after Open and Close (default)",
+                "nl": "Schakelaar na openen en sluiten (standaard)",
+                "de": "Umschalten nach Open und Close (Standard)"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Switch after Open",
+                "nl": "Schakelaar na openen",
+                "de": "Umschalten nach Open"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Switch after Close",
+                "nl": "Schakelaar na sluiten",
+                "de": "Umschalten nach Close"
+              }
+            }
+          ]
+        },
+        {
+          "id": "group_command",
+          "zwave": {
+            "index": 7,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "0",
+          "label": {
+            "en": "Command Sent to Devices of Association Group 2",
+            "nl": "Commando Verzonden naar apparaten van de Associatiegroep 2",
+            "de": "Befehl, der an Geräte der Assoziationsgruppe 2 gesendet wird"
+          },
+          "hint": {
+            "en": "This parameter defines which commands is sent to 2nd Association Group ",
+            "nl": "Deze parameter definieert welke commando's naar de 2e Associatiegroep worden gestuurd.",
+            "de": "Dieser Parameter definiert, welche Befehle an die Assoziationsgruppe 2 gesendet werden."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "On and Off (default)",
+                "nl": "Aan en uit (standaard)",
+                "de": "An und Aus (Standard)"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "On",
+                "nl": "Aan",
+                "de": "On"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Off",
+                "nl": "Uuit",
+                "de": "Off"
+              }
+            }
+          ]
+        },
+        {
+          "id": "basic_group_on",
+          "zwave": {
+            "index": 8,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number",
+          "value": 255,
+          "label": {
+            "en": "BASIC command value sent to 2nd Association Group on On event",
+            "nl": "BASIC command verzonden naar 2de Associatiegroep On evenement",
+            "de": "BASIC Command wird an die Assoziationsgruppe 2 gesendet, wenn das Ereignis On eintritt "
+          },
+          "hint": {
+            "en": "This is the BASIC command value sent in case of On event. (1-99, 255) (Default: 255)",
+            "nl": "BASIC-commandowaarde verzonden in het geval van On event. (1-99, 255) (Standaard: 255)",
+            "de": "Dies ist das BASIC Command, das im Falle des Ereignisses On gesendet wird. (1-99, Standard: 255)"
+          }
+        },
+        {
+          "id": "basic_group_off",
+          "zwave": {
+            "index": 9,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number",
+          "value": 255,
+          "label": {
+            "en": "BASIC command value sent to 2nd Association Group off event",
+            "nl": "BASIC command verzonden naar 2de Associatiegroep off evenement",
+            "de": "BASIC Command wird bei AUS gesendet "
+          },
+          "hint": {
+            "en": "This is the BASIC command value sent in case of Off event. (1-99, 255) (Default: 255)",
+            "nl": "BASIC-commandowaarde verzonden in het geval van Off event. (1-99, 255) (Standaard: 255=-1)",
+            "de": "Dies ist das BASIC Command, das im Falle des Ereignisses Off gesendet wird. (1-99, 255) (Standard: 255=-1)"
+          }
+        },
+        {
+          "id": "time_delay_on",
+          "zwave": {
+            "index": 10,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 32400
+          },
+          "type": "number",
+          "value": 0,
+          "label": {
+            "en": "Time Delay of On command frame",
+            "nl": "Tijdvertraging van het On-commandokader",
+            "de": "Zeitverzögerung des BASIC Commands AN"
+          },
+          "hint": {
+            "en": "On command is sent after a delay defined in this parameter. (0-32400) (Default: 0)",
+            "nl": "On command is sent after a delay defined in this parameter. (0-32400) (Standaard: 0)",
+            "de": "Das On Kommando wird nach einer in diesem Parameter definierten Verzögerung gesendet.  (0-32400) (Standard: 0)"
+          }
+        },
+        {
+          "id": "time_delay_off",
+          "zwave": {
+            "index": 11,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 32400
+          },
+          "type": "number",
+          "value": 0,
+          "label": {
+            "en": "Time Delay of Off command frame",
+            "nl": "Tijdvertraging van het Off-commandokader",
+            "de": "Zeitverzögerung des BASIC Commands AUS"
+          },
+          "hint": {
+            "en": "Off command is sent after a delay defined in this parameter. (0-32400) (Default: 0)",
+            "nl": "Off command is sent after a delay defined in this parameter. (0-32400) (Standaard: 0)",
+            "de": "Das Off Kommando wird nach einer in diesem Parameter definierten Verzögerung gesendet.  (0-32400) (Standard: 0)"
+          }
+        },
+        {
+          "id": "time_delay_tamper",
+          "zwave": {
+            "index": 12,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 32400
+          },
+          "type": "number",
+          "value": 0,
+          "label": {
+            "en": "Delay of Tamper Alarm Cancellation",
+            "nl": "Vertraging van de Annulering van het stamperalarm door een manipulatiealarm",
+            "de": "Zeitverzögerung bis der Tamper Alarm zurückgesetzt wird "
+          },
+          "hint": {
+            "en": "Time a tamper alarm is delayed. (0-32400) (Default: 0)",
+            "nl": "Tijd dat een sabotagealarm wordt uitgesteld.  (0-32400) (Standaard: 0)",
+            "de": "Zeitverzögerung bis der Tamper Alarm zurückgesetzt wird. (0-32400) (Standard: 0)"
+          }
+        },
+        {
+          "id": "alarm_cancellation",
+          "zwave": {
+            "index": 13,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "1",
+          "label": {
+            "en": "Reporting Tamper Alarm Cancellation",
+            "nl": "Melden van het stamperalarm annuleren",
+            "de": "Notification, dass der Tamper Alarm zurückgesetzt wurde "
+          },
+          "hint": {
+            "en": "This parameter defines if the alarm cancellation event is reported.",
+            "nl": "Deze parameter bepaalt of de alarmannulering wordt gemeld.",
+            "de": "Dieser Parameter legt fest, ob das Ereignis Tamper Alarm zurückgesetzt gemeldet wird."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Do not send Report",
+                "nl": "Niet verzenden Rapport",
+                "de": "Bericht nicht senden"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Send Report (default)",
+                "nl": "Rapport verzenden (standaard)",
+                "de": "Bericht senden (Standard)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "central_scene",
+          "zwave": {
+            "index": 14,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "1",
+          "label": {
+            "en": "Central Scene Event Functionality",
+            "nl": "Central Scene Event Functionality ",
+            "de": "Central Scene Funktionalität"
+          },
+          "hint": {
+            "en": "This parameter enables/disables  the central scene function.",
+            "nl": "Deze parameter activeert/uitschakelt de central scene function.",
+            "de": "Dieser Parameter legt fest, ob die Central scene function aktiviert ist. "
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled",
+                "nl": "Uitgeschakeld",
+                "de": "Deaktiviert"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Enabled (default)",
+                "nl": "Ingeschakeld (standaard)",
+                "de": "Aktiviert (Standard)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "tilt_on",
+          "zwave": {
+            "index": 15,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "1",
+          "label": {
+            "en": "Tilt Sensor Functionality",
+            "nl": "Tilt Sensor Functionality ",
+            "de": "Neigungssensor Funktionalität"
+          },
+          "hint": {
+            "en": "This parameter enables/disables  the tilt function.",
+            "nl": "Deze parameter schakelt de kantelfunctie in of uit.",
+            "de": "Dieser Parameter aktiviert/deaktiviert den Neigungssensorensor."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled",
+                "nl": "Uitgeschakeld",
+                "de": "Deaktiviert"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Enabled (default)",
+                "nl": "Ingeschakeld (standaard)",
+                "de": "Aktiviert (Standard)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "tilt_sensor_state",
+          "zwave": {
+            "index": 16,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "0",
+          "label": {
+            "en": "Tilt Sensor State",
+            "nl": "Tilt Sensor State",
+            "de": "Neigungssensor-Zustand"
+          },
+          "hint": {
+            "en": "This parameter allows to set in what state is door/window when the tilt is in an OFF state.",
+            "nl": "Deze parameter maakt het mogelijk om in te stellen in welke toestand de deur/het raam zich bevindt wanneer de kanteling in een OFF-toestand is.",
+            "de": "Mit diesem Parameter kann eingestellt werden, in welchem Zustand sich die Tür/das Fenster befindet, wenn sich die Neigung im AUS-Zustand befindet."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "OFF when sensor is vertical ",
+                "nl": "UIT wanneer de sensor verticaal is ",
+                "de": "AUS, wenn der Sensor senkrecht steht "
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "ON when sensor is vertical ",
+                "nl": "AAN wanneer de sensor verticaal is ",
+                "de": "An, wenn der Sensor senkrecht steht "
+              }
+            }
+          ]
+        },
+        {
+          "id": "group_trigger_tilt",
+          "zwave": {
+            "index": 17,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "0",
+          "label": {
+            "en": "5th Association Group Trigger",
+            "nl": "5e Groepsreactie van de vereniging",
+            "de": "Auslöser für Assoziationsgruppe 5"
+          },
+          "hint": {
+            "en": "This parameter defines the status of the magnet switch that causes sending a BASIC command to all devices of Association Group 5.",
+            "nl": "Deze parameter definieert de status van de magneetschakelaar die het verzenden van een BASIC-opdracht naar alle apparaten van Associatiegroep 5 veroorzaakt.",
+            "de": "Dieser Parameter definiert den Status des Magnetschalters, der das Senden eines BASIC-Befehls an alle Geräte der Zuordnungsgruppe 5 bewirkt."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Switch after Open and Close",
+                "nl": "Schakelaar na Openen en Sluiten",
+                "de": "Schaltet nach Öffnen und Schließen"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Switch after Open",
+                "nl": "Schakelaar na Openen",
+                "de": "Schaltet nach Öffnen"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Switch after Close",
+                "nl": "Schakelaar na Sluiten",
+                "de": "Schaltet nach Schließen"
+              }
+            }
+          ]
+        },
+        {
+          "id": "group_command_tilt",
+          "zwave": {
+            "index": 18,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "0",
+          "label": {
+            "en": "Command Sent to Devices of Association Group 5",
+            "nl": "Commando Verzending naar apparaten van de vereniging Groep 5",
+            "de": "Befehl an Geräte der Assoziationsgruppe 5"
+          },
+          "hint": {
+            "en": "This parameter defines which commands is sent to 5th Association Group",
+            "nl": "Deze parameter definieert welke commando's naar de 5e groep van de vereniging worden gestuurd.",
+            "de": "Dieser Parameter definiert, welche Befehle an 5th Association Group gesendet werden"
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "ON",
+                "nl": "AAN",
+                "de": "AN"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "OFF",
+                "nl": "UIT",
+                "de": "AUS"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "ON and OFF",
+                "nl": "AAN na UIT",
+                "de": "AN und AUS"
+              }
+            }
+          ]
+        },
+        {
+          "id": "basic_group5_on",
+          "zwave": {
+            "index": 19,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number",
+          "value": 255,
+          "label": {
+            "en": "BASIC command value sent to 5nd Association Group on On event",
+            "nl": "BASIC command verzonden naar 5de Associatiegroep On evenement",
+            "de": "BASIC Command wird an die Assoziationsgruppe 5 gesendet, wenn das Ereignis On eintritt "
+          },
+          "hint": {
+            "en": "This is the BASIC command value sent in case of On event. (1-99, 255) (Default: 255)",
+            "nl": "BASIC-commandowaarde verzonden in het geval van On event. (1-99, 255) (Standaard: 255)",
+            "de": "Dies ist das BASIC Command, das im Falle des Ereignisses On gesendet wird. (1-99, Standard: 255)"
+          }
+        },
+        {
+          "id": "basic_group5_off",
+          "zwave": {
+            "index": 20,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number",
+          "value": 255,
+          "label": {
+            "en": "BASIC command value sent to 5nd Association Group off event",
+            "nl": "BASIC command verzonden naar 5de Associatiegroep off evenement",
+            "de": "BASIC Command wird an die Assoziationsgruppe 5 gesendet, wenn das Ereignis Off eintritt "
+          },
+          "hint": {
+            "en": "This is the BASIC command value sent in case of Off event. (1-99, 255)",
+            "nl": "BASIC-commandowaarde verzonden in het geval van Off event. (1-99, 255)",
+            "de": "Dies ist das BASIC Command, das im Falle des Ereignisses Off gesendet wird.(1-99, 255)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ZWA019",
+      "name": {
+        "en": "Water Sensor 7 Pro"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_battery",
+        "alarm_water",
+        "measure_temperature",
+        "measure_humidity",
+        "alarm_tamper"
+      ],
+      "images": {
+        "large": "/drivers/ZWA019/assets/images/large.png",
+        "small": "/drivers/ZWA019/assets/images/small.png"
       },
       "energy": {
         "batteries": [
@@ -8968,154 +13478,514 @@
         "manufacturerId": 881,
         "productTypeId": [
           2,
-          514
+          258
         ],
         "productId": [
-          7
+          19
         ],
-        "zwaveAllianceProductId": 2286,
-        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2286/Oomi Dual In-Wall Switch manual.pdf",
+        "zwaveAllianceProductId": 3872,
+        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=product_documents/3872/Water%20Sensor%207%20Pro-3.pdf",
         "learnmode": {
-          "image": "/drivers/ZWA008/assets/learnmode.svg",
           "instruction": {
-            "en": "Remove the cover of Door/Window Sensor 7 (ZWA008), then press the black button three times.",
-            "nl": "Verwijder de deksel van Door/Window Sensor 7 (ZWA008), druk daarna drie keer op het zwarte knopje."
-          }
+            "en": "Tripple click the tamper switch (on the right side below the battery housing)",
+            "nl": "Druk driemaal op knop (aan de rechterkant onder de batterijbehuizing)",
+            "de": "Dreimal schnell hintereinander den Tamper-Taster (auf der rechten Seite unterhalb des Batteriegehäuses) betätigen. "
+          },
+          "image": "/drivers/ZWA019/assets/learnmode.svg"
         },
         "associationGroups": [
           1
         ],
         "defaultConfiguration": [
           {
-            "id": 80,
-            "value": 2,
-            "size": 1
+            "id": 16,
+            "size": 1,
+            "value": 5
+          },
+          {
+            "id": 17,
+            "size": 1,
+            "value": 2
+          },
+          {
+            "id": 18,
+            "size": 2,
+            "value": 900
           }
         ]
       },
       "settings": [
         {
-          "type": "group",
-          "label": {
-            "en": "Contact sensor",
-            "nl": "Contact sensor"
+          "id": "visual_led_indications",
+          "zwave": {
+            "index": 3,
+            "size": 1
           },
-          "collapsed": false,
-          "children": [
+          "type": "dropdown",
+          "value": "7",
+          "label": {
+            "en": "Visual LED Indications",
+            "nl": "Visuele LED-indicaties",
+            "de": "Optische LED-Anzeige"
+          },
+          "hint": {
+            "en": "This parameter defines when the red LED will indicate events. Disabling all indications may extend battery life.",
+            "nl": "Deze parameter bepaalt wanneer de rode LED gebeurtenissen aangeeft. Het uitschakelen van alle indicaties kan de levensduur van de batterij verlengen.",
+            "de": "Dieser Parameter legt fest, wann die rote LED Ereignisse anzeigt. Das Deaktivieren aller Anzeigen kann die Lebensdauer der Batterie verlängern."
+          },
+          "values": [
             {
-              "zwave": {
-                "index": 3,
-                "size": 1
-              },
-              "values": [
-                {
-                  "id": "0",
-                  "label": {
-                    "en": "No indications",
-                    "nl": "Geen indicatie"
-                  }
-                },
-                {
-                  "id": "1",
-                  "label": {
-                    "en": "indication on change in opening state",
-                    "nl": "indicatie bij het openen/sluiten"
-                  }
-                },
-                {
-                  "id": "2",
-                  "label": {
-                    "en": "indication on wake up",
-                    "nl": "indicatie bij het ontwaken"
-                  }
-                },
-                {
-                  "id": "4",
-                  "label": {
-                    "en": "indication on device tampering",
-                    "nl": "indicatie bij sabotage"
-                  }
-                }
-              ],
-              "value": "7",
-              "id": "led_indications",
+              "id": "7",
               "label": {
-                "en": "LED light style",
-                "nl": "LED licht stijl"
-              },
-              "hint": {
-                "en": "This parameter (3) determines the way in which the LED behaves after events have been detected.",
-                "nl": "Deze parameter (3) bepaalt het gedrag van de LED wanneer er een statusverandering is gedetecteerd."
-              },
-              "type": "dropdown"
+                "en": "On at all events (default)",
+                "nl": "Altijd aan (standaard)",
+                "de": "An bei allen Events (Standard)"
+              }
             },
             {
-              "zwave": {
-                "index": 2,
-                "size": 1
-              },
-              "values": [
-                {
-                  "id": "0",
-                  "label": {
-                    "en": "Closed by default",
-                    "nl": "Normaal gesloten"
-                  }
-                },
-                {
-                  "id": "1",
-                  "label": {
-                    "en": "Opened by default",
-                    "nl": "Normaal open"
-                  }
-                }
-              ],
-              "id": "door_window_state",
-              "type": "radio",
+              "id": "0",
               "label": {
-                "en": "Default position for sensor",
-                "nl": "Standaard positie voor sensor"
-              },
-              "hint": {
-                "en": "This parameter (2) determines the default position for this sensor.",
-                "nl": "Deze parameter (2) bepaalt de standaard positite van de sensor."
-              },
-              "value": "0"
+                "en": "Off",
+                "nl": "Uit",
+                "de": "Aus"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Water Leakage Status Change only",
+                "nl": "Alleen bij status verandering van waterlekkage",
+                "de": "Nur bei Statusänderung des Wasseralarm"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Wake Up only",
+                "nl": "Alleen bij Wake Up",
+                "de": "Nur bei Wake Up"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Device Tampering only",
+                "nl": "Alleen bij apparaat sabotage",
+                "de": "Nur bei Auslösen des Tamper-Tasters"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Water Sensor Status Change + Wake Up",
+                "nl": "Status verandering van water sensor + Wake Up",
+                "de": "Statusänderung Wasser Sensor + Wake Up"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Open/Close Status Change + Device Tampering",
+                "nl": "Statuswijziging open / dicht + apparaat sabotage",
+                "de": "Statusänderung Öffnen/Schließen + Tamper-Taster"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Wake Up + Device Tampering",
+                "nl": "Wake Up + apparaat sabotage",
+                "de": "Wake Up + Tamper-Taster"
+              }
             }
           ]
         },
         {
-          "type": "group",
-          "label": {
-            "en": "Tamper alarm",
-            "nl": "Sabotage alarm"
+          "id": "range_test",
+          "zwave": {
+            "index": 4,
+            "size": 1
           },
-          "collapsed": true,
-          "children": [
+          "type": "dropdown",
+          "value": "0",
+          "label": {
+            "en": "Range Test after double click",
+            "nl": "Bereiktest na dubbelklikken",
+            "de": "Reichweitentest nach Doppelklick"
+          },
+          "hint": {
+            "en": "Allows to enable the activation of a Z-Wave range test with double clicking the tamper switch.",
+            "nl": "Maakt het mogelijk om een Z-Wave-bereiktest te activeren met een dubbelklik op de sabotageschakelaar. ",
+            "de": "Ermöglicht die Aktivierung eines Z-Wave-Reichweitentests durch Doppelklicken des Manipulationsschalters."
+          },
+          "values": [
             {
-              "zwave": {
-                "index": 11,
-                "size": 2
-              },
-              "attr": {
-                "min": 0,
-                "max": 32400
-              },
-              "value": 5,
-              "id": "tamper_cancellation_delay",
+              "id": "0",
               "label": {
-                "en": "Cancellation delay (s)",
-                "nl": "Annuleringsperiode (s)"
-              },
-              "hint": {
-                "en": "This parameter (11) sets the time after which the alarm will be cancelled.",
-                "nl": "Deze parameter (11) bepaalt de tijd waarna het alarm wordt gedeactiveerd."
-              },
-              "type": "number"
+                "en": "Enabled (default)",
+                "nl": "Ingeschakeld",
+                "de": "Deaktiviert (Standard)"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Disabled",
+                "nl": "Uitgeschakeld",
+                "de": "Aktiviert"
+              }
             }
           ]
+        },
+        {
+          "id": "group_trigger",
+          "zwave": {
+            "index": 5,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "0",
+          "label": {
+            "en": "2nd Association Group Trigger",
+            "nl": "2de Association Group Trigger",
+            "de": "Auslöser für Assoziationsgruppe 2"
+          },
+          "hint": {
+            "en": "This parameter defines the status of the water leakage that determines when a BASIC command is sent to all devices of Association Group 2.",
+            "nl": "Deze parameter definieert de status van de waterlekkage die het verzenden van een BASIC-opdracht naar alle apparaten van groep 2 veroorzaakt.",
+            "de": "Dieser Parameter definiert den Status des Wasseraustritts, der das Senden eines BASIC-Befehls an alle Geräte der Verbandsgruppe 2 bewirkt."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Switch after Water Leakage Start and Stop",
+                "nl": "Schakelaar na waterlekkage Start en Stop",
+                "de": "Schalter nach Start und Stopp bei Wasserleckage."
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Switch after Leakage Start",
+                "nl": "Schakelaar na waterlekkage Start",
+                "de": "Umschalten nach Start bei Wasseralarm"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Switch after Water Leakage Stop",
+                "nl": "Schakelaar na waterlekkage Stop",
+                "de": "Umschalten nach Stop bei Wasseralarm"
+              }
+            }
+          ]
+        },
+        {
+          "id": "group_command",
+          "zwave": {
+            "index": 6,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "0",
+          "label": {
+            "en": "Command Sent to Devices of Association Group 2",
+            "nl": "Commando Verzonden naar apparaten van de Associatiegroep 2",
+            "de": "Befehl, der an Geräte der Assoziationsgruppe 2 gesendet wird"
+          },
+          "hint": {
+            "en": "This parameter defines which commands is sent to 2nd Association Group ",
+            "nl": "Deze parameter definieert welke commando's naar de 2e Associatiegroep worden gestuurd.",
+            "de": "Dieser Parameter definiert, welche Befehle an die Assoziationsgruppe 2 gesendet werden."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "On and Off (default)",
+                "nl": "Aan en uit (standaard)",
+                "de": "An und Aus (Standard)"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "On",
+                "nl": "Aan",
+                "de": "On"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Off",
+                "nl": "Uit",
+                "de": "Off"
+              }
+            }
+          ]
+        },
+        {
+          "id": "basic_group_on",
+          "zwave": {
+            "index": 7,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number",
+          "value": 255,
+          "label": {
+            "en": "BASIC command value sent to 2nd Association Group on On event",
+            "nl": "BASIC command verzonden naar 2de Associatiegroep On evenement",
+            "de": "BASIC Command wird an die Assoziationsgruppe 2 gesendet, wenn das Ereignis On eintritt "
+          },
+          "hint": {
+            "en": "This is the BASIC command value sent in case of On event. (1-99, 255) (Default: 255)",
+            "nl": "BASIC-commandowaarde verzonden in het geval van On event. (1-99, 255) (Standaard: 255)",
+            "de": "Dies ist das BASIC Command, das im Falle des Ereignisses On gesendet wird. (1-99, Standard: 255)"
+          }
+        },
+        {
+          "id": "basic_group_off",
+          "zwave": {
+            "index": 8,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number",
+          "value": 0,
+          "label": {
+            "en": "BASIC command value sent to 2nd Association Group off event",
+            "nl": "BASIC command verzonden naar 2de Associatiegroep off evenement",
+            "de": "BASIC Command wird bei AUS gesendet "
+          },
+          "hint": {
+            "en": "This is the BASIC command value sent in case of Off event. (1-99, 255) (Default: 255)",
+            "nl": "BASIC-commandowaarde verzonden in het geval van Off event. (1-99, 255) (Standaard: 255)",
+            "de": "Dies ist das BASIC Command, das im Falle des Ereignisses Off gesendet wird. (1-99, 255) (Standard: 255)"
+          }
+        },
+        {
+          "id": "time_delay_on",
+          "zwave": {
+            "index": 9,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 32400
+          },
+          "type": "number",
+          "value": 0,
+          "label": {
+            "en": "Time Delay of On command frame",
+            "nl": "Tijdvertraging van het On-commandokader",
+            "de": "Zeitverzögerung des BASIC Commands AN"
+          },
+          "hint": {
+            "en": "On command is sent after a delay defined in this parameter. (0-32400) (Default: 0)",
+            "nl": "On command is sent after a delay defined in this parameter. (0-32400) (Standaard: 0)",
+            "de": "Das On Kommando wird nach einer in diesem Parameter definierten Verzögerung gesendet.  (0-32400) (Standard: 0)"
+          }
+        },
+        {
+          "id": "time_delay_off",
+          "zwave": {
+            "index": 10,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 32400
+          },
+          "type": "number",
+          "value": 0,
+          "label": {
+            "en": "Time Delay of Off command frame",
+            "nl": "Tijdvertraging van het Off-commandokader",
+            "de": "Zeitverzögerung des BASIC Commands AUS"
+          },
+          "hint": {
+            "en": "Off command is sent after a delay defined in this parameter. (0-32400) (Default: 0)",
+            "nl": "Off-opdracht wordt verzonden na een in deze parameter gedefinieerde vertraging. (0-32400) (Standaard: 0)",
+            "de": "Das Off Kommando wird nach einer in diesem Parameter definierten Verzögerung gesendet.  (0-32400) (Standard: 0)"
+          }
+        },
+        {
+          "id": "time_delay_tamper",
+          "zwave": {
+            "index": 11,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 32400
+          },
+          "type": "number",
+          "value": 0,
+          "label": {
+            "en": "Delay of Tamper Alarm Cancellation",
+            "nl": "Tijdsvertraging tot het sabotagealarm wordt gereset",
+            "de": "Zeitverzögerung bis der Tamper Alarm zurückgesetzt wird "
+          },
+          "hint": {
+            "en": "Time a tamper alarm is delayed. (0-32400) (Default: 0)",
+            "nl": "Tijd dat een sabotagealarm wordt uitgesteld.  (0-32400) (Standaard: 0)",
+            "de": "Zeitverzögerung bis der Tamper Alarm zurückgesetzt wird. (0-32400) (Standard: 0)"
+          }
+        },
+        {
+          "id": "alarm_cancellation",
+          "zwave": {
+            "index": 12,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "1",
+          "label": {
+            "en": "Reporting Tamper Alarm Cancellation",
+            "nl": "Melding dat het sabotagealarm is gereset",
+            "de": "Notification, dass der Tamper Alarm zurückgesetzt wurde "
+          },
+          "hint": {
+            "en": "This parameter defines if the alarm cancellation event is reported.",
+            "nl": "Deze parameter bepaalt of de alarmannulering wordt gemeld.",
+            "de": "Dieser Parameter legt fest, ob das Ereignis Tamper Alarm zurückgesetzt gemeldet wird."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Do not send Report",
+                "nl": "Rapport niet verzenden",
+                "de": "Bericht nicht senden"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Send Report (default)",
+                "nl": "Rapport verzenden (standaard)",
+                "de": "Bericht senden (Standard)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "temperature_change",
+          "zwave": {
+            "index": 16,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 100
+          },
+          "type": "number",
+          "value": 5,
+          "label": {
+            "en": "This value defines the minimum change of temperature to cause a temperature report.",
+            "nl": "Deze waarde definieert de minimale verandering van de temperatuur om een temperatuurrapport te veroorzaken.",
+            "de": "Dieser Wert definiert die minimale Temperaturänderung, die einen Temperaturbericht verursacht."
+          }
+        },
+        {
+          "id": "humidity_change",
+          "zwave": {
+            "index": 17,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 20
+          },
+          "type": "number",
+          "value": 2,
+          "label": {
+            "en": "This value defines the minimum change of humidity to cause a humidity report.",
+            "nl": "Deze waarde definieert de minimale verandering van de luchtvochtigheid om een vochtigheidsrapport te veroorzaken.",
+            "de": "Dieser Wert definiert die minimale Änderung der Feuchtigkeit, die einen Feuchtigkeitsbericht verursacht."
+          }
+        },
+        {
+          "id": "periodic_report",
+          "zwave": {
+            "index": 18,
+            "size": 2,
+            "signed": false
+          },
+          "attr": {
+            "min": 900,
+            "max": 65535
+          },
+          "type": "number",
+          "value": 900,
+          "label": {
+            "en": "This parameter defines the time interval to send a report for both humidity and temperature.",
+            "nl": "Deze parameter definieert het tijdsinterval voor het verzenden van een rapport voor zowel de luchtvochtigheid als de temperatuur.",
+            "de": "Dieser Parameter definiert das Zeitintervall, in dem ein Bericht sowohl für Feuchtigkeit als auch für Temperatur gesendet werden soll."
+          }
         }
       ]
     }
-  ]
+  ],
+  "capabilities": {
+    "info_tilt": {
+      "type": "boolean",
+      "title": {
+        "en": "Tilt",
+        "nl": "Gekanteld",
+        "de": "Gekippt"
+      },
+      "getable": true,
+      "setable": false,
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "Tilt",
+        "nl": "Gekanteld",
+        "de": "Gekippt"
+      },
+      "insightsTitleFalse": {
+        "en": "No Tilt",
+        "nl": "Niet gekanteld",
+        "de": "Nicht Gekippt"
+      },
+      "icon": "/assets/tilt.svg"
+    },
+    "measure_dewpoint": {
+      "type": "number",
+      "title": {
+        "en": "DewPoint",
+        "nl": "Dauwpunt",
+        "de": "Taupunkt"
+      },
+      "units": {
+        "en": "°C",
+        "nl": "°C",
+        "de": "°C"
+      },
+      "desc": {
+        "en": "Celsius (C)",
+        "nl": "Celsius (C)"
+      },
+      "chartType": "stepLine",
+      "insights": true,
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "icon": "/assets/measure_dewpoint.svg"
+    }
+  }
 }

@@ -1,0 +1,286 @@
+[
+{
+      "id": "tempchange_to_report",
+      "zwave": {
+        "index": 1,
+        "size": 1
+      },
+	  "attr": {
+      "min": 0,
+      "max": 100
+    },
+      "type": "number",
+      "value": 5,
+      "label": {
+        "en": "Minimum Temperature change to report",
+        "nl": "Minimale temperatuurverandering voor rapport",
+		"de": "Minimale Temperaturänderung für den Bericht"
+      },
+      "hint": {
+        "en": "This value defines the minimum change of temperature to cause an unsolicited report of humidity to the central controller using Lifeline. If the value is set to 0, there will be no reports sent to the controller, when the temperature changes. However, periodic reports, managed by configuration parameter 4, may still be active. (0-100, 1/10 degree)",
+        "nl": "Deze waarde definieert de minimale temperatuursverandering die een ongevraagde melding van de luchtvochtigheid aan de centrale met behulp van Lifeline veroorzaakt. Als de waarde op 0 is ingesteld, worden er geen meldingen naar de regelaar gestuurd wanneer de temperatuur verandert. Periodieke rapporten, beheerd door configuratieparameter 4, kunnen echter nog steeds actief zijn. (0-100, 1/10 graad)",
+		"de": "Dieser Wert definiert die minimale Temperaturänderung, um eine unaufgeforderte Meldung der Luftfeuchtigkeit an die zentrale Steuerung über die Lifeline zu veranlassen.Wenn der Wert auf 0 gesetzt ist, werden keine Meldungen an die Steuerung gesendet, wenn sich die Temperatur ändert. Periodische Berichte, die über den Konfigurationsparameter 4 verwaltet werden, können jedoch weiterhin aktiv sein. (0-100, 0.1° Schritte)"
+      }
+    },
+	{
+      "id": "humiditychange_to_report",
+      "zwave": {
+        "index": 2,
+        "size": 1
+      },
+	  "attr": {
+      "min": 0,
+      "max": 100
+    },
+      "type": "number",
+      "value": 5,
+      "label": {
+        "en": "Minimum humidity change to report",
+        "nl": "Minimale vochtverandering voor het rapport",
+		"de": "Minimale Feuchtigkeitsänderung für den Bericht"
+      },
+      "hint": {
+        "en": "This parameter defines the time interval to send an unsolicited report. If the value is set to 0, there will be no periodic reports sent to the controller. However, reports on temperature/humidity changes, managed by configuration parameters 1 and 2, may still be active. (0-100, %)",
+        "nl": "Deze parameter definieert het tijdsinterval voor het verzenden van een ongevraagde melding. Als de waarde op 0 is ingesteld, worden er geen periodieke rapporten naar de regelaar gestuurd. Het is echter mogelijk dat er nog steeds rapporten over temperatuur- en vochtigheidsveranderingen, beheerd door de configuratieparameters 1 en 2, actief zijn. (0-100, %)",
+		"de": "Dieser Wert definiert die minimale Änderung der Luftfeuchtigkeit, um eine unaufgeforderte Meldung der Luftfeuchtigkeit an die zentrale Steuerung über Lifeline zu veranlassen.Wenn der Wert auf 0 gesetzt ist, werden keine Meldungen an die Steuerung gesendet, wenn sich die Luftfeuchtigkeit ändert. Periodische Berichte, die über den Konfigurationsparameter 4 verwaltet werden, können jedoch weiterhin aktiv sein.  (0-100, in %)"
+      }
+    },
+		{
+      "id": "periodic_report",
+      "zwave": {
+        "index": 4,
+        "size": 2,
+		"signed": false
+      },
+	  "attr": {
+      "min": 0,
+      "max": 65535
+    },
+      "type": "number",
+      "value": 43200,
+      "label": {
+        "en": "Periodic Reports",
+        "nl": "Periodieke rapporten",
+		"de": "Periodische Berichte"
+      },
+      "hint": {
+        "en": "This parameter defines the time interval to send an unsolicited report. If the value is set to 0, there will be no periodic reports sent to the controller. However, reports on temperature/humidity changes, managed by configuration parameters 1 and 2, may still be active. (0, 900-65535)",
+        "nl": "Deze parameter definieert het tijdsinterval voor het verzenden van een ongevraagde melding. Als de waarde op 0 is ingesteld, worden er geen periodieke rapporten naar de regelaar gestuurd. Het is echter mogelijk dat er nog steeds rapporten over temperatuur- en vochtigheidsveranderingen, beheerd door de configuratieparameters 1 en 2, actief zijn.  (0, 900-65535)",
+		"de": "Dieser Parameter definiert das Zeitintervall für das Senden eines unaufgeforderten Berichts.Wenn der Wert auf 0 gesetzt ist, werden keine regelmäßigen Berichte an die Steuerung gesendet. Es ist jedoch möglich, dass Berichte über Temperatur-/Feuchteänderungen, die über die Konfigurationsparameter 1 und 2 verwaltet werden, noch aktiv sind. (0, 900-65535)"
+      }
+    },
+	{
+      "id": "temperature_report_upper",
+      "zwave": {
+        "index": 5,
+        "size": 2,
+		"signed": false
+      },
+	  "attr": {
+      "min": 0,
+      "max": 1000
+    },
+      "type": "number",
+      "value": 0,
+      "label": {
+        "en": "Upper temperature threshold",
+        "nl": "Bovenste temperatuurdrempel",
+		"de": "Oberer Temperaturschwellwert"
+      },
+      "hint": {
+        "en": "This parameter defines a temperature. If the measured temperature surpasses this value, a BASIC command is sent into Association Group 2  (0-1000, 1/10 degree)",
+        "nl": "Deze parameter definieert een temperatuur. Als de gemeten temperatuur deze waarde overschrijdt, wordt een BASIC-commando naar Associatiegroep 2 gestuurd (0-1000, 1/10 graad).",
+		"de": "Dieser Parameter definiert eine Temperatur. Überschreitet die gemessene Temperatur diesen Schwellwert, wird ein BASIC-Befehl an die Verknüpfungsgruppe 2 gesendet (0-1000, 0.1° Schritte)"
+      }
+    },
+		{
+      "id": "temperature_report_lower",
+      "zwave": {
+        "index": 6,
+        "size": 2,
+		"signed": false
+      },
+	  "attr": {
+      "min": 0,
+      "max": 65535
+    },
+      "type": "number",
+      "value": 0,
+      "label": {
+        "en": "Lower temperature threshold",
+        "nl": "Lagere temperatuurdrempel",
+		"de": "Unterer Temperaturschwellwert"
+      },
+      "hint": {
+        "en": "This parameter defines a temperature. If the measured temperature dropps below this watermark a BASIC command is sent into Association Group 3. (1 - 1000: 1/10 degree [0,1°C - 100°C]. 65336 - 65535: 1/10 degree [-20,0°C - -0,1°C])",
+        "nl": "Deze parameter definieert een temperatuur. Als de gemeten temperatuur onder dit watermerk daalt, wordt een BASIC-commando naar Associatiegroep 3 gestuurd. (1 - 1000: 1/10 graad [0,1°C - 100°C]. 65336 - 65535: 1/10 graad [-20,0°C - -0,1°C])",
+		"de": "Dieser Parameter definiert eine Temperatur. Unterschreitet die gemessene Temperatur diesen Schwellwert, wird ein BASIC-Befehl an die  Verknüpfungsgruppe 3 gesendet. (1 - 1000: 0,1°C bis 100,0°C.  65336-65535: -20,0°C bis -0,1°C) "
+      }
+    },
+			{
+      "id": "humidtiy_report_upper",
+      "zwave": {
+        "index": 7,
+        "size": 1
+      },
+	  "attr": {
+      "min": 0,
+      "max": 100
+    },
+      "type": "number",
+      "value": 0,
+      "label": {
+        "en": "Humidity upper threshold",
+        "nl": "Luchtvochtigheid bovendrempel",
+		"de": "Luftfeuchtigkeit oberer Schwellwert "
+      },
+      "hint": {
+        "en": "This parameter defines a relative humidity. If the measured humidity falls below this threshold, a BASIC command is sent to link group 4. (0, 10-100 in %)",
+        "nl": "Deze parameter definieert een relatieve vochtigheid. Als de gemeten relatieve vochtigheid deze drempel overschrijdt, wordt een BASIC-commando verzonden naar koppelingsgroep 4. (0, 10-100 in %)",
+		"de": "Dieser Parameter definiert eine relative Luftfeuchtigkeit. Überschreitet die gemessene relative Luftfeuchtigkeit diesen Schwellwert, wird ein BASIC-Befehl an die Verknüpfungsgruppe 4 gesendet. (0, 10-100 in %)"
+      }
+    },
+	{
+      "id": "humidtiy_report_lower",
+      "zwave": {
+        "index": 8,
+        "size": 1
+      },
+	  "attr": {
+      "min": 0,
+      "max": 90
+    },
+      "type": "number",
+      "value": 0,
+      "label": {
+        "en": "Humidity lower threshold",
+        "nl": "Luchtvochtigheid onderdrempel",
+		"de": "Luftfeuchtigkeit unterer Schwellwert"
+      },
+      "hint": {
+        "en": "This parameter defines a relative humidity. If the measured humidity falls below this threshold, a BASIC command is sent to link group 5. (0, 1-90 in %)",
+        "nl": "Deze parameter definieert een relatieve vochtigheid. Als de gemeten luchtvochtigheid onder deze drempel komt, wordt een BASIC-commando verzonden naar koppelingsgroep 5. (0, 1-90 in %)",
+		"de": "Dieser Parameter definiert eine relative Luftfeuchtigkeit. Fällt die gemessene Luftfeuchtigkeit unter diesen Schwellwert, wird ein BASIC-Befehl an die Verknüpfungsgruppe 5 gesendet.  (0, 1-90 in %)"
+      }
+    },
+		{
+      "id": "low_temp_trigger",
+      "zwave": {
+        "index": 9,
+        "size": 1,
+		"signed": false
+      },
+	  "attr": {
+      "min": 0,
+      "max": 255
+    },
+      "type": "number",
+      "value": 255,
+      "label": {
+        "en": "Low Temperature Trigger BASIC Set Command Value",
+        "nl": "Lage temperatuur Trigger BASIC Ingestelde opdrachtwaarde voor lage temperatuur Trigger ",
+		"de": "Basic Werte bei unterer Temperaturschwelle"
+      },
+      "hint": {
+        "en": "This defines which BASIC command should be sent to association group 3.",
+        "nl": "Dit definieert welk BASIC-commando naar associatiegroep 3 moet worden gestuurd.",
+		"de": "Hiermit wird definiert, welcher BASIC-Befehl in die Assoziationsgruppe 3 gesendet werden soll. "
+      }
+    },
+			{
+      "id": "high_temp_trigger",
+      "zwave": {
+        "index": 10,
+        "size": 1,
+		"signed": false
+      },
+	  "attr": {
+      "min": 0,
+      "max": 255
+    },
+      "type": "number",
+      "value": 0,
+      "label": {
+        "en": "High Temperature Trigger BASIC Set Command Value",
+        "nl": "Hoge Temperatuur Trigger BASIC Ingestelde Commandowaarde",
+		"de": "Basic Wert bei oberen Temperaturschwellwert"
+      },
+      "hint": {
+        "en": "This defines which BASIC command should be sent to association group 2.",
+        "nl": "Dit definieert welk BASIC-commando naar associatiegroep 2 moet worden gestuurd.",
+		"de": "Hiermit wird definiert, welcher BASIC-Befehl in die Assoziationsgruppe 2 gesendet werden soll. "
+      }
+    },
+				{
+      "id": "low_humidity_trigger",
+      "zwave": {
+        "index": 11,
+        "size": 1,
+		"signed": false
+      },
+	  "attr": {
+      "min": 0,
+      "max": 255
+    },
+      "type": "number",
+      "value": 255,
+      "label": {
+        "en": "Low Humidity  Trigger BASIC Set Command Value",
+        "nl": "Lage Vochtigheid Trigger BASIC Ingestelde Commandowaarde",
+		"de": "Basic Wert bei unterem Luftfeuchtigkeitsschwellwert "
+      },
+      "hint": {
+        "en": "This defines which BASIC command is to be sent to association group 5.",
+        "nl": "Dit definieert welk BASIC-commando naar associatiegroep 5 moet worden gestuurd.",
+		"de": "Hiermit wird definiert, welcher BASIC-Befehl in die Assoziationsgruppe 5 gesendet werden soll. "
+      }
+    },
+				{
+      "id": "high_humidity_trigger",
+      "zwave": {
+        "index": 12,
+        "size": 1,
+		"signed": false
+      },
+	  "attr": {
+      "min": 0,
+      "max": 255
+    },
+      "type": "number",
+      "value": 0,
+      "label": {
+        "en": "High Humidity Trigger BASIC Set Command Value",
+        "nl": "Hoge Vochtigheid Trigger BASIC Ingestelde Commandowaarde",
+		"de": "Basic Wert bei oberen Luftfeuchtigkeitsschwellwert"
+      },
+      "hint": {
+        "en": "This defines which BASIC command should be sent to association group 4.",
+        "nl": "Dit definieert welk BASIC-commando naar associatiegroep 4 moet worden gestuurd.",
+		"de": "Hiermit wird definiert, welcher BASIC-Befehl in die Assoziationsgruppe 4 gesendet werden soll."
+      }
+    },
+	{
+      "id": "mold_offset",
+      "zwave": {
+        "index": 13,
+        "size": 1,
+		"signed": false
+      },
+	  "attr": {
+      "min": 0,
+      "max": 10
+    },
+      "type": "number",
+      "value": 0,
+      "label": {
+        "en": "Offset value for Mold environment notification",
+        "nl": "Compensatiewaarde voor Schimmelmilieumelding",
+		"de": "Offset-Wert für die Benachrichtigung über die Moldumgebung"
+      },
+      "hint": {
+        "en": "This value allows to increase the humidity threshold for ideal mold environment notification by max 10%.",
+        "nl": "Deze waarde maakt het mogelijk om de vochtigheidsdrempel voor ideale schimmelmeldingen met maximaal 10% te verhogen.",
+		"de": "Dieser Wert erlaubt es, den Feuchtigkeitsschwellenwert für die Meldung einer idealen Schimmelpilzumgebung um maximal 10% zu erhöhen."
+      }
+    }
+  ]

@@ -1,0 +1,61 @@
+{
+  "id": "ZWA019",
+  "name": {
+    "en": "Water Sensor 7 Pro"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_battery",
+    "alarm_water",
+    "measure_temperature",
+	"measure_humidity",
+    "alarm_tamper"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "energy": {
+    "batteries": [ "LS14250" ]
+  },
+  "zwave": {
+    "manufacturerId": 881,
+    "productTypeId": [
+      2,
+      258
+    ],
+    "productId": [
+      19
+    ],
+    "zwaveAllianceProductId": 3872,
+    "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=product_documents/3872/Water%20Sensor%207%20Pro-3.pdf",
+    "learnmode": {
+      "instruction": {
+         "en": "Tripple click the tamper switch (on the right side below the battery housing)",
+        "nl": "Druk driemaal op knop (aan de rechterkant onder de batterijbehuizing)",
+		"de": "Dreimal schnell hintereinander den Tamper-Taster (auf der rechten Seite unterhalb des Batteriegehäuses) betätigen. "
+      },
+	  "image": "{{driverAssetsPath}}/learnmode.svg"
+    },
+    "associationGroups": [
+      1
+    ],
+    "defaultConfiguration": [
+      {
+        "id": 16,
+        "size": 1,
+        "value": 5
+      },
+	  {
+        "id": 17,
+        "size": 1,
+        "value": 2
+      },
+	  {
+        "id": 18,
+        "size": 2,
+        "value": 900
+      }
+	]
+  }
+}

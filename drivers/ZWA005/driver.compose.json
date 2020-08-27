@@ -1,0 +1,101 @@
+{
+  "id": "ZWA005",
+  "name": {
+    "en": "TriSensor"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_battery",
+    "alarm_motion",
+    "measure_temperature",
+    "measure_luminance"
+    
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "energy": {
+    "batteries": [
+      "CR123A",
+      "CR123A"
+    ]
+  },
+  "zwave": {
+    "manufacturerId": 881,
+    "productTypeId": [
+      2,
+      5
+    ],
+    "productId": 5,
+    "zwaveAllianceProductId": 2898,
+    "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=MarketCertificationFiles/2898/TriSensor%20user%20manual%2020180416.pdf",
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the action button on your {{driverNameEn}}.",
+        "nl": "Druk op de actie knop op de {{driverNameEn}}."
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Lifeline"
+        }
+      }},
+	  "associationGroupsOptions": {
+      "2": {
+        "hint": {
+          "en": "Basic Group"
+
+        }
+      }},
+	  "associationGroupsOptions": {
+      "3": {
+        "hint": {
+          "en": "Basic Group"
+        }
+      }
+    },
+    "defaultConfiguration": [
+      {
+        "id": 1,
+        "value": 30,
+        "size": 2
+      },
+      {
+        "id": 2,
+        "value": 60,
+        "size": 2
+      },
+	  {
+        "id": 4,
+        "value": 1,
+        "size": 1
+      },
+	  {
+        "id": 21,
+        "value": 0,
+        "size": 2
+      },
+	  {
+        "id": 22,
+        "value": 0,
+        "size": 2
+      },
+	  {
+        "id": 23,
+        "value": 600,
+        "size": 2
+      },
+	  {
+        "id": 24,
+        "value": 1800,
+        "size": 2
+      }
+     ]
+  }
+}

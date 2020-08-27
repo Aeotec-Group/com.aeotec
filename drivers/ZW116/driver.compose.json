@@ -3,7 +3,7 @@
   "name": {
     "en": "Nano Switch (ZW116)"
   },
-  "class": "light",
+  "class": "socket",
   "capabilities": [
     "measure_power",
     "meter_power",
@@ -48,7 +48,17 @@
         "id": 92,
         "size": 1,
         "value": 30
-      }
+      },
+	   {
+        "id": 101,
+        "size": 4,
+        "value": 1
+	  },
+	  {
+        "id": 111,
+        "size": 4,
+        "value": 1800
+	  }
     ]
   }
 }

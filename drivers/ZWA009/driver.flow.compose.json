@@ -1,0 +1,42 @@
+{
+  "triggers": [    
+    {
+      "id": "mold_alarm_on",
+      "title": {
+        "en": "The mold alarm is on",
+		"nl": "Het schimmelalarm is aan",
+		"de": "Der Schimmel Alarm is angegangen"
+      }
+    },
+    {
+      "id": "mold_alarm_off",
+      "title": {
+        "en": "The mold alarm is off",
+		"nl": "Het schimmelalarm is uit",
+		"de": "Der Schimmel Alarm is ausgegangen"
+      }
+    },
+	{
+    "id": "dewpoint_value",
+    "title": {
+      "en": "The dew point has changed",
+      "nl": "Het dauwpunt is veranderd",
+	  "de": "Der Taupunkt hat sich geändert"
+    },
+	        "tokens": [
+          {
+            "name": "dewpoint",
+            "type": "number",
+            "title": {
+              "en": "Dew Point",
+              "nl": "Dauwpunt",
+			  "de": "Taupunkt"
+            }
+          }
+],
+    "args": []
+  }	
+	],
+  "conditions": [],
+  "actions": []
+}
