@@ -47,7 +47,7 @@
       "index": 121,
       "size": 4
     },
-    "value": "299",
+    "value": "273",
     "values": [
       {
         "id": "0",
@@ -57,14 +57,14 @@
         }
       },
       {
-        "id": "298",
+        "id": "272",
         "label": {
           "en": "Water detect",
           "nl": "Water detectie"
         }
       },
       {
-        "id": "299",
+        "id": "273",
         "label": {
           "en": "Water detect and battery",
           "nl": "Water detectie and batterij"
