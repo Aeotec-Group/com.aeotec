@@ -9,19 +9,7 @@ class ZWA003 extends ZwaveDevice {
 		// TODO: add battery type (INTERNAL) to driver.compose
         this._batteryTrigger = this.getDriver().batteryTrigger;
         this._sceneTrigger = this.getDriver().sceneTrigger;
-        this._dimTrigger = this.getDriver().dimTrigger;
-
-		this.registerCapability('measure_battery', 'BATTERY');
-		this.registerCapability('alarm_battery', 'NOTIFICATION', {
-            reportParser: (report) => {
-                if (report['Notification Type'] === 'Power Management') {
-                    if (report.Event === 13) this._batteryTrigger.trigger(this, null, null);
-                    else if (report.Event === 15) return true;
-                    return false;
-                }
-                return null;
-            },
-        });
+        this.registerCapability('measure_battery', 'BATTERY');
 
 		this.registerReportListener('CENTRAL_SCENE', 'CENTRAL_SCENE_NOTIFICATION', (report) => {
 			if (report.hasOwnProperty('Properties1') &&
@@ -34,29 +22,7 @@ class ZWA003 extends ZwaveDevice {
 				this._sceneTrigger.trigger(this, null, data);
 			}
 		});
-		this.registerReportListener('CONFIGURATION', 'CONFIGURATION_REPORT', (report) => {
-			if (report.hasOwnProperty('Parameter Number') &&
-				report.hasOwnProperty('Configuration Value')) {
-				if (report['Parameter Number'] === 9) {
-					const data = {
-						button: report['Configuration Value'][0].toString(),
-						scene: (report['Configuration Value'][1] === 1) ? 'Key Slide Up' : 'Key Slide Down',
-					};
-					this._sceneTrigger.trigger(this, null, data);
-				}
-                	if (report['Parameter Number'] === 10) {
-					let value = Math.round(report['Configuration Value'][2] / 2) / 100;
-					if (value < 0.5) value = Math.max(value - 0.05, 0);
-					const token = {
-						dim: value,
-					};
-					const data = {
-						button: report['Configuration Value'][0].toString(),
-					};
-					this._dimTrigger.trigger(this, token, data);
-				}
-			}
-		});
+		
 	}
 
 	async onSettings(oldSettings, newSettings, changedKeys) {
