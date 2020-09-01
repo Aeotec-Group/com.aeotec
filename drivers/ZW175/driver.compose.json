@@ -5,9 +5,11 @@
   },
   "class": "socket",
   "capabilities": [
-      "measure_power",
       "meter_power",
-      "onoff"
+      "measure_power",
+      "onoff",
+	  "measure_voltage",
+	  "measure_current"
   ],
   "images": {
     "large": "{{driverAssetsPath}}/images/large.png",
@@ -27,17 +29,24 @@
     "zwaveAllianceProductId": 6544,
     "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=MarketCertificationFiles/3437/Smart%20Switch%207%20product%20manual.pdf - Smart Switch 7 product manual.pdf",
     "learnmode": {
+	"image": "{{driverAssetsPath}}/learnmode.svg",
       "instruction": {
-        "en": "Press the (action) button 2x times in 1 second on the Smart Switch 7 to enter learn mode"
+        "en": "Press the button 1x, the Smart Switch 7 flashes slowly in blue. Press the button again, the LED turns orange."
       }
     },
+	 "unlearnmode": {
+	 "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the (action) button 2x times in 1 second on the Smart Switch 7 to enter unlearn mode, LED turns purple."
+		}
+	},
     "associationGroups": [
       1
     ],
     "associationGroupsOptions": {
       "1": {
         "hint": {
-          "en": "Z-Wave Plus Lifeline.\r\nThe Hial CC and Basic Report CC (configured by parameter 80) can be sent to the associatd nodes in this group. Typically the main Z-Wave controller Node ID 01 should be associated to this association."
+          "en": "Z-Wave Plus Lifeline.\r\nThe Hail CC and Basic Report CC (configured by parameter 80) can be sent to the associatd nodes in this group. Typically the main Z-Wave controller Node ID 01 should be associated to this association."
         }
       },
 	  "2": {
@@ -110,12 +119,12 @@
 	  {
         "id": 101,
         "size": 4,
-        "value": 3
+        "value": 15
       },
 	  {
         "id": 111,
         "size": 4,
-        "value": 600
+        "value": 30
       }
     ]
   }

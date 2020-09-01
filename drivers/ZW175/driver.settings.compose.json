@@ -104,10 +104,10 @@
 		"id": "18",
 		"type": "number",
 		"label": {
-			"en": "Minimum wattage change needed before an update report is send"
+			"en": "LED blinking frequency."
 		},
 		"hint": {
-			"en": "This parameter ({{zwaveParameterIndex}}) determines the LED blinking frequency per second when alarm is enabled."
+			"en": "TSet amount of blinks per seconds."
 		},
 		"zwave": {
 			"index": 18,
@@ -124,10 +124,10 @@
 		"id": "19",
 		"type": "number",
 		"label": {
-			"en": "Minimum wattage change (%) needed before an update report is send"
+			"en": "Start or stop LED blinking.(Write Only)"
 		},
 		"hint": {
-			"en": "This parameter ({{zwaveParameterIndex}}) is a SET only command, setting this parameter will cause the LED to blink in for X amount of seconds before it stops on its own."
+			"en": "Set the duration and start the blinking process. "
 		},
 		"zwave": {
 			"index": 19,
@@ -137,7 +137,7 @@
 			"min": 0,
 			"max": 255
 		},
-		"value": 5
+		"value": 0
 	},
 	{
 		"id": "20",
@@ -278,7 +278,7 @@
 			"min": 0,
 			"max": 2300
 		},
-		"value": 5
+		"value": 0
 	},
 	{
 		"id": "92",
@@ -347,13 +347,13 @@
 			"en": "This parameter ({{zwaveParameterIndex}}) allows you to set the interval at which the sensors set on Parameter 101 to be reported every X amount of seconds."
 		},
 		"zwave": {
-			"index": 101,
+			"index": 111,
 			"size": 4
 		},
 		"attr": {
 			"min": 0,
 			"max": 2592000
 		},
-		"value": 600
+		"value": 30
 	}
 ]
