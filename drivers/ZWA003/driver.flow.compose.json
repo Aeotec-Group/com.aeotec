@@ -1,7 +1,7 @@
 {
   "triggers": [
     {
-      "id": "ZWA003_scene",
+      "id": "zw130_scene",
       "title": {
         "en": "Scene is activated",
         "nl": "Scene is geactiveerd"
@@ -78,9 +78,70 @@
         }
       ]
     },
-    
     {
-      "id": "ZWA003_battery_full",
+      "id": "zw130_dim",
+      "title": {
+        "en": "Dim level has been sent",
+        "nl": "Het helderheidsniveau is verzonden"
+      },
+      "hint": {
+        "en": "The dim level is send when you slide your finger over the wallmote. The brightness level will be the height you stopped at (full height of the {{driverNameEn}}).",
+        "nl": "Het helderheidsniveau wordt verzonden bij het schuiven van de vinger over de wallmote. Het helderheidsniveau is de hoogte waar je stopt (volle hoogte van de {{driverNameNl}})."
+      },
+      "tokens": [
+        {
+          "name": "dim",
+          "type": "number",
+          "title": {
+            "en": "level",
+            "nl": "niveau"
+          },
+          "example": 0.5
+        }
+      ],
+      "args": [
+        {
+          "name": "button",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Top",
+                "nl": "Links",
+				"de": "Oben"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Bottom left",
+                "nl": "Links onder",
+				"de": "Links unten"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Bottom right",
+                "nl": "Rechts onder",
+				"de": "Rechts unten"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Cental button",
+                "nl": "Middelste knop",
+				"de": "Mittlere Taste"
+              }
+			}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zw130_battery_full",
       "title": {
         "en": "Battery fully charged",
         "nl": "Batterij volledig opgeladen"

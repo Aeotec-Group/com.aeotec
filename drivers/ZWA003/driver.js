@@ -2,15 +2,20 @@
 
 const Homey = require('homey');
 
-class ZWA003Driver extends Homey.Driver {
-    onInit() {
-        super.onInit();
+class ZW130Driver extends Homey.Driver {
 
-        this.batteryTrigger = new Homey.FlowCardTriggerDevice('ZWA003_battery_full').register();
-        this.sceneTrigger = new Homey.FlowCardTriggerDevice('ZWA003_scene').register().registerRunListener((args, state) => {
-            return args.device.sceneRunListener(args, state);
-        });
-            }
+  onInit() {
+    super.onInit();
+
+    this.batteryTrigger = new Homey.FlowCardTriggerDevice('zw130_battery_full').register();
+    this.sceneTrigger = new Homey.FlowCardTriggerDevice('zw130_scene').register().registerRunListener((args, state) => {
+      return args.device.sceneRunListener(args, state);
+    });
+    this.dimTrigger = new Homey.FlowCardTriggerDevice('zw130_dim').register().registerRunListener((args, state) => {
+      return args.device.dimRunListener(args, state);
+    });
+  }
+
 }
 
-module.exports = ZWA003Driver;
+module.exports = ZW130Driver;
