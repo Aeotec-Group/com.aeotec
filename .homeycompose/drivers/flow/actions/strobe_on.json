@@ -1,0 +1,77 @@
+{
+    "title": {
+        "en": "Light effect on",
+        "de": "Lichteffekte ein"
+    },
+	"args": [
+		{
+			"name": "count",
+			"type": "number",
+	        "min": 1,
+	        "max": 255,
+			"title":
+				{ 
+				"en": "Color selection: 1=White, 2=Red, 4=Orange, 8=Yellow, 16=Green, 32=Blue, 64=Indigo, 127=all. Calculate the values X = 1+4=5 (White and Orange)",
+				"de": "Farbauswahl: 1=Weiß, 2=Rot, 4=Orange, 8=Gelb, 16=Grün, 32=Blau, 64=Indigo, 127=alle. Berechnen Sie die Werte X = 1+4=5 (Weiß und Orange)."
+				},
+		    "placeholder": {
+		        "en": "Add selected color",
+		        "de": "Farbauswahl einfügen"
+		    }
+		},
+		{
+			"name": "speed",
+			"type": "number",
+	        "min": 50,
+	        "max": 8640000,
+			"title": {
+				"en": "Rate of change",
+				"de": "Änderungsgeschwindigkeit"
+				},
+		    "placeholder": {
+		        "en": "X x 10 ms, min. value 50",
+		        "de": "X x 10 ms, Minimalwert 50"
+		    }
+		},
+		{
+			"name": "random_color",
+			"type": "dropdown",
+			"values": [
+				{
+					"id": "1",
+					"label": {
+						"en": "Own Color set",
+						"de": "Eigene Farbenauswahl"
+					}
+				},
+				{
+					"id": "2",
+					"label": {
+						"en": "Random color",
+						"de": "Willkürliche Farben"
+					}
+				}
+			]
+		},
+		{
+			"name": "strobe",
+			"type": "dropdown",
+			"values": [
+				{
+					"id": "0",
+					"label": {
+						"en": "Disabled Strobe",
+						"de": "Deaktiviert Stoboskop"
+					}
+				},
+				{
+					"id": "1",
+					"label": {
+						"en": "Enable Strobe",
+						"de": "Aktiviert Stroboskop"
+					}
+				}
+			]
+		}
+	]
+}
