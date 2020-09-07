@@ -1,0 +1,16 @@
+{
+  "triggers": [
+  ],
+  "conditions": [
+  ],
+  "actions": [
+    {
+      "$extends":"strobe_on",
+      "id": "BULB6MC-strobe_on"
+    },
+    {
+      "$extends":"strobe_off",
+      "id": "BULB6MC-strobe_off"
+    }
+  ]
+}

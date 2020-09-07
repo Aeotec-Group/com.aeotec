@@ -1,0 +1,53 @@
+{
+    "id": "ZWA002",
+    "name": {
+        "en": "LED Bulb6 MC"
+        
+    },
+    "zwave": {
+        "manufacturerId": 881,
+        "productTypeId": [
+      3,
+      515
+    ],
+        "productId": 2,
+        "learnmode": {
+		"image": "{{driverAssetsPath}}/learnmode.svg",
+            "instruction": {
+                "en": "Quickly turn the {{driverNameEn}} off and on again.",
+				"de": "Schalten Sie die {{driverNameEn}} schnell aus und wieder ein."
+            }
+        },
+		"unlearnmode": {
+		"image": "{{driverAssetsPath}}/unlearnmode.svg",
+      "instruction": {
+			"en": "Quickly turn the {{driverNameEn}} off and on again 3 times.",
+			"de": "Schalten Sie die {{driverNameEn}} schnell 3 Mal aus und wieder ein."
+      }
+    },
+        "associationGroups": [
+            1
+        ],
+        "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "The association group 1 is the Z-Wave Lifeline group. The Hail CC and Basic Report CC (configurable) will be sent to the associated nodes.",
+		  "de": "Die Assoziationsgruppe 1 ist die Z-Wave-Lifeline-Gruppe. Die Hail CC und Basic Report CC (konfigurierbar) werden an die assoziierten Knoten gesendet"
+        }
+      }
+    }
+    },
+    "class": "light",
+    "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+    ],
+    "images": {
+         "large": "{{driverAssetsPath}}/images/large.png",
+         "small": "{{driverAssetsPath}}/images/small.png"
+    }
+}

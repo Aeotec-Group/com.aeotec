@@ -1,0 +1,123 @@
+[
+    {
+        "id": "config_param_1",
+        "type": "dropdown",
+        "label": {
+            "en": "LED Animations",
+            "de": "LED Animationen"
+        },
+        "hint": {
+            "en": "Enables animations",
+            "de": "Aktiviert Animationen"
+        },
+             
+        "zwave": {
+            "index": 1,
+            "size": 1
+        },
+		"value": "0",
+			"values": [
+		  {
+			"id": "0",
+			"label": {
+			  "en": "Disabled",
+			  "de": "Deaktiviert"
+			}
+		  },
+		  {
+			"id": "1",
+			"label": {
+			  "en": "Blink Colors in order mode.",
+			  "de": "Farben blinken im Werksmodus"
+			}
+		  },
+		  {
+			"id": "2",
+			"label": {
+			  "en": "Randomized blink color mode",
+			  "de": "Wechselnder Farbmodus"
+			}
+		  }
+		]		  
+    },
+	{
+        "id": "config_param_2",
+        "type": "dropdown",
+        "label": {
+            "en": "Strobe Mode",
+            "de": "Stroboskop-Modus"
+        },
+        "hint": {
+            "en": "Enables Strobe Mode, please read the user guide for this setting.",
+            "de": "Aktiviert Stroboskop-Modus, bitte beachten Sie das Handbuch."
+        },
+             
+        "zwave": {
+            "index": 2,
+            "size": 1
+        } ,
+		"value": "0",
+			"values": [
+		  {
+			"id": "0",
+			"label": {
+			  "en": "Disabled",
+			  "de": "Deaktiviert"
+			}
+		  },
+		  {
+			"id": "1",
+			"label": {
+			  "en": "Enable Strobe over Custom Color.",
+			  "de": "Aktivieren Sie Strobe über Benutzerdefinierte Farbe."
+			}
+		  }	
+		]
+    },
+	
+    {
+        "id": "config_param_3",
+        "type": "number",
+        "label": {
+            "en": "Color change rate",
+            "de": "Farbänderungsrate"
+        },
+        "hint": {
+            "en": "Set the rate of change to next color in Custom Mode. Rate of change in X = 10 ms",
+            "nl": "Stellt die Änderungsgeschwindigkeit auf die nächste Farbe im benutzerdefinierten Modus ein. Änderungsgeschwindigkeit in X = 10 ms"
+        },
+        "value": 50,
+        "attr": {
+            "min": 0,
+            "max": 8640000
+        },
+        "zwave": {
+            "index": 3,
+            "size": 4
+        }        
+    },
+    {
+        "id": "config_param_4",
+        "type": "number",
+        "label": {
+			"en":"Color Setting",
+			"de":"Farbauswahl"
+			},
+		"hint": {
+            "en": "Color selection: 1=White, 2=Red, 4=Orange, 8=Yellow, 16=Green, 32=Blue, 64=Indigo, 128=Lila, 255=all. Calculate the values X = 1+4=5 (White and Orange)",
+            "de": "Farbauswahl: 1=Weiß, 2=Rot, 4=Orange, 8=Gelb, 16=Grün, 32=Blau, 64=Indigo, 128= Lila, 255=alle. Berechnen Sie die Werte X = 1+4=5 (Weiß und Orange)."
+        },
+        "value": 1,
+		"attr": {
+            "min": 0,
+            "max": 255
+        },
+        "zwave": {
+            "index": 4,
+            "size": 1,
+			"signed": false
+        }
+		
+    
+    }
+]
